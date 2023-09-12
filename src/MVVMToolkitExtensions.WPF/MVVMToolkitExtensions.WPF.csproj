@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0-windows</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<UseWPF>true</UseWPF>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<TargetFrameworks>net6.0-windows;net7.0-windows</TargetFrameworks>
+		<UseWPF>true</UseWPF>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<PackageId>MVVMToolkitExtensions.WPF</PackageId>
+		<Version>1.0.0</Version>
+		<Authors>Brandon Woodward</Authors>
+		<Description>Extensions to Microsoft.CommunityToolkit.MVVM and Microsoft.Extensions.DependencyInjection for WPF, 
+			inspired by Prism. This includes a ViewModel resolution, DialogService, and NavigationService.</Description>
+		<PackageTags>WPF MVVM Toolkit Extensions</PackageTags>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageProjectUrl>https://github.com/YourUsername/YourRepo</PackageProjectUrl>
+		<PackageIconUrl>https://url-to-your-icon.png</PackageIconUrl>
+		<RepositoryUrl>https://github.com/YourUsername/YourRepo</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+	</ItemGroup>
+
+
+
+
+
+
+</Project>

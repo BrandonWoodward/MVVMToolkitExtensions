@@ -1,0 +1,31 @@
+name: integration
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 7.0.x
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build --no-restore
+    - name: Test and collect coverage
+      run: dotnet test --collect:"XPlat Code Coverage" --no-build
+    - name: Move coverage report to known location
+      run: mv ./tests/AutoWireViewModel.Tests/TestResults/*/coverage.cobertura.xml ./tests/AutoWireViewModel.Tests/coverage.cobertura.xml
+    - name: Upload coverage to Codecov  
+      uses: codecov/codecov-action@v3
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        file: ./tests/AutoWireViewModel.Tests/coverage.cobertura.xml
+        fail_ci_if_error: true`

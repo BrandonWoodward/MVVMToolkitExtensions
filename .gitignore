@@ -9,6 +9,8 @@
 *.user
 *.userosscache
 *.sln.docstates
+/.idea/.idea.LightMvvmUtils/.idea
+/demos/MVVMToolkitExtensions.WPF.Demo/MVVMToolkitExtensions.WPF.Demo.csproj
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
