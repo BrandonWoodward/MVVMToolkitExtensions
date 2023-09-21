@@ -25,6 +25,9 @@ jobs:
     - name: Extract version from tag
       run: echo "PACKAGE_VERSION=${GITHUB_REF#refs/tags/v}" >> $env:GITHUB_ENV 
 
+    - name: Check PACKAGE_VERSION
+      run: echo "PACKAGE_VERSION is ${{ env.PACKAGE_VERSION }}"
+
     - name: Pack with tag version
       run: dotnet pack ./src/MVVMToolkitExtensions.WPF/MVVMToolkitExtensions.WPF.csproj --configuration Release -o ./out /p:PackageVersion=${{ env.PACKAGE_VERSION }}
   
