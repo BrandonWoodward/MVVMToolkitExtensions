@@ -1,17 +1,28 @@
 <h1 align="center">
   MVVMToolkitExtensions
-  <br>
 </h1>
 
 <div align="center">
+  
+[![build](https://github.com/BrandonWoodward/MVVMToolkitExtensions/actions/workflows/CD.yml/badge.svg)](https://github.com/BrandonWoodward/MVVMToolkitExtensions/actions/workflows/CD.yml)
+[![NuGet](https://img.shields.io/nuget/v/MVVMToolkitExtensions.WPF.svg?style=flat)](https://www.nuget.org/packages/MVVMToolkitExtensions.WPF/)
 
 </div>
 
 <h4 align="center"> 
-🧰 A simple set of WPF MVVM utilities for use with CommunityToolkit.MVVM and Microsoft.Extensions.DependencyInjection.
+🧰 A simple set of WPF MVVM utilities for use with <a href="https://learn.microsoft.com/en-gb/dotnet/communitytoolkit/mvvm/" target="_blank">CommunityToolkit.MVVM</a> and <a href="https://learn.microsoft.com/en-us/dotnet/core/extensions/dependency-injection" target="_blank">Microsoft.Extensions.DependencyInjection.</a>
 </h4>
 
----
+<br>
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Setup](#setup)
+- [Navigation](#navigation)
+- [Dialogs](#dialogs)
+
+<br>
 
 ## Installation
 
@@ -26,6 +37,8 @@ Or the `dotnet` CLI:
 ```bash
 dotnet add package MVVMToolkitExtensions.WPF
 ```
+
+<br>
 
 ## Setup
 
@@ -49,6 +62,8 @@ protected override void OnStartup(StartupEventArgs e)
         .Bootstrap<MainWindow>();
 }
 ```
+
+<br>
 
 ## Navigation
 
@@ -107,6 +122,8 @@ public class ViewBViewModel : INavigationAware
         => Console.WriteLine("Navigated away from ViewB.");
 }
 ```
+
+<br>
 
 ## Dialogs
 
