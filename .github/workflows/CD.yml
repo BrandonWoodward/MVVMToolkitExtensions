@@ -23,7 +23,9 @@ jobs:
         dotnet-version: ${{ matrix.dotnet }}
 
     - name: Extract version from tag
-      run: echo "PACKAGE_VERSION=${GITHUB_REF#refs/tags/v}" >> $env:GITHUB_ENV 
+      run: |
+        $version = "${{ github.ref }}".replace('refs/tags/v', '')
+        echo "PACKAGE_VERSION=$version" >> $env:GITHUB_ENV
 
     - name: Print PACKAGE_VERSION
       run: echo $env:PACKAGE_VERSION
