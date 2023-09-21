@@ -2,5 +2,5 @@
 
 internal sealed class DialogRegistration
 {
-    public required Type ViewType { get; set; }
+    public Type ViewType { get; set; }
 }
