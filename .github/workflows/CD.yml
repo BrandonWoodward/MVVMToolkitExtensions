@@ -9,9 +9,6 @@ on:
 jobs:
   publish:
     runs-on: windows-latest
-    strategy:
-      matrix:
-        dotnet: ['6.0.x', '7.0.x']
     steps:
       
     - name: Checkout code
@@ -20,13 +17,12 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: ${{ matrix.dotnet }}
+        dotnet-version: '7.0.x'
 
     - name: Extract version from tag
       run: |
         $version = "${{ github.ref }}".replace('refs/tags/v', '')
         echo "PACKAGE_VERSION=$version" >> $env:GITHUB_ENV
-
     - name: Print PACKAGE_VERSION
       run: echo $env:PACKAGE_VERSION
 
