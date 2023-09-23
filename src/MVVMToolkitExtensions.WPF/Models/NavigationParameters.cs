@@ -6,5 +6,5 @@ public class NavigationParameters : BaseParameters
 
     public NavigationParameters(IDictionary<string, object> initialValues) : base(initialValues) { }
 
-    public static DialogParameters Empty => new();
+    public static NavigationParameters Empty => new();
 }
