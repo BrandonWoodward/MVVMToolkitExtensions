@@ -9,9 +9,6 @@ on:
 jobs:
   publish:
     runs-on: windows-latest
-    strategy:
-      matrix:
-        dotnet: ['6.0.x', '7.0.x']
     steps:
       
     - name: Checkout code
@@ -20,13 +17,20 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: ${{ matrix.dotnet }}
+        dotnet-version: '7.0.x'
 
     - name: Extract version from tag
-      run: echo "PACKAGE_VERSION=${GITHUB_REF#refs/tags/v}" >> $env:GITHUB_ENV 
+      run: |
+        $version = "${{ github.ref }}".replace('refs/tags/v', '')
+        echo "PACKAGE_VERSION=$version" >> $env:GITHUB_ENV
+    - name: Print PACKAGE_VERSION
+      run: echo $env:PACKAGE_VERSION
 
     - name: Pack with tag version
-      run: dotnet pack ./src/MVVMToolkitExtensions.WPF/MVVMToolkitExtensions.WPF.csproj --configuration Release -o ./out /p:PackageVersion=${{ env.PACKAGE_VERSION }}
-  
+      run: dotnet pack .\src\MVVMToolkitExtensions.WPF\MVVMToolkitExtensions.WPF.csproj --configuration Release -o .\out /p:PackageVersion=${{ env.PACKAGE_VERSION }}
+
+    - name: List files in out directory
+      run: Get-ChildItem -Path .\out\
+
     - name: Push to NuGet
-      run: dotnet nuget push "./out/MVVMToolkitExtensions.WPF.*.nupkg" -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
+      run: dotnet nuget push ".\out\MVVMToolkitExtensions.WPF.*.nupkg" -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
