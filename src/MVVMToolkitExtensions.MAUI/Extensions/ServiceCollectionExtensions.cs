@@ -50,7 +50,6 @@ public static class ServiceCollectionExtensions
         services.TryAddSingleton<IPageFactory, PageFactory>();
         services.TryAddSingleton<INavigationRoot, NavigationRoot>();
         services.TryAddSingleton<INavigationService, NavigationService>();
-        services.TryAddSingleton<IDialogService, DialogService>();
         return services;
     }
 
