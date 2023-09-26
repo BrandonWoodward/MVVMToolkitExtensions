@@ -10,7 +10,7 @@
 *.userosscache
 *.sln.docstates
 /.idea/.idea.LightMvvmUtils/.idea
-/demos/MVVMToolkitExtensions.WPF.Demo/MVVMToolkitExtensions.WPF.Demo.csproj
+/demos
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
@@ -363,7 +363,3 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
-/demos/MVVMToolkitExtensions.WPF.Demo/MVVMToolkitExtensions.WPF.Demo.csproj
-/demos/MVVMToolkitExtensions.WPF.Demo/MVVMToolkitExtensions.WPF.Demo.csproj
-/demos/MVVMToolkitExtensions.MAUI.Demo/MVVMToolkitExtensions.MAUI.Demo.csproj
-/demos/MVVMToolkitExtensions.WPF.Demo/MVVMToolkitExtensions.WPF.Demo.csproj
