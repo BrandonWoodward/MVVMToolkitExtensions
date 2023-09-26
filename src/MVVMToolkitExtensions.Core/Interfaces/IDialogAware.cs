@@ -1,7 +1,7 @@
 ﻿namespace MVVMToolkitExtensions.Core.Interfaces;
 
 /// <summary>
-/// Tap into the dialog lifecycle using these methods
+/// Tap into the dialog lifecycle using these methods.
 /// </summary>
 public interface IDialogAware
 {
@@ -19,7 +19,7 @@ public interface IDialogAware
     /// Called when the dialog is opened.
     /// </summary>
     /// <param name="parameters">
-    /// Key/value pairs to be passed to the dialog's ViewModel
+    /// Key/value pairs to be passed to the dialog's ViewModel.
     /// </param>
     void OnDialogOpened(IParameters parameters);
 }

@@ -1,13 +1,24 @@
 ﻿using System.Windows;
 using MVVMToolkitExtensions.Core.Interfaces;
+using MVVMToolkitExtensions.Core.Models;
 
 namespace MVVMToolkitExtensions.WPF.Interfaces;
 
 /// <summary>
-/// Service used to show dialogs and pass parameters to them.
-/// Dialogs must be registered in the DI container with AddView
+/// Service used to show dialogs and pass parameters to their ViewModels.
 /// </summary>
 public interface IDialogService
 {
-    void ShowDialog<TView>(IParameters parameters) where TView : FrameworkElement;
+    /// <summary>
+    /// Show the view provided as a dialog. If your view is a Window, it will be shown as is;
+    /// anything else will be wrapped in a Window control.
+    /// </summary>
+    /// <remarks>
+    /// The view must be registered in the DI container using AddView.
+    /// </remarks>
+    /// <param name="parameters">Optional parameters to pass parameters to the dialog's ViewModel.
+    /// Use <see cref="IDialogAware"/> to retrieve the parameters through the OnDialogOpened.
+    /// </param>
+    /// <typeparam name="TView">The view to show as a dialog.</typeparam>
+    void ShowDialog<TView>(DialogParameters? parameters = null) where TView : FrameworkElement;
 }

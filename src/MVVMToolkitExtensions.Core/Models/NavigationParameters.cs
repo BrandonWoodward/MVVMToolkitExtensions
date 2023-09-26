@@ -1,10 +1,13 @@
 ﻿namespace MVVMToolkitExtensions.Core.Models;
 
+/// <summary>
+/// A set of key/value pairs that can be used to pass parameters between ViewModels.
+/// </summary>
 public class NavigationParameters : BaseParameters
 {
     public NavigationParameters() { }
 
     public NavigationParameters(IDictionary<string, object> initialValues) : base(initialValues) { }
 
-    public static NavigationParameters Empty => new();
+    internal static NavigationParameters Empty => new();
 }

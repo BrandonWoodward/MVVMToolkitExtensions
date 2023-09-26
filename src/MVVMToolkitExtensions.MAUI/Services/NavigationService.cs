@@ -20,7 +20,7 @@ internal sealed class NavigationService : INavigationService
         _navigationRoot = navigationRoot;
     }
     
-    public async Task NavigateAsync(string uri, NavigationParameters parameters)
+    public async Task NavigateAsync(string uri, NavigationParameters parameters = null)
     {
         var cleanUri = uri.Trim();
         var segments = cleanUri.Split('/').Where(s => !string.IsNullOrWhiteSpace(s)).ToList();
@@ -95,7 +95,7 @@ internal sealed class NavigationService : INavigationService
         
         // Handle OnNavigatedTo if ViewModel implements INavigationAware.
         if (viewModel is INavigationAware navigationAware)
-            navigationAware.OnNavigatedTo(parameters);
+            navigationAware.OnNavigatedTo(parameters ?? NavigationParameters.Empty);
         
         // Push page to navigation stack.
         await _navigationRoot.PushAsync(page);

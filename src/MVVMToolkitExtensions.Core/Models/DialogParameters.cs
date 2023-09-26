@@ -10,5 +10,5 @@ public class DialogParameters : BaseParameters
 
     public DialogParameters(IDictionary<string, object> initialValues) : base(initialValues) { }
 
-    public static DialogParameters Empty => new();
+    internal static DialogParameters Empty => new();
 }

@@ -10,10 +10,9 @@ public static class ServiceProviderExtensions
 {
     /// <summary>
     /// Bootstraps the application by registering some required services and showing the provided window.
+    /// The DataContext will be set automatically to the ViewModel registered for the provided view.
     /// </summary>
     /// <typeparam name="TView">The main view type to be displayed after bootstrapping.</typeparam>
-    /// <param name="serviceProvider">The service provider from which services are resolved.</param>
-    /// <returns>The service provider for potential further chaining.</returns>
     public static IServiceProvider Bootstrap<TView>(this IServiceProvider serviceProvider)
         where TView : Window 
     {

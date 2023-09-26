@@ -1,8 +1,10 @@
 ﻿using MVVMToolkitExtensions.Core.Interfaces;
-using MVVMToolkitExtensions.MAUI.Interfaces;
 
 namespace MVVMToolkitExtensions.MAUI.Controls;
 
+/// <summary>
+/// Supports view-based navigation by providing a region to fill with content.
+/// </summary>
 public class RegionControl : ContentView
 {
     public static readonly BindableProperty RegionNameProperty =

@@ -13,11 +13,10 @@ public static class ServiceCollectionExtensions
 {
     /// <summary>
     /// Registers a view and its associated view model to the DI container as transient.
+    /// Adds the mapping to the view registry to allow the view to be resolved with the BindingContext set to the ViewModel provided.
     /// </summary>
     /// <typeparam name="TView">The type of the view to register.</typeparam>
-    /// <typeparam name="TViewModel">The type of the view model to register.</typeparam>
-    /// <param name="services">The IServiceCollection to add the services to.</param>
-    /// <returns>The same service collection so that multiple calls can be chained.</returns>
+    /// <typeparam name="TViewModel">The type of the view model associated with the view.</typeparam>
     public static IServiceCollection AddView<TView, TViewModel>(this IServiceCollection services)
         where TView : VisualElement
         where TViewModel : class
@@ -31,6 +30,9 @@ public static class ServiceCollectionExtensions
     /// <summary>
     /// Registers a page for navigation. The URI route is inferred from the page type name.
     /// </summary>
+    /// <remarks>
+    /// You should also register the page and it's view model with the DI container using the AddView method.
+    /// </remarks>
     /// <typeparam name="TPage">The type of the page to register.</typeparam>
     public static void AddRoute<TPage>(this IServiceCollection services)
         where TPage : Page
