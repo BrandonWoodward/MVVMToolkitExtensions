@@ -1,12 +1,10 @@
 ﻿using System.Windows;
 using MVVMToolkitExtensions.Core.Interfaces;
+using MVVMToolkitExtensions.Core.Models;
 using MVVMToolkitExtensions.WPF.Interfaces;
 
 namespace MVVMToolkitExtensions.WPF.Services;
 
-/// <summary>
-/// Service used to show dialogs and pass parameters to them.
-/// </summary>
 internal sealed class DialogService : IDialogService
 {
     private readonly IDialogFactory _dialogWindowFactory;
@@ -17,7 +15,7 @@ internal sealed class DialogService : IDialogService
         _dialogWindowFactory = dialogWindowFactory;
     }
 
-    public void ShowDialog<TView>(IParameters parameters) where TView : FrameworkElement
+    public void ShowDialog<TView>(DialogParameters? parameters = null) where TView : FrameworkElement
     {
         CreateDialog<TView>()
             .HandleDialogAware(parameters)
@@ -31,12 +29,12 @@ internal sealed class DialogService : IDialogService
         return this;
     }
 
-    private DialogService HandleDialogAware(IParameters parameters)
+    private DialogService HandleDialogAware(DialogParameters? parameters)
     {
         if (_currentView?.DataContext is not IDialogAware dialogAwareViewModel) return this;
         _currentView.Closing += (_, e) => e.Cancel = !dialogAwareViewModel.CanCloseDialog();
         _currentView.Closed += (_, _) => dialogAwareViewModel.OnDialogClosed();
-        dialogAwareViewModel.OnDialogOpened(parameters);
+        dialogAwareViewModel.OnDialogOpened(parameters ?? DialogParameters.Empty);
         return this;
     }
 

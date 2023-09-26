@@ -17,14 +17,14 @@ internal sealed class RegionManager : IRegionManager
         _regionRegistry = regionRegistry;
     }
 
-    public void Navigate<TView>(string regionName, NavigationParameters parameters) 
+    public void Navigate<TView>(string regionName, NavigationParameters? parameters = null) 
         where TView : FrameworkElement
     {
         CheckRegionExists(regionName)
             .ClearContent(regionName)
             .HandleNavigationAware(regionName, vm => vm.OnNavigatedFrom())
             .SetContent<TView>(regionName)
-            .HandleNavigationAware(regionName, vm => vm.OnNavigatedTo(parameters));
+            .HandleNavigationAware(regionName, vm => vm.OnNavigatedTo(parameters ?? NavigationParameters.Empty));
     }
 
     public void Clear(string regionName) 
