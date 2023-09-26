@@ -11,7 +11,7 @@ namespace MVVMToolkitExtensions.MAUI.Tests;
 public class RegionManagerTests
 {
     private readonly IViewFactory _viewFactory;
-    private readonly IRegionRegistry _regionRegistry;
+    private readonly IRegionRegistry<RegionControl> _regionRegistry;
     private readonly IRegionManager _sut;
     
     private class StubView : View { }
@@ -19,7 +19,7 @@ public class RegionManagerTests
     public RegionManagerTests()
     {
         _viewFactory = Substitute.For<IViewFactory>();
-        _regionRegistry = Substitute.For<IRegionRegistry>();
+        _regionRegistry = Substitute.For<IRegionRegistry<RegionControl>>();
         _sut = new RegionManager(_viewFactory, _regionRegistry);
     }
     
