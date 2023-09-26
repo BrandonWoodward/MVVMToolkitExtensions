@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
+using MVVMToolkitExtensions.Core.Interfaces;
 using MVVMToolkitExtensions.WPF.Interfaces;
 
 namespace MVVMToolkitExtensions.WPF.Controls;
@@ -24,7 +25,7 @@ public class RegionControl : ContentControl
         
         // TODO - How can I access the INavigationRegistry here without this global state?
         if (Application.Current.Resources["NavigationRegistry"] 
-            is not IRegionRegistry navigationRegistry) 
+            is not IRegionRegistry<RegionControl> navigationRegistry) 
             throw new NullReferenceException();
         
         navigationRegistry[regionName] = navigationContainer;

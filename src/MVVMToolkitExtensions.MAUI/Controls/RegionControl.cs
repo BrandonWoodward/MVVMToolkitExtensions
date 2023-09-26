@@ -1,4 +1,5 @@
-﻿using MVVMToolkitExtensions.MAUI.Interfaces;
+﻿using MVVMToolkitExtensions.Core.Interfaces;
+using MVVMToolkitExtensions.MAUI.Interfaces;
 
 namespace MVVMToolkitExtensions.MAUI.Controls;
 
@@ -24,7 +25,7 @@ public class RegionControl : ContentView
         
         // This is strange. How else to get the service provider in a static callback?
         // All controls in MAUI have an IMauiContext from which you can access the Dependency Injection container to get services.
-        var regionRegistry = (navigationContainer as IMauiContext)!.Services.GetRequiredService<IRegionRegistry>();
+        var regionRegistry = (navigationContainer as IMauiContext)!.Services.GetRequiredService<IRegionRegistry<RegionControl>>();
         regionRegistry[regionName] = navigationContainer;
     }
 }

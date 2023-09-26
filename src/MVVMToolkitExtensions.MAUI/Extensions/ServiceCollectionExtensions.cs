@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection.Extensions;
 using MVVMToolkitExtensions.Core.Interfaces;
 using MVVMToolkitExtensions.Core.Models;
+using MVVMToolkitExtensions.MAUI.Controls;
 using MVVMToolkitExtensions.MAUI.Factories;
 using MVVMToolkitExtensions.MAUI.Interfaces;
 using MVVMToolkitExtensions.MAUI.Models;
@@ -44,11 +45,12 @@ public static class ServiceCollectionExtensions
     {
         services.TryAddSingleton<IViewRegistry, ViewRegistry>();
         services.TryAddSingleton<INavigationRegistry, NavigationRegistry>();
-        services.TryAddSingleton<IRegionRegistry, RegionRegistry>();
+        services.TryAddSingleton<IRegionRegistry<RegionControl>, RegionRegistry<RegionControl>>();
         services.TryAddSingleton<IViewFactory, ViewFactory>();
         services.TryAddSingleton<IPageFactory, PageFactory>();
         services.TryAddSingleton<INavigationRoot, NavigationRoot>();
         services.TryAddSingleton<INavigationService, NavigationService>();
+        services.TryAddSingleton<IDialogService, DialogService>();
         return services;
     }
 

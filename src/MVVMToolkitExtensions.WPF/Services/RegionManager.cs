@@ -1,17 +1,17 @@
 ﻿using System.Windows;
 using MVVMToolkitExtensions.Core.Interfaces;
 using MVVMToolkitExtensions.Core.Models;
+using MVVMToolkitExtensions.WPF.Controls;
 using MVVMToolkitExtensions.WPF.Interfaces;
-using MVVMToolkitExtensions.WPF.Models;
 
 namespace MVVMToolkitExtensions.WPF.Services;
 
 internal sealed class RegionManager : IRegionManager
 {
     private readonly IViewFactory _viewFactory;
-    private readonly IRegionRegistry _regionRegistry;
+    private readonly IRegionRegistry<RegionControl> _regionRegistry;
 
-    public RegionManager(IViewFactory viewFactory, IRegionRegistry regionRegistry)
+    public RegionManager(IViewFactory viewFactory, IRegionRegistry<RegionControl> regionRegistry)
     {
         _viewFactory = viewFactory;
         _regionRegistry = regionRegistry;
@@ -23,7 +23,7 @@ internal sealed class RegionManager : IRegionManager
         CheckRegionExists(regionName)
             .ClearContent(regionName)
             .HandleNavigationAware(regionName, vm => vm.OnNavigatedFrom())
-            .SetContent<TView>(regionName, parameters)
+            .SetContent<TView>(regionName)
             .HandleNavigationAware(regionName, vm => vm.OnNavigatedTo(parameters));
     }
 
@@ -57,7 +57,7 @@ internal sealed class RegionManager : IRegionManager
         return this;
     }
 
-    private RegionManager SetContent<TView>(string regionName, NavigationParameters parameters) 
+    private RegionManager SetContent<TView>(string regionName) 
         where TView : FrameworkElement
     {
         var (view, _) = _viewFactory.Create<TView>();

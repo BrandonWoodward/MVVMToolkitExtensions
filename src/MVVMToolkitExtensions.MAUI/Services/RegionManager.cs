@@ -1,5 +1,6 @@
 ﻿using MVVMToolkitExtensions.Core.Interfaces;
 using MVVMToolkitExtensions.Core.Models;
+using MVVMToolkitExtensions.MAUI.Controls;
 using MVVMToolkitExtensions.MAUI.Interfaces;
 
 namespace MVVMToolkitExtensions.MAUI.Services;
@@ -7,9 +8,9 @@ namespace MVVMToolkitExtensions.MAUI.Services;
 internal sealed class RegionManager : IRegionManager
 {
     private readonly IViewFactory _viewFactory;
-    private readonly IRegionRegistry _regionRegistry;
+    private readonly IRegionRegistry<RegionControl> _regionRegistry;
 
-    public RegionManager(IViewFactory viewFactory, IRegionRegistry regionRegistry)
+    public RegionManager(IViewFactory viewFactory, IRegionRegistry<RegionControl> regionRegistry)
     {
         _viewFactory = viewFactory;
         _regionRegistry = regionRegistry;
@@ -54,7 +55,7 @@ internal sealed class RegionManager : IRegionManager
         return this;
     }
 
-    private RegionManager SetContent<TView>(string regionName) 
+    private RegionManager SetContent<TView>(string regionName)
         where TView : View
     {
         var (view, _) = _viewFactory.Create<TView>();
