@@ -33,6 +33,6 @@ jobs:
     
     - name: Run tests
       run: |
-        dotnet test ./tests/MVVMToolkitExtensions.Core.Tests/MVVMToolkitExtensions.Core.Tests.csproj --no-restore --no-build --verbosity normal
-        dotnet test ./tests/MVVMToolkitExtensions.WPF.Tests/MVVMToolkitExtensions.WPF.Tests.csproj --no-restore --no-build --verbosity normal
-        dotnet test ./tests/MVVMToolkitExtensions.MAUI.Tests/MVVMToolkitExtensions.MAUI.Tests.csproj --no-restore --no-build --verbosity normal
+        dotnet test ./tests/MVVMToolkitExtensions.Core.Tests/MVVMToolkitExtensions.Core.Tests.csproj --no-restore --verbosity normal
+        dotnet test ./tests/MVVMToolkitExtensions.WPF.Tests/MVVMToolkitExtensions.WPF.Tests.csproj --no-restore --verbosity normal
+        dotnet test ./tests/MVVMToolkitExtensions.MAUI.Tests/MVVMToolkitExtensions.MAUI.Tests.csproj --no-restore --verbosity normal
