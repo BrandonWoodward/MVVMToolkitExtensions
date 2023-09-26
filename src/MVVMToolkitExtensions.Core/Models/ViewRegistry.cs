@@ -8,7 +8,8 @@ internal sealed class ViewRegistry : IViewRegistry
 
     public Type this[Type viewType]
     {
-        get => _registry[viewType];
+        get => _registry.TryGetValue(viewType, out var type) 
+            ? type : throw new KeyNotFoundException("View not found. Register a View/ViewModel using AddView<TView, TViewModel>()");
         set => _registry[viewType] = value;
     }
 
@@ -21,12 +22,6 @@ internal sealed class ViewRegistry : IViewRegistry
             viewRegistration => viewRegistration.ViewModelType
         );
     }
-    
-    public IEnumerable<Type> Views() 
-        =>  _registry.Keys.AsEnumerable();
-    
-    public IEnumerable<Type> ViewModels()
-        => _registry.Values.AsEnumerable();
 
     public bool Contains(Type viewType)
         => _registry.ContainsKey(viewType);
