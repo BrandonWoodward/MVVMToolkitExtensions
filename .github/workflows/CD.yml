@@ -1,4 +1,4 @@
-name: deployment
+name: CD
 
 on:
   release:
@@ -26,11 +26,23 @@ jobs:
     - name: Print PACKAGE_VERSION
       run: echo $env:PACKAGE_VERSION
 
-    - name: Pack with tag version
+    # Pack and Publish MyPackage.Core
+    - name: Pack MyPackage.Core with tag version
+      run: dotnet pack .\src\MVVMToolkitExtensions.Core\MVVMToolkitExtensions.Core.csproj --configuration Release -o .\out /p:PackageVersion=${{ env.PACKAGE_VERSION }}
+
+    - name: Push MyPackage.Core to NuGet
+      run: dotnet nuget push ".\out\MVVMToolkitExtensions.Core.*.nupkg" -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
+
+    # Pack and Publish MyPackage.WPF
+    - name: Pack MyPackage.WPF with tag version
       run: dotnet pack .\src\MVVMToolkitExtensions.WPF\MVVMToolkitExtensions.WPF.csproj --configuration Release -o .\out /p:PackageVersion=${{ env.PACKAGE_VERSION }}
 
-    - name: List files in out directory
-      run: Get-ChildItem -Path .\out\
-
-    - name: Push to NuGet
+    - name: Push MyPackage.WPF to NuGet
       run: dotnet nuget push ".\out\MVVMToolkitExtensions.WPF.*.nupkg" -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
+
+    # Pack and Publish MyPackage.MAUI
+    - name: Pack MyPackage.MAUI with tag version
+      run: dotnet pack .\src\MVVMToolkitExtensions.MAUI\MVVMToolkitExtensions.MAUI.csproj --configuration Release -o .\out /p:PackageVersion=${{ env.PACKAGE_VERSION }}
+
+    - name: Push MyPackage.MAUI to NuGet
+      run: dotnet nuget push ".\out\MVVMToolkitExtensions.MAUI.*.nupkg" -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
