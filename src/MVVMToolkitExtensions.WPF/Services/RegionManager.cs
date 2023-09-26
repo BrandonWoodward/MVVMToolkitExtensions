@@ -1,15 +1,17 @@
 ﻿using System.Windows;
+using MVVMToolkitExtensions.Core.Interfaces;
+using MVVMToolkitExtensions.Core.Models;
 using MVVMToolkitExtensions.WPF.Interfaces;
 using MVVMToolkitExtensions.WPF.Models;
 
 namespace MVVMToolkitExtensions.WPF.Services;
 
-internal sealed class NavigationService : INavigationService
+internal sealed class RegionManager : IRegionManager
 {
     private readonly IViewFactory _viewFactory;
-    private readonly INavigationRegistry _regionRegistry;
+    private readonly IRegionRegistry _regionRegistry;
 
-    public NavigationService(IViewFactory viewFactory, INavigationRegistry regionRegistry)
+    public RegionManager(IViewFactory viewFactory, IRegionRegistry regionRegistry)
     {
         _viewFactory = viewFactory;
         _regionRegistry = regionRegistry;
@@ -32,20 +34,20 @@ internal sealed class NavigationService : INavigationService
             .HandleNavigationAware(regionName, vm => vm.OnNavigatedFrom());
     }
 
-    private NavigationService CheckRegionExists(string regionName)
+    private RegionManager CheckRegionExists(string regionName)
     {
         if (!_regionRegistry.Contains(regionName))
             throw new InvalidOperationException($"Region with name {regionName} not found.");
         return this;
     }
 
-    private NavigationService ClearContent(string regionName)
+    private RegionManager ClearContent(string regionName)
     {
         _regionRegistry[regionName].Content = null;
         return this;
     }
 
-    private NavigationService HandleNavigationAware(string regionName, Action<INavigationAware> action)
+    private RegionManager HandleNavigationAware(string regionName, Action<INavigationAware> action)
     {
         if (_regionRegistry[regionName].Content is FrameworkElement 
                { DataContext: INavigationAware navigationAwareViewModel })
@@ -55,7 +57,7 @@ internal sealed class NavigationService : INavigationService
         return this;
     }
 
-    private NavigationService SetContent<TView>(string regionName, NavigationParameters parameters) 
+    private RegionManager SetContent<TView>(string regionName, NavigationParameters parameters) 
         where TView : FrameworkElement
     {
         var (view, _) = _viewFactory.Create<TView>();

@@ -364,3 +364,6 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 /demos/MVVMToolkitExtensions.WPF.Demo/MVVMToolkitExtensions.WPF.Demo.csproj
+/demos/MVVMToolkitExtensions.WPF.Demo/MVVMToolkitExtensions.WPF.Demo.csproj
+/demos/MVVMToolkitExtensions.MAUI.Demo/MVVMToolkitExtensions.MAUI.Demo.csproj
+/demos/MVVMToolkitExtensions.WPF.Demo/MVVMToolkitExtensions.WPF.Demo.csproj

@@ -1,4 +1,6 @@
-﻿namespace MVVMToolkitExtensions.WPF.Interfaces;
+﻿using MVVMToolkitExtensions.Core.Interfaces;
+
+namespace MVVMToolkitExtensions.WPF.Interfaces;
 
 /// <summary>
 /// Tap into the dialog lifecycle using these methods

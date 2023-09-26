@@ -1,6 +1,8 @@
 ﻿using AutoWireViewModel.Demos.WPF.Views;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using MVVMToolkitExtensions.Core.Interfaces;
+using MVVMToolkitExtensions.Core.Models;
 using MVVMToolkitExtensions.WPF.Interfaces;
 using MVVMToolkitExtensions.WPF.Models;
 

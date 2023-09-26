@@ -1,4 +1,4 @@
-﻿namespace MVVMToolkitExtensions.WPF.Interfaces;
+﻿namespace MVVMToolkitExtensions.Core.Interfaces;
 
 /// <summary>
 /// Tap into the navigation lifecycle of the view

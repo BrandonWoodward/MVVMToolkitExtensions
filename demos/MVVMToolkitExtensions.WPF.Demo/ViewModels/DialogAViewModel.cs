@@ -1,6 +1,7 @@
 ﻿using System;
 using CommunityToolkit.Mvvm.ComponentModel;
 using System.Diagnostics;
+using MVVMToolkitExtensions.Core.Interfaces;
 using MVVMToolkitExtensions.WPF.Interfaces;
 
 namespace AutoWireViewModel.Demos.WPF.ViewModels;

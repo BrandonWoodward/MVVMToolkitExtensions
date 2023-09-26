@@ -3,11 +3,11 @@ using MVVMToolkitExtensions.WPF.Interfaces;
 
 namespace MVVMToolkitExtensions.WPF.Models;
 
-public sealed class NavigationRegistry : INavigationRegistry
+internal sealed class RegionRegistry : IRegionRegistry
 {
-    private readonly Dictionary<string, NavigationContainer> _registry = new();
+    private readonly Dictionary<string, RegionControl> _registry = new();
 
-    public NavigationContainer this[string regionName]
+    public RegionControl this[string regionName]
     {
         get => _registry[regionName];
         set => _registry[regionName] = value;

@@ -1,6 +1,8 @@
 ﻿using System.Windows;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
+using MVVMToolkitExtensions.Core.Interfaces;
+using MVVMToolkitExtensions.Core.Models;
 using MVVMToolkitExtensions.WPF.Factories;
 using MVVMToolkitExtensions.WPF.Interfaces;
 using MVVMToolkitExtensions.WPF.Models;
@@ -30,11 +32,11 @@ public static class ServiceCollectionExtensions
     private static IServiceCollection CheckRequiredServicesRegistered(this IServiceCollection services)
     {
         services.TryAddSingleton<IViewRegistry, ViewRegistry>();
-        services.TryAddSingleton<INavigationRegistry, NavigationRegistry>();
+        services.TryAddSingleton<IRegionRegistry, RegionRegistry>();
         services.TryAddSingleton<IViewFactory, ViewFactory>();
         services.TryAddSingleton<IDialogFactory, DialogFactory>();
         services.TryAddSingleton<IDialogService, DialogService>();
-        services.TryAddSingleton<INavigationService, NavigationService>();
+        services.TryAddSingleton<IRegionManager, RegionManager>();
         return services;
     }
 
@@ -53,7 +55,7 @@ public static class ServiceCollectionExtensions
     {
         services.TryAddEnumerable(ServiceDescriptor.Transient(
             typeof(IViewRegistration),
-            typeof(ViewRegistration<TView, TViewModel>)
+            typeof(ViewRegistration<TView, TViewModel, FrameworkElement>)
         ));
         return services;
     }

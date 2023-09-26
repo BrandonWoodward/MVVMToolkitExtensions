@@ -2,7 +2,7 @@
 
 namespace MVVMToolkitExtensions.WPF.Interfaces;
 
-public interface IDialogWindow
+internal interface IDialogWindow
 {
     object DataContext { get; set; }
 

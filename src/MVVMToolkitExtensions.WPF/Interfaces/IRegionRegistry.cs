@@ -2,8 +2,8 @@
 
 namespace MVVMToolkitExtensions.WPF.Interfaces;
 
-public interface INavigationRegistry
+internal interface IRegionRegistry
 {
-    NavigationContainer this[string regionName] { get; set; }
+    RegionControl this[string regionName] { get; set; }
     bool Contains(string regionName);
 }

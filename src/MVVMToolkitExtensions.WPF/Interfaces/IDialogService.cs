@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using MVVMToolkitExtensions.Core.Interfaces;
 
 namespace MVVMToolkitExtensions.WPF.Interfaces;
 

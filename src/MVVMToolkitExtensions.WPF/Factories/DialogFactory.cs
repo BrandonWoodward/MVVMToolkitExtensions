@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using Microsoft.Extensions.DependencyInjection;
+using MVVMToolkitExtensions.Core.Interfaces;
 using MVVMToolkitExtensions.WPF.Adapters;
 using MVVMToolkitExtensions.WPF.Interfaces;
 

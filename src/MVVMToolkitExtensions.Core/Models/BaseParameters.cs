@@ -1,7 +1,7 @@
 ﻿using System.Collections;
-using MVVMToolkitExtensions.WPF.Interfaces;
+using MVVMToolkitExtensions.Core.Interfaces;
 
-namespace MVVMToolkitExtensions.WPF.Models;
+namespace MVVMToolkitExtensions.Core.Models;
 
 public class BaseParameters : IParameters, IEnumerable
 {

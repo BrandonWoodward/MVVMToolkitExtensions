@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using MVVMToolkitExtensions.Core.Interfaces;
 using MVVMToolkitExtensions.WPF.Interfaces;
 
 namespace MVVMToolkitExtensions.WPF.Services;
@@ -25,7 +26,7 @@ internal sealed class DialogService : IDialogService
 
     private DialogService CreateDialog<TView>() where TView : FrameworkElement
     {
-        var (view, viewModel) = _dialogWindowFactory.Create<TView>();
+        var (view, _) = _dialogWindowFactory.Create<TView>();
         _currentView = view;
         return this;
     }

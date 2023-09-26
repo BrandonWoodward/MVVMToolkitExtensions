@@ -1,6 +1,5 @@
 ﻿using System.Windows;
 using Microsoft.Extensions.DependencyInjection;
-using MVVMToolkitExtensions.WPF.Controls;
 using MVVMToolkitExtensions.WPF.Interfaces;
 
 namespace MVVMToolkitExtensions.WPF.Extensions;
@@ -16,7 +15,7 @@ public static class ServiceProviderExtensions
     public static IServiceProvider Bootstrap<TView>(this IServiceProvider serviceProvider)
         where TView : Window 
     {
-        var navigationRegistry = serviceProvider.GetRequiredService<INavigationRegistry>();
+        var navigationRegistry = serviceProvider.GetRequiredService<IRegionRegistry>();
         
         // TODO - Exposing global state like this is not ideal
         // TODO - How else can I access these services in static callback for DependencyProperty?

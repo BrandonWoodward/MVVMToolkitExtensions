@@ -1,6 +1,6 @@
-﻿namespace MVVMToolkitExtensions.WPF.Interfaces;
+﻿namespace MVVMToolkitExtensions.Core.Interfaces;
 
-public interface IViewRegistry
+internal interface IViewRegistry
 {
     Type this[Type viewType] { get; set; }
     bool Contains(Type viewType);

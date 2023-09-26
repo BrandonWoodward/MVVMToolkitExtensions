@@ -4,7 +4,7 @@ using MVVMToolkitExtensions.WPF.Interfaces;
 
 namespace MVVMToolkitExtensions.WPF.Adapters;
 
-internal class DialogWindowAdapter : IDialogWindow
+internal sealed class DialogWindowAdapter : IDialogWindow
 {
     private readonly Window _window;
 

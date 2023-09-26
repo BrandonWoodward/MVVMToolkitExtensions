@@ -1,4 +1,4 @@
-﻿namespace MVVMToolkitExtensions.WPF.Interfaces;
+﻿namespace MVVMToolkitExtensions.Core.Interfaces;
 
 public interface IParameters
 {

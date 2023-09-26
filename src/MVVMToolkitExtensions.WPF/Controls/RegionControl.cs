@@ -4,12 +4,12 @@ using MVVMToolkitExtensions.WPF.Interfaces;
 
 namespace MVVMToolkitExtensions.WPF.Controls;
 
-public class NavigationContainer : ContentControl
+public class RegionControl : ContentControl
 {
     public static readonly DependencyProperty RegionNameProperty = DependencyProperty.Register(
         nameof(RegionName),
         typeof(string),
-        typeof(NavigationContainer),
+        typeof(RegionControl),
         new(null, OnRegionNameChanged));
 
     public string RegionName 
@@ -20,11 +20,11 @@ public class NavigationContainer : ContentControl
 
     private static void OnRegionNameChanged(DependencyObject d, DependencyPropertyChangedEventArgs e) 
     {
-        if (d is not NavigationContainer navigationContainer || e.NewValue is not string regionName) return;
+        if (d is not RegionControl navigationContainer || e.NewValue is not string regionName) return;
         
         // TODO - How can I access the INavigationRegistry here without this global state?
         if (Application.Current.Resources["NavigationRegistry"] 
-            is not INavigationRegistry navigationRegistry) 
+            is not IRegionRegistry navigationRegistry) 
             throw new NullReferenceException();
         
         navigationRegistry[regionName] = navigationContainer;

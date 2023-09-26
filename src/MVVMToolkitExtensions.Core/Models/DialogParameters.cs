@@ -1,4 +1,4 @@
-﻿namespace MVVMToolkitExtensions.WPF.Models;
+﻿namespace MVVMToolkitExtensions.Core.Models;
 
 
 /// <summary>

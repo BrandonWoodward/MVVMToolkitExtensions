@@ -1,8 +1,8 @@
-﻿using MVVMToolkitExtensions.WPF.Interfaces;
+﻿using MVVMToolkitExtensions.Core.Interfaces;
 
-namespace MVVMToolkitExtensions.WPF.Models;
+namespace MVVMToolkitExtensions.Core.Models;
 
-public sealed class ViewRegistry : IViewRegistry
+internal sealed class ViewRegistry : IViewRegistry
 {
     private readonly Dictionary<Type, Type> _registry;
 
