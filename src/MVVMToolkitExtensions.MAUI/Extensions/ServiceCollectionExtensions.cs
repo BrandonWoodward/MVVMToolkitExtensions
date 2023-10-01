@@ -47,6 +47,7 @@ public static class ServiceCollectionExtensions
     {
         services.TryAddSingleton<IViewRegistry, ViewRegistry>();
         services.TryAddSingleton<INavigationRegistry, NavigationRegistry>();
+        services.TryAddSingleton<IRegionManager, RegionManager>();
         services.TryAddSingleton<IRegionRegistry<RegionControl>, RegionRegistry<RegionControl>>();
         services.TryAddSingleton<IViewFactory, ViewFactory>();
         services.TryAddSingleton<IPageFactory, PageFactory>();
