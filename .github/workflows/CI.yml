@@ -21,18 +21,15 @@ jobs:
 
     - name: Restore dependencies
       run: |
-        dotnet restore ./src/MVVMToolkitExtensions.Core/MVVMToolkitExtensions.Core.csproj
         dotnet restore ./src/MVVMToolkitExtensions.WPF/MVVMToolkitExtensions.WPF.csproj
         dotnet restore ./src/MVVMToolkitExtensions.MAUI/MVVMToolkitExtensions.MAUI.csproj
 
     - name: Build specified projects
       run: |
-        dotnet build ./src/MVVMToolkitExtensions.Core/MVVMToolkitExtensions.Core.csproj --configuration Release --no-restore
         dotnet build ./src/MVVMToolkitExtensions.WPF/MVVMToolkitExtensions.WPF.csproj --configuration Release --no-restore
         dotnet build ./src/MVVMToolkitExtensions.MAUI/MVVMToolkitExtensions.MAUI.csproj --configuration Release --no-restore
     
     - name: Run tests
       run: |
-        dotnet test ./tests/MVVMToolkitExtensions.Core.Tests/MVVMToolkitExtensions.Core.Tests.csproj --verbosity normal
         dotnet test ./tests/MVVMToolkitExtensions.WPF.Tests/MVVMToolkitExtensions.WPF.Tests.csproj --verbosity normal
         dotnet test ./tests/MVVMToolkitExtensions.MAUI.Tests/MVVMToolkitExtensions.MAUI.Tests.csproj --verbosity normal
