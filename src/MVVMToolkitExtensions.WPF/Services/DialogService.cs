@@ -1,6 +1,6 @@
-﻿using System.Windows;
-using MVVMToolkitExtensions.WPF.Interfaces;
+﻿using MVVMToolkitExtensions.WPF.Interfaces;
 using MVVMToolkitExtensions.WPF.Models;
+using System.Windows;
 
 namespace MVVMToolkitExtensions.WPF.Services;
 
@@ -30,16 +30,13 @@ internal sealed class DialogService : IDialogService
 
     private DialogService HandleDialogAware(DialogParameters? parameters)
     {
-        if (_currentView?.DataContext is not IDialogAware dialogAwareViewModel) return this;
+        if(_currentView?.DataContext is not IDialogAware dialogAwareViewModel) return this;
         _currentView.Closing += (_, e) => e.Cancel = !dialogAwareViewModel.CanCloseDialog();
         _currentView.Closed += (_, _) => dialogAwareViewModel.OnDialogClosed();
         dialogAwareViewModel.OnDialogOpened(parameters ?? DialogParameters.Empty);
         return this;
     }
 
-    private void Show()
-    {
-        _currentView?.ShowDialog();
-    }
+    private void Show() => _currentView?.ShowDialog();
 }
 
