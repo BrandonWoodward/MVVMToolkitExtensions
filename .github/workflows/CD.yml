@@ -26,23 +26,16 @@ jobs:
     - name: Print PACKAGE_VERSION
       run: echo $env:PACKAGE_VERSION
 
-    # Pack and Publish MyPackage.Core
-    - name: Pack MyPackage.Core with tag version
-      run: dotnet pack .\src\MVVMToolkitExtensions.Core\MVVMToolkitExtensions.Core.csproj --configuration Release -o .\out /p:PackageVersion=${{ env.PACKAGE_VERSION }}
-
-    - name: Push MyPackage.Core to NuGet
-      run: dotnet nuget push ".\out\MVVMToolkitExtensions.Core.*.nupkg" -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
-
-    # Pack and Publish MyPackage.WPF
+    # Pack and Publish MVVMToolkitExtensions.WPF
     - name: Pack MyPackage.WPF with tag version
       run: dotnet pack .\src\MVVMToolkitExtensions.WPF\MVVMToolkitExtensions.WPF.csproj --configuration Release -o .\out /p:PackageVersion=${{ env.PACKAGE_VERSION }}
 
-    - name: Push MyPackage.WPF to NuGet
+    - name: Push MVVMToolkitExtensions.WPF to NuGet
       run: dotnet nuget push ".\out\MVVMToolkitExtensions.WPF.*.nupkg" -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
 
     # Pack and Publish MyPackage.MAUI
-    - name: Pack MyPackage.MAUI with tag version
+    - name: Pack MVVMToolkitExtensions.MAUI with tag version
       run: dotnet pack .\src\MVVMToolkitExtensions.MAUI\MVVMToolkitExtensions.MAUI.csproj --configuration Release -o .\out /p:PackageVersion=${{ env.PACKAGE_VERSION }}
 
-    - name: Push MyPackage.MAUI to NuGet
+    - name: Push MVVMToolkitExtensions.MAUI to NuGet
       run: dotnet nuget push ".\out\MVVMToolkitExtensions.MAUI.*.nupkg" -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
