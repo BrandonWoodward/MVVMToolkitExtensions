@@ -1,22 +1,21 @@
-﻿using System.Windows;
-using MVVMToolkitExtensions.WPF.Controls;
-using MVVMToolkitExtensions.WPF.Interfaces;
+﻿using MVVMToolkitExtensions.WPF.Interfaces;
 using MVVMToolkitExtensions.WPF.Models;
+using System.Windows;
 
 namespace MVVMToolkitExtensions.WPF.Services;
 
 internal sealed class RegionManager : IRegionManager
 {
     private readonly IViewFactory _viewFactory;
-    private readonly IRegionRegistry<RegionControl> _regionRegistry;
+    private readonly IRegionRegistry _regionRegistry;
 
-    public RegionManager(IViewFactory viewFactory, IRegionRegistry<RegionControl> regionRegistry)
+    public RegionManager(IViewFactory viewFactory, IRegionRegistry regionRegistry)
     {
         _viewFactory = viewFactory;
         _regionRegistry = regionRegistry;
     }
 
-    public void Navigate<TView>(string regionName, NavigationParameters? parameters = null) 
+    public void Navigate<TView>(string regionName, NavigationParameters? parameters = null)
         where TView : FrameworkElement
     {
         CheckRegionExists(regionName)
@@ -26,7 +25,7 @@ internal sealed class RegionManager : IRegionManager
             .HandleNavigationAware(regionName, vm => vm.OnNavigatedTo(parameters ?? NavigationParameters.Empty));
     }
 
-    public void Clear(string regionName) 
+    public void Clear(string regionName)
     {
         CheckRegionExists(regionName)
             .ClearContent(regionName)
@@ -35,7 +34,7 @@ internal sealed class RegionManager : IRegionManager
 
     private RegionManager CheckRegionExists(string regionName)
     {
-        if (!_regionRegistry.Contains(regionName))
+        if(!_regionRegistry.Contains(regionName))
             throw new InvalidOperationException($"Region with name {regionName} not found.");
         return this;
     }
@@ -48,15 +47,15 @@ internal sealed class RegionManager : IRegionManager
 
     private RegionManager HandleNavigationAware(string regionName, Action<INavigationAware> action)
     {
-        if (_regionRegistry[regionName].Content is FrameworkElement 
-               { DataContext: INavigationAware navigationAwareViewModel })
+        if(_regionRegistry[regionName].Content is FrameworkElement
+            { DataContext: INavigationAware navigationAwareViewModel })
         {
             action(navigationAwareViewModel);
         }
         return this;
     }
 
-    private RegionManager SetContent<TView>(string regionName) 
+    private RegionManager SetContent<TView>(string regionName)
         where TView : FrameworkElement
     {
         var (view, _) = _viewFactory.Create<TView>();

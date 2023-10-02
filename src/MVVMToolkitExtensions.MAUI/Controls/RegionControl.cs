@@ -4,8 +4,14 @@ using MVVMToolkitExtensions.MAUI.Models;
 namespace MVVMToolkitExtensions.MAUI.Controls;
 
 /// <summary>
-/// Supports view-based navigation by providing a region to fill with content.
+/// Represents a control that provides a region for view-based navigation.
+/// This control allows you to define a region in XAML and then use a navigation 
+/// service to place views into it.
 /// </summary>
+/// <remarks>
+/// By defining a <see cref="RegionName"/>, you're effectively creating a placeholder
+/// or "region" where content can be injected dynamically using the navigation service.
+/// </remarks>
 public class RegionControl : ContentView
 {
     private string _regionName;
@@ -21,30 +27,4 @@ public class RegionControl : ContentView
             }
         }
     }
-
-
-    //public static readonly BindableProperty RegionNameProperty =
-    //    BindableProperty.Create(
-    //        nameof(RegionName),
-    //        typeof(string),
-    //        typeof(RegionControl),
-    //        defaultValue: null,
-    //        propertyChanged: OnRegionNameChanged);
-
-    //public string RegionName
-    //{
-    //    get => (string)GetValue(RegionNameProperty);
-    //    set => SetValue(RegionNameProperty, value);
-    //}
-
-    //private static void OnRegionNameChanged(BindableObject bindable, object oldValue, object newValue)
-    //{
-    //    if(bindable is not RegionControl navigationContainer || newValue is not string regionName) return;
-
-    //    // This is strange. How else to get the service provider in a static callback?
-    //    // All controls in MAUI have an IMauiContext from which you can access the Dependency Injection container to get services.
-    //    if(navigationContainer is not IMauiContext) return;
-    //    var regionRegistry = (navigationContainer as IMauiContext)!.Services.GetRequiredService<IRegionRegistry<RegionControl>>();
-    //    regionRegistry[regionName] = navigationContainer;
-    //}
 }

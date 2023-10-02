@@ -1,9 +1,8 @@
 ﻿using System.Collections;
-using MVVMToolkitExtensions.WPF.Interfaces;
 
 namespace MVVMToolkitExtensions.WPF.Models;
 
-public class BaseParameters : IParameters, IEnumerable
+public class BaseParameters : IEnumerable
 {
     private readonly Dictionary<string, object> _parameters = new();
 

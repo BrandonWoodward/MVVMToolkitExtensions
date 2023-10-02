@@ -1,7 +1,7 @@
-﻿using System.Windows;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using MVVMToolkitExtensions.WPF.Adapters;
 using MVVMToolkitExtensions.WPF.Interfaces;
+using System.Windows;
 
 namespace MVVMToolkitExtensions.WPF.Factories;
 
@@ -24,10 +24,12 @@ internal sealed class DialogFactory : IDialogFactory
         var viewModelType = _viewRegistry[typeof(TView)];
         var view = _serviceProvider.GetRequiredService<TView>();
         var viewModel = _serviceProvider.GetRequiredService(viewModelType);
-        view.DataContext = viewModel;
 
         // Adapt the control to the IDialogWindow interface
-        var dialogView = new DialogWindowAdapter(view);
+        var dialogView = new DialogWindowAdapter(view)
+        {
+            DataContext = viewModel
+        };
         return (dialogView, (IDialogAware)viewModel);
     }
 }

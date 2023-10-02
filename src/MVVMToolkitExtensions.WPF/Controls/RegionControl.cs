@@ -5,6 +5,16 @@ using System.Windows.Controls;
 
 namespace MVVMToolkitExtensions.WPF.Controls;
 
+/// <summary>
+/// Represents a control that provides a region for view-based navigation.
+/// This control allows you to define a region in XAML and then use a navigation 
+/// service to place views into it.
+/// </summary>
+/// <remarks>
+/// By defining a <see cref="RegionName"/>, you're effectively creating a placeholder
+/// or "region" where content can be injected dynamically using the navigation service.
+/// </remarks>
+/// <example>
 public class RegionControl : ContentControl
 {
     public static readonly DependencyProperty RegionNameProperty = DependencyProperty.Register(
