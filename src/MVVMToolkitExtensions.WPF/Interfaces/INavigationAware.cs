@@ -1,4 +1,6 @@
-﻿namespace MVVMToolkitExtensions.Core.Interfaces;
+﻿using MVVMToolkitExtensions.WPF.Models;
+
+namespace MVVMToolkitExtensions.WPF.Interfaces;
 
 /// <summary>
 /// Tap into the navigation lifecycle of the view/page.
@@ -9,8 +11,8 @@ public interface INavigationAware
     /// Called when the view/page is navigated to.
     /// </summary>
     /// <param name="parameters">Key/Value pairs to pass to the ViewModel</param>
-    void OnNavigatedTo(IParameters parameters);
-    
+    void OnNavigatedTo(NavigationParameters parameters);
+
     /// <summary>
     /// Called when the view/page is navigated from.
     /// </summary>
