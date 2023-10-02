@@ -1,7 +1,4 @@
 ﻿using Microsoft.Extensions.DependencyInjection.Extensions;
-using MVVMToolkitExtensions.Core.Interfaces;
-using MVVMToolkitExtensions.Core.Models;
-using MVVMToolkitExtensions.MAUI.Controls;
 using MVVMToolkitExtensions.MAUI.Factories;
 using MVVMToolkitExtensions.MAUI.Interfaces;
 using MVVMToolkitExtensions.MAUI.Models;
@@ -26,7 +23,7 @@ public static class ServiceCollectionExtensions
             .RegisterViewAndViewModel<TView, TViewModel>()
             .RegisterWithViewRegistry<TView, TViewModel>();
     }
-    
+
     /// <summary>
     /// Registers a page for navigation. The URI route is inferred from the page type name.
     /// </summary>
@@ -42,13 +39,13 @@ public static class ServiceCollectionExtensions
             typeof(NavigationRegistration<TPage>)
         ));
     }
-    
+
     private static IServiceCollection CheckRequiredServicesRegistered(this IServiceCollection services)
     {
         services.TryAddSingleton<IViewRegistry, ViewRegistry>();
         services.TryAddSingleton<INavigationRegistry, NavigationRegistry>();
         services.TryAddSingleton<IRegionManager, RegionManager>();
-        services.TryAddSingleton<IRegionRegistry<RegionControl>, RegionRegistry<RegionControl>>();
+        services.TryAddSingleton<IRegionRegistry, RegionRegistry>();
         services.TryAddSingleton<IViewFactory, ViewFactory>();
         services.TryAddSingleton<IPageFactory, PageFactory>();
         services.TryAddSingleton<INavigationRoot, NavigationRoot>();

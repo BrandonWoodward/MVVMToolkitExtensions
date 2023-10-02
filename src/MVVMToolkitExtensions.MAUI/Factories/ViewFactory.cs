@@ -1,16 +1,31 @@
-﻿using MVVMToolkitExtensions.Core.Factories;
-using MVVMToolkitExtensions.MAUI.Interfaces;
+﻿using MVVMToolkitExtensions.MAUI.Interfaces;
 
 namespace MVVMToolkitExtensions.MAUI.Factories;
 
-internal sealed class ViewFactory : FactoryBase<VisualElement>, IViewFactory
+internal sealed class ViewFactory : IViewFactory
 {
-    public ViewFactory(IServiceProvider serviceProvider)
-        : base(serviceProvider) { }
+    private readonly IServiceProvider _serviceProvider;
+    private readonly IViewRegistry _viewRegistry;
 
-    public (TView View, object ViewModel) Create<TView>() where TView : VisualElement
-        => CreateCore<TView>();
+    public ViewFactory(IServiceProvider serviceProvider, IViewRegistry viewRegistry)
+    {
+        _serviceProvider = serviceProvider;
+        _viewRegistry = viewRegistry;
+    }
 
-    public (VisualElement View, object ViewModel) Create(Type viewType)
-        => CreateCore(viewType);
+    public (TView View, object ViewModel) Create<TView>()
+        where TView : VisualElement
+    {
+        var (view, viewModel) = Create(typeof(TView));
+        return ((TView)view, viewModel);
+    }
+
+    public (VisualElement View, object ViewModel) Create(Type pageType)
+    {
+        var viewModelType = _viewRegistry[pageType];
+        var view = (VisualElement)_serviceProvider.GetRequiredService(pageType);
+        var viewModel = _serviceProvider.GetRequiredService(viewModelType);
+        view.BindingContext = viewModel;
+        return (view, viewModel);
+    }
 }

@@ -5,6 +5,7 @@
         <!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
         <!-- <TargetFrameworks>$(TargetFrameworks);net7.0-tizen</TargetFrameworks> -->
         <UseMaui>true</UseMaui>
+		<Nullable>enable</Nullable>
         <SingleProject>true</SingleProject>
         <ImplicitUsings>enable</ImplicitUsings>
 
@@ -16,6 +17,6 @@
         <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
     </PropertyGroup>
     <ItemGroup>
-      <ProjectReference Include="..\MVVMToolkitExtensions.Core\MVVMToolkitExtensions.Core.csproj" />
+      <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1" />
     </ItemGroup>
 </Project>

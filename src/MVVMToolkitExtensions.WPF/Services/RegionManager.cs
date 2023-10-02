@@ -1,8 +1,7 @@
 ﻿using System.Windows;
-using MVVMToolkitExtensions.Core.Interfaces;
-using MVVMToolkitExtensions.Core.Models;
 using MVVMToolkitExtensions.WPF.Controls;
 using MVVMToolkitExtensions.WPF.Interfaces;
+using MVVMToolkitExtensions.WPF.Models;
 
 namespace MVVMToolkitExtensions.WPF.Services;
 

@@ -1,12 +1,10 @@
-﻿using System.Windows;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
-using MVVMToolkitExtensions.Core.Interfaces;
-using MVVMToolkitExtensions.Core.Models;
-using MVVMToolkitExtensions.WPF.Controls;
 using MVVMToolkitExtensions.WPF.Factories;
 using MVVMToolkitExtensions.WPF.Interfaces;
+using MVVMToolkitExtensions.WPF.Models;
 using MVVMToolkitExtensions.WPF.Services;
+using System.Windows;
 
 namespace MVVMToolkitExtensions.WPF.Extensions;
 
@@ -27,11 +25,11 @@ public static class ServiceCollectionExtensions
             .AddViewAndViewModel<TView, TViewModel>()
             .AddViewAndViewModelMapping<TView, TViewModel>();
     }
-    
+
     private static IServiceCollection CheckRequiredServicesRegistered(this IServiceCollection services)
     {
         services.TryAddSingleton<IViewRegistry, ViewRegistry>();
-        services.TryAddSingleton<IRegionRegistry<RegionControl>, RegionRegistry<RegionControl>>();
+        services.TryAddSingleton<IRegionRegistry, RegionRegistry>();
         services.TryAddSingleton<IViewFactory, ViewFactory>();
         services.TryAddSingleton<IDialogFactory, DialogFactory>();
         services.TryAddSingleton<IDialogService, DialogService>();

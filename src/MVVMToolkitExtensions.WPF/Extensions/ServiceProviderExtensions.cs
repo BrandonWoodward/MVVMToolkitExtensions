@@ -1,27 +1,19 @@
-﻿using System.Windows;
-using Microsoft.Extensions.DependencyInjection;
-using MVVMToolkitExtensions.Core.Interfaces;
-using MVVMToolkitExtensions.WPF.Controls;
+﻿using Microsoft.Extensions.DependencyInjection;
 using MVVMToolkitExtensions.WPF.Interfaces;
+using System.Windows;
 
 namespace MVVMToolkitExtensions.WPF.Extensions;
 
-public static class ServiceProviderExtensions 
+public static class ServiceProviderExtensions
 {
     /// <summary>
     /// Bootstraps the application by registering some required services and showing the provided window.
     /// The DataContext will be set automatically to the ViewModel registered for the provided view.
     /// </summary>
     /// <typeparam name="TView">The main view type to be displayed after bootstrapping.</typeparam>
-    public static IServiceProvider Bootstrap<TView>(this IServiceProvider serviceProvider)
-        where TView : Window 
+    public static IServiceProvider WithMainWindow<TView>(this IServiceProvider serviceProvider)
+        where TView : Window
     {
-        var navigationRegistry = serviceProvider.GetRequiredService<IRegionRegistry<RegionControl>>();
-        
-        // TODO - Exposing global state like this is not ideal
-        // TODO - How else can I access these services in static callback for DependencyProperty?
-        Application.Current.Resources["NavigationRegistry"] = navigationRegistry;
-        
         // Show the main window
         serviceProvider
             .GetRequiredService<IViewFactory>()

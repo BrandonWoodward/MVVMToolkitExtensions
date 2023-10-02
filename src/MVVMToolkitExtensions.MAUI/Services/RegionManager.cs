@@ -1,22 +1,20 @@
-﻿using MVVMToolkitExtensions.Core.Interfaces;
-using MVVMToolkitExtensions.Core.Models;
-using MVVMToolkitExtensions.MAUI.Controls;
-using MVVMToolkitExtensions.MAUI.Interfaces;
+﻿using MVVMToolkitExtensions.MAUI.Interfaces;
+using MVVMToolkitExtensions.MAUI.Models;
 
 namespace MVVMToolkitExtensions.MAUI.Services;
 
 internal sealed class RegionManager : IRegionManager
 {
     private readonly IViewFactory _viewFactory;
-    private readonly IRegionRegistry<RegionControl> _regionRegistry;
+    private readonly IRegionRegistry _regionRegistry;
 
-    public RegionManager(IViewFactory viewFactory, IRegionRegistry<RegionControl> regionRegistry)
+    public RegionManager(IViewFactory viewFactory, IRegionRegistry regionRegistry)
     {
         _viewFactory = viewFactory;
         _regionRegistry = regionRegistry;
     }
 
-    public void Navigate<TView>(string regionName, NavigationParameters parameters = null) 
+    public void Navigate<TView>(string regionName, NavigationParameters parameters = null)
         where TView : View
     {
         CheckRegionExists(regionName)
@@ -35,7 +33,7 @@ internal sealed class RegionManager : IRegionManager
 
     private RegionManager CheckRegionExists(string regionName)
     {
-        if (!_regionRegistry.Contains(regionName))
+        if(!_regionRegistry.Contains(regionName))
             throw new InvalidOperationException($"Region with name {regionName} not found.");
         return this;
     }
@@ -48,7 +46,7 @@ internal sealed class RegionManager : IRegionManager
 
     private RegionManager HandleNavigationAware(string regionName, Action<INavigationAware> action)
     {
-        if (_regionRegistry[regionName].Content is { BindingContext: INavigationAware navigationAwareViewModel })
+        if(_regionRegistry[regionName].Content is { BindingContext: INavigationAware navigationAwareViewModel })
         {
             action(navigationAwareViewModel);
         }

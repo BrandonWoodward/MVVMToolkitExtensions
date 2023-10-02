@@ -22,8 +22,9 @@
 		<RepositoryUrl>https://github.com/BrandonWoodward/MVVMToolkitExtensions</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 	</PropertyGroup>
-	
+
 	<ItemGroup>
-	  <ProjectReference Include="..\MVVMToolkitExtensions.Core\MVVMToolkitExtensions.Core.csproj" />
+	  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1" />
+	  <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
 	</ItemGroup>
 </Project>

@@ -1,4 +1,4 @@
-using MVVMToolkitExtensions.Core.Models;
+using MVVMToolkitExtensions.MAUI.Models;
 
 namespace MVVMToolkitExtensions.MAUI.Interfaces;
 

@@ -12,13 +12,16 @@ public static class MauiAppBuilderExtensions
     /// <returns>A factory function for creating a View with the BindingContext set to the
     /// ViewModel registered for the provided view. You should inject this into your App.xaml.cs.
     /// </returns>
-    public static MauiAppBuilder WithMainPage<TPage>(this MauiAppBuilder builder) 
+    public static MauiAppBuilder WithMainPage<TPage>(this MauiAppBuilder builder)
         where TPage : Page
     {
         builder.Services.AddSingleton<Func<Page>>(services =>
         {
             return () =>
             {
+                services.GetRequiredService<IViewRegistry>();
+                services.GetRequiredService<IRegionRegistry>();
+
                 var pageFactory = services.GetRequiredService<IPageFactory>();
                 var (view, _) = pageFactory.Create<TPage>();
                 return new NavigationPage(view);

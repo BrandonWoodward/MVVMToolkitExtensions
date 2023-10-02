@@ -1,4 +1,4 @@
-﻿namespace MVVMToolkitExtensions.Core.Interfaces;
+﻿namespace MVVMToolkitExtensions.WPF.Interfaces;
 
 internal interface IViewRegistration
 {

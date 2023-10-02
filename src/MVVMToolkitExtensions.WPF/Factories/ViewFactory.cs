@@ -1,25 +1,32 @@
-﻿using System.Windows;
-using MVVMToolkitExtensions.Core.Factories;
+﻿using Microsoft.Extensions.DependencyInjection;
 using MVVMToolkitExtensions.WPF.Interfaces;
+using System.Windows;
 
 namespace MVVMToolkitExtensions.WPF.Factories;
 
-internal sealed class ViewFactory : FactoryBase<FrameworkElement>, IViewFactory
+internal sealed class ViewFactory : IViewFactory
 {
-    public ViewFactory(IServiceProvider serviceProvider)
-        : base(serviceProvider) { }
+    private readonly IServiceProvider _serviceProvider;
+    private readonly IViewRegistry _viewRegistry;
 
-    public (TView View, object ViewModel) Create<TView>() 
-        where TView : FrameworkElement
+    public ViewFactory(IServiceProvider serviceProvider, IViewRegistry viewRegistry)
     {
-        var (view, viewModel) = CreateCore<TView>();
-        view.DataContext = viewModel;
-        return (view, viewModel);
+        _serviceProvider = serviceProvider;
+        _viewRegistry = viewRegistry;
     }
 
-    public (FrameworkElement View, object ViewModel) Create(Type viewType)
+    public (TView View, object ViewModel) Create<TView>()
+        where TView : FrameworkElement
     {
-        var (view, viewModel) = CreateCore(viewType);
+        var (view, viewModel) = Create(typeof(TView));
+        return ((TView)view, viewModel);
+    }
+
+    public (FrameworkElement View, object ViewModel) Create(Type pageType)
+    {
+        var viewModelType = _viewRegistry[pageType];
+        var view = (FrameworkElement)_serviceProvider.GetRequiredService(pageType);
+        var viewModel = _serviceProvider.GetRequiredService(viewModelType);
         view.DataContext = viewModel;
         return (view, viewModel);
     }
