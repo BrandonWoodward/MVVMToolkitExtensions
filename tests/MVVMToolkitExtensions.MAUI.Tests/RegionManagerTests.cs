@@ -1,7 +1,6 @@
-using MVVMToolkitExtensions.Core.Interfaces;
-using MVVMToolkitExtensions.Core.Models;
 using MVVMToolkitExtensions.MAUI.Controls;
 using MVVMToolkitExtensions.MAUI.Interfaces;
+using MVVMToolkitExtensions.MAUI.Models;
 using MVVMToolkitExtensions.MAUI.Services;
 using NSubstitute;
 using Xunit;
@@ -11,32 +10,32 @@ namespace MVVMToolkitExtensions.MAUI.Tests;
 public class RegionManagerTests
 {
     private readonly IViewFactory _viewFactory;
-    private readonly IRegionRegistry<RegionControl> _regionRegistry;
+    private readonly IRegionRegistry _regionRegistry;
     private readonly IRegionManager _sut;
-    
+
     private class StubView : View { }
-    
+
     public RegionManagerTests()
     {
         _viewFactory = Substitute.For<IViewFactory>();
-        _regionRegistry = Substitute.For<IRegionRegistry<RegionControl>>();
+        _regionRegistry = Substitute.For<IRegionRegistry>();
         _sut = new RegionManager(_viewFactory, _regionRegistry);
     }
-    
+
     [Fact]
     public void Navigate_ShouldThrowInvalidOperationException_WhenRegionDoesNotExist()
     {
         // Arrange
         const string regionName = "Region";
         _regionRegistry.Contains(regionName).Returns(false);
-        
+
         // Act
         void Act() => _sut.Navigate<StubView>(regionName, new());
-        
+
         // Assert
         Assert.Throws<InvalidOperationException>(Act);
     }
-    
+
     [Fact]
     public void Navigate_ShouldClearAndSetNewContent_WhenRegionExists()
     {
@@ -45,15 +44,15 @@ public class RegionManagerTests
         _regionRegistry.Contains(regionName).Returns(true);
         var region = Substitute.For<RegionControl>();
         _regionRegistry[regionName].Returns(region);
-        
+
         // Act
         _sut.Navigate<StubView>(regionName, new());
-        
+
         // Assert
         _regionRegistry[regionName].Received(1).Content = null;
         _regionRegistry[regionName].Received(1).Content = Arg.Any<StubView>();
     }
-    
+
     [Fact]
     public void Navigate_ShouldHandleNavigationAware_WhenBindingContextIsNavigationAware()
     {
@@ -73,7 +72,7 @@ public class RegionManagerTests
         navAware.Received(1).OnNavigatedFrom();
         navAware.Received(1).OnNavigatedTo(Arg.Any<NavigationParameters>());
     }
-    
+
     [Fact]
     public void Clear_ShouldClearRegionContent_WhenRegionExists()
     {
@@ -89,8 +88,8 @@ public class RegionManagerTests
         // Assert
         _regionRegistry[regionName].Received(1).Content = null;
     }
-    
-    
+
+
     [Fact]
     public void Clear_InvokesOnNavigatedFrom_WhenRegionContentHasNavigationAwareBindingContext()
     {
