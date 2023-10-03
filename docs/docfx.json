@@ -5,7 +5,7 @@
         {
           "files": [ "/MVVMToolkitExtensions.MAUI/**.csproj", "/MVVMToolkitExtensions.WPF/**.csproj" ],
           "exclude": [ "./src/**/obj/**", "./src/**/bin/**" ],
-          "src": "../../src"
+          "src": "../src"
         }
       ],
       "dest": "api",
@@ -43,7 +43,7 @@
         ]
       }
     ],
-    "output": "../",
+    "output": "./",
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
     "template": [

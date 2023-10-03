@@ -1,0 +1,806 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: MVVMToolkitExtensions.MAUI.Controls
+  name: MVVMToolkitExtensions.MAUI.Controls
+  href: api/MVVMToolkitExtensions.MAUI.Controls.html
+  commentId: N:MVVMToolkitExtensions.MAUI.Controls
+  fullName: MVVMToolkitExtensions.MAUI.Controls
+  nameWithType: MVVMToolkitExtensions.MAUI.Controls
+- uid: MVVMToolkitExtensions.MAUI.Controls.RegionControl
+  name: RegionControl
+  href: api/MVVMToolkitExtensions.MAUI.Controls.RegionControl.html
+  commentId: T:MVVMToolkitExtensions.MAUI.Controls.RegionControl
+  fullName: MVVMToolkitExtensions.MAUI.Controls.RegionControl
+  nameWithType: RegionControl
+- uid: MVVMToolkitExtensions.MAUI.Controls.RegionControl.RegionName
+  name: RegionName
+  href: api/MVVMToolkitExtensions.MAUI.Controls.RegionControl.html#MVVMToolkitExtensions_MAUI_Controls_RegionControl_RegionName
+  commentId: P:MVVMToolkitExtensions.MAUI.Controls.RegionControl.RegionName
+  fullName: MVVMToolkitExtensions.MAUI.Controls.RegionControl.RegionName
+  nameWithType: RegionControl.RegionName
+- uid: MVVMToolkitExtensions.MAUI.Controls.RegionControl.RegionName*
+  name: RegionName
+  href: api/MVVMToolkitExtensions.MAUI.Controls.RegionControl.html#MVVMToolkitExtensions_MAUI_Controls_RegionControl_RegionName_
+  commentId: Overload:MVVMToolkitExtensions.MAUI.Controls.RegionControl.RegionName
+  isSpec: "True"
+  fullName: MVVMToolkitExtensions.MAUI.Controls.RegionControl.RegionName
+  nameWithType: RegionControl.RegionName
+- uid: MVVMToolkitExtensions.MAUI.Extensions
+  name: MVVMToolkitExtensions.MAUI.Extensions
+  href: api/MVVMToolkitExtensions.MAUI.Extensions.html
+  commentId: N:MVVMToolkitExtensions.MAUI.Extensions
+  fullName: MVVMToolkitExtensions.MAUI.Extensions
+  nameWithType: MVVMToolkitExtensions.MAUI.Extensions
+- uid: MVVMToolkitExtensions.MAUI.Extensions.MauiAppBuilderExtensions
+  name: MauiAppBuilderExtensions
+  href: api/MVVMToolkitExtensions.MAUI.Extensions.MauiAppBuilderExtensions.html
+  commentId: T:MVVMToolkitExtensions.MAUI.Extensions.MauiAppBuilderExtensions
+  fullName: MVVMToolkitExtensions.MAUI.Extensions.MauiAppBuilderExtensions
+  nameWithType: MauiAppBuilderExtensions
+- uid: MVVMToolkitExtensions.MAUI.Extensions.MauiAppBuilderExtensions.WithMainPage*
+  name: WithMainPage
+  href: api/MVVMToolkitExtensions.MAUI.Extensions.MauiAppBuilderExtensions.html#MVVMToolkitExtensions_MAUI_Extensions_MauiAppBuilderExtensions_WithMainPage_
+  commentId: Overload:MVVMToolkitExtensions.MAUI.Extensions.MauiAppBuilderExtensions.WithMainPage
+  isSpec: "True"
+  fullName: MVVMToolkitExtensions.MAUI.Extensions.MauiAppBuilderExtensions.WithMainPage
+  nameWithType: MauiAppBuilderExtensions.WithMainPage
+- uid: MVVMToolkitExtensions.MAUI.Extensions.MauiAppBuilderExtensions.WithMainPage``1(Microsoft.Maui.Hosting.MauiAppBuilder)
+  name: WithMainPage<TPage>(MauiAppBuilder)
+  href: api/MVVMToolkitExtensions.MAUI.Extensions.MauiAppBuilderExtensions.html#MVVMToolkitExtensions_MAUI_Extensions_MauiAppBuilderExtensions_WithMainPage__1_Microsoft_Maui_Hosting_MauiAppBuilder_
+  commentId: M:MVVMToolkitExtensions.MAUI.Extensions.MauiAppBuilderExtensions.WithMainPage``1(Microsoft.Maui.Hosting.MauiAppBuilder)
+  name.vb: WithMainPage(Of TPage)(MauiAppBuilder)
+  fullName: MVVMToolkitExtensions.MAUI.Extensions.MauiAppBuilderExtensions.WithMainPage<TPage>(Microsoft.Maui.Hosting.MauiAppBuilder)
+  fullName.vb: MVVMToolkitExtensions.MAUI.Extensions.MauiAppBuilderExtensions.WithMainPage(Of TPage)(Microsoft.Maui.Hosting.MauiAppBuilder)
+  nameWithType: MauiAppBuilderExtensions.WithMainPage<TPage>(MauiAppBuilder)
+  nameWithType.vb: MauiAppBuilderExtensions.WithMainPage(Of TPage)(MauiAppBuilder)
+- uid: MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions
+  name: ServiceCollectionExtensions
+  href: api/MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.html
+  commentId: T:MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions
+  fullName: MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions
+  nameWithType: ServiceCollectionExtensions
+- uid: MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.AddRoute*
+  name: AddRoute
+  href: api/MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.html#MVVMToolkitExtensions_MAUI_Extensions_ServiceCollectionExtensions_AddRoute_
+  commentId: Overload:MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.AddRoute
+  isSpec: "True"
+  fullName: MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.AddRoute
+  nameWithType: ServiceCollectionExtensions.AddRoute
+- uid: MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.AddRoute``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  name: AddRoute<TPage>(IServiceCollection)
+  href: api/MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.html#MVVMToolkitExtensions_MAUI_Extensions_ServiceCollectionExtensions_AddRoute__1_Microsoft_Extensions_DependencyInjection_IServiceCollection_
+  commentId: M:MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.AddRoute``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  name.vb: AddRoute(Of TPage)(IServiceCollection)
+  fullName: MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.AddRoute<TPage>(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  fullName.vb: MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.AddRoute(Of TPage)(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  nameWithType: ServiceCollectionExtensions.AddRoute<TPage>(IServiceCollection)
+  nameWithType.vb: ServiceCollectionExtensions.AddRoute(Of TPage)(IServiceCollection)
+- uid: MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.AddView*
+  name: AddView
+  href: api/MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.html#MVVMToolkitExtensions_MAUI_Extensions_ServiceCollectionExtensions_AddView_
+  commentId: Overload:MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.AddView
+  isSpec: "True"
+  fullName: MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.AddView
+  nameWithType: ServiceCollectionExtensions.AddView
+- uid: MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.AddView``2(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  name: AddView<TView, TViewModel>(IServiceCollection)
+  href: api/MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.html#MVVMToolkitExtensions_MAUI_Extensions_ServiceCollectionExtensions_AddView__2_Microsoft_Extensions_DependencyInjection_IServiceCollection_
+  commentId: M:MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.AddView``2(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  name.vb: AddView(Of TView, TViewModel)(IServiceCollection)
+  fullName: MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.AddView<TView, TViewModel>(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  fullName.vb: MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.AddView(Of TView, TViewModel)(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  nameWithType: ServiceCollectionExtensions.AddView<TView, TViewModel>(IServiceCollection)
+  nameWithType.vb: ServiceCollectionExtensions.AddView(Of TView, TViewModel)(IServiceCollection)
+- uid: MVVMToolkitExtensions.MAUI.Interfaces
+  name: MVVMToolkitExtensions.MAUI.Interfaces
+  href: api/MVVMToolkitExtensions.MAUI.Interfaces.html
+  commentId: N:MVVMToolkitExtensions.MAUI.Interfaces
+  fullName: MVVMToolkitExtensions.MAUI.Interfaces
+  nameWithType: MVVMToolkitExtensions.MAUI.Interfaces
+- uid: MVVMToolkitExtensions.MAUI.Interfaces.INavigationAware
+  name: INavigationAware
+  href: api/MVVMToolkitExtensions.MAUI.Interfaces.INavigationAware.html
+  commentId: T:MVVMToolkitExtensions.MAUI.Interfaces.INavigationAware
+  fullName: MVVMToolkitExtensions.MAUI.Interfaces.INavigationAware
+  nameWithType: INavigationAware
+- uid: MVVMToolkitExtensions.MAUI.Interfaces.INavigationAware.OnNavigatedFrom
+  name: OnNavigatedFrom()
+  href: api/MVVMToolkitExtensions.MAUI.Interfaces.INavigationAware.html#MVVMToolkitExtensions_MAUI_Interfaces_INavigationAware_OnNavigatedFrom
+  commentId: M:MVVMToolkitExtensions.MAUI.Interfaces.INavigationAware.OnNavigatedFrom
+  fullName: MVVMToolkitExtensions.MAUI.Interfaces.INavigationAware.OnNavigatedFrom()
+  nameWithType: INavigationAware.OnNavigatedFrom()
+- uid: MVVMToolkitExtensions.MAUI.Interfaces.INavigationAware.OnNavigatedFrom*
+  name: OnNavigatedFrom
+  href: api/MVVMToolkitExtensions.MAUI.Interfaces.INavigationAware.html#MVVMToolkitExtensions_MAUI_Interfaces_INavigationAware_OnNavigatedFrom_
+  commentId: Overload:MVVMToolkitExtensions.MAUI.Interfaces.INavigationAware.OnNavigatedFrom
+  isSpec: "True"
+  fullName: MVVMToolkitExtensions.MAUI.Interfaces.INavigationAware.OnNavigatedFrom
+  nameWithType: INavigationAware.OnNavigatedFrom
+- uid: MVVMToolkitExtensions.MAUI.Interfaces.INavigationAware.OnNavigatedTo(MVVMToolkitExtensions.MAUI.Models.NavigationParameters)
+  name: OnNavigatedTo(NavigationParameters)
+  href: api/MVVMToolkitExtensions.MAUI.Interfaces.INavigationAware.html#MVVMToolkitExtensions_MAUI_Interfaces_INavigationAware_OnNavigatedTo_MVVMToolkitExtensions_MAUI_Models_NavigationParameters_
+  commentId: M:MVVMToolkitExtensions.MAUI.Interfaces.INavigationAware.OnNavigatedTo(MVVMToolkitExtensions.MAUI.Models.NavigationParameters)
+  fullName: MVVMToolkitExtensions.MAUI.Interfaces.INavigationAware.OnNavigatedTo(MVVMToolkitExtensions.MAUI.Models.NavigationParameters)
+  nameWithType: INavigationAware.OnNavigatedTo(NavigationParameters)
+- uid: MVVMToolkitExtensions.MAUI.Interfaces.INavigationAware.OnNavigatedTo*
+  name: OnNavigatedTo
+  href: api/MVVMToolkitExtensions.MAUI.Interfaces.INavigationAware.html#MVVMToolkitExtensions_MAUI_Interfaces_INavigationAware_OnNavigatedTo_
+  commentId: Overload:MVVMToolkitExtensions.MAUI.Interfaces.INavigationAware.OnNavigatedTo
+  isSpec: "True"
+  fullName: MVVMToolkitExtensions.MAUI.Interfaces.INavigationAware.OnNavigatedTo
+  nameWithType: INavigationAware.OnNavigatedTo
+- uid: MVVMToolkitExtensions.MAUI.Interfaces.INavigationService
+  name: INavigationService
+  href: api/MVVMToolkitExtensions.MAUI.Interfaces.INavigationService.html
+  commentId: T:MVVMToolkitExtensions.MAUI.Interfaces.INavigationService
+  fullName: MVVMToolkitExtensions.MAUI.Interfaces.INavigationService
+  nameWithType: INavigationService
+- uid: MVVMToolkitExtensions.MAUI.Interfaces.INavigationService.NavigateAsync(System.String,MVVMToolkitExtensions.MAUI.Models.NavigationParameters)
+  name: NavigateAsync(string, NavigationParameters)
+  href: api/MVVMToolkitExtensions.MAUI.Interfaces.INavigationService.html#MVVMToolkitExtensions_MAUI_Interfaces_INavigationService_NavigateAsync_System_String_MVVMToolkitExtensions_MAUI_Models_NavigationParameters_
+  commentId: M:MVVMToolkitExtensions.MAUI.Interfaces.INavigationService.NavigateAsync(System.String,MVVMToolkitExtensions.MAUI.Models.NavigationParameters)
+  name.vb: NavigateAsync(String, NavigationParameters)
+  fullName: MVVMToolkitExtensions.MAUI.Interfaces.INavigationService.NavigateAsync(string, MVVMToolkitExtensions.MAUI.Models.NavigationParameters)
+  fullName.vb: MVVMToolkitExtensions.MAUI.Interfaces.INavigationService.NavigateAsync(String, MVVMToolkitExtensions.MAUI.Models.NavigationParameters)
+  nameWithType: INavigationService.NavigateAsync(string, NavigationParameters)
+  nameWithType.vb: INavigationService.NavigateAsync(String, NavigationParameters)
+- uid: MVVMToolkitExtensions.MAUI.Interfaces.INavigationService.NavigateAsync*
+  name: NavigateAsync
+  href: api/MVVMToolkitExtensions.MAUI.Interfaces.INavigationService.html#MVVMToolkitExtensions_MAUI_Interfaces_INavigationService_NavigateAsync_
+  commentId: Overload:MVVMToolkitExtensions.MAUI.Interfaces.INavigationService.NavigateAsync
+  isSpec: "True"
+  fullName: MVVMToolkitExtensions.MAUI.Interfaces.INavigationService.NavigateAsync
+  nameWithType: INavigationService.NavigateAsync
+- uid: MVVMToolkitExtensions.MAUI.Interfaces.IPageFactory
+  name: IPageFactory
+  href: api/MVVMToolkitExtensions.MAUI.Interfaces.IPageFactory.html
+  commentId: T:MVVMToolkitExtensions.MAUI.Interfaces.IPageFactory
+  fullName: MVVMToolkitExtensions.MAUI.Interfaces.IPageFactory
+  nameWithType: IPageFactory
+- uid: MVVMToolkitExtensions.MAUI.Interfaces.IPageFactory.Create(System.Type)
+  name: Create(Type)
+  href: api/MVVMToolkitExtensions.MAUI.Interfaces.IPageFactory.html#MVVMToolkitExtensions_MAUI_Interfaces_IPageFactory_Create_System_Type_
+  commentId: M:MVVMToolkitExtensions.MAUI.Interfaces.IPageFactory.Create(System.Type)
+  fullName: MVVMToolkitExtensions.MAUI.Interfaces.IPageFactory.Create(System.Type)
+  nameWithType: IPageFactory.Create(Type)
+- uid: MVVMToolkitExtensions.MAUI.Interfaces.IPageFactory.Create*
+  name: Create
+  href: api/MVVMToolkitExtensions.MAUI.Interfaces.IPageFactory.html#MVVMToolkitExtensions_MAUI_Interfaces_IPageFactory_Create_
+  commentId: Overload:MVVMToolkitExtensions.MAUI.Interfaces.IPageFactory.Create
+  isSpec: "True"
+  fullName: MVVMToolkitExtensions.MAUI.Interfaces.IPageFactory.Create
+  nameWithType: IPageFactory.Create
+- uid: MVVMToolkitExtensions.MAUI.Interfaces.IPageFactory.Create``1
+  name: Create<TPage>()
+  href: api/MVVMToolkitExtensions.MAUI.Interfaces.IPageFactory.html#MVVMToolkitExtensions_MAUI_Interfaces_IPageFactory_Create__1
+  commentId: M:MVVMToolkitExtensions.MAUI.Interfaces.IPageFactory.Create``1
+  name.vb: Create(Of TPage)()
+  fullName: MVVMToolkitExtensions.MAUI.Interfaces.IPageFactory.Create<TPage>()
+  fullName.vb: MVVMToolkitExtensions.MAUI.Interfaces.IPageFactory.Create(Of TPage)()
+  nameWithType: IPageFactory.Create<TPage>()
+  nameWithType.vb: IPageFactory.Create(Of TPage)()
+- uid: MVVMToolkitExtensions.MAUI.Interfaces.IRegionManager
+  name: IRegionManager
+  href: api/MVVMToolkitExtensions.MAUI.Interfaces.IRegionManager.html
+  commentId: T:MVVMToolkitExtensions.MAUI.Interfaces.IRegionManager
+  fullName: MVVMToolkitExtensions.MAUI.Interfaces.IRegionManager
+  nameWithType: IRegionManager
+- uid: MVVMToolkitExtensions.MAUI.Interfaces.IRegionManager.Clear(System.String)
+  name: Clear(string)
+  href: api/MVVMToolkitExtensions.MAUI.Interfaces.IRegionManager.html#MVVMToolkitExtensions_MAUI_Interfaces_IRegionManager_Clear_System_String_
+  commentId: M:MVVMToolkitExtensions.MAUI.Interfaces.IRegionManager.Clear(System.String)
+  name.vb: Clear(String)
+  fullName: MVVMToolkitExtensions.MAUI.Interfaces.IRegionManager.Clear(string)
+  fullName.vb: MVVMToolkitExtensions.MAUI.Interfaces.IRegionManager.Clear(String)
+  nameWithType: IRegionManager.Clear(string)
+  nameWithType.vb: IRegionManager.Clear(String)
+- uid: MVVMToolkitExtensions.MAUI.Interfaces.IRegionManager.Clear*
+  name: Clear
+  href: api/MVVMToolkitExtensions.MAUI.Interfaces.IRegionManager.html#MVVMToolkitExtensions_MAUI_Interfaces_IRegionManager_Clear_
+  commentId: Overload:MVVMToolkitExtensions.MAUI.Interfaces.IRegionManager.Clear
+  isSpec: "True"
+  fullName: MVVMToolkitExtensions.MAUI.Interfaces.IRegionManager.Clear
+  nameWithType: IRegionManager.Clear
+- uid: MVVMToolkitExtensions.MAUI.Interfaces.IRegionManager.Navigate*
+  name: Navigate
+  href: api/MVVMToolkitExtensions.MAUI.Interfaces.IRegionManager.html#MVVMToolkitExtensions_MAUI_Interfaces_IRegionManager_Navigate_
+  commentId: Overload:MVVMToolkitExtensions.MAUI.Interfaces.IRegionManager.Navigate
+  isSpec: "True"
+  fullName: MVVMToolkitExtensions.MAUI.Interfaces.IRegionManager.Navigate
+  nameWithType: IRegionManager.Navigate
+- uid: MVVMToolkitExtensions.MAUI.Interfaces.IRegionManager.Navigate``1(System.String,MVVMToolkitExtensions.MAUI.Models.NavigationParameters)
+  name: Navigate<TView>(string, NavigationParameters?)
+  href: api/MVVMToolkitExtensions.MAUI.Interfaces.IRegionManager.html#MVVMToolkitExtensions_MAUI_Interfaces_IRegionManager_Navigate__1_System_String_MVVMToolkitExtensions_MAUI_Models_NavigationParameters_
+  commentId: M:MVVMToolkitExtensions.MAUI.Interfaces.IRegionManager.Navigate``1(System.String,MVVMToolkitExtensions.MAUI.Models.NavigationParameters)
+  name.vb: Navigate(Of TView)(String, NavigationParameters)
+  fullName: MVVMToolkitExtensions.MAUI.Interfaces.IRegionManager.Navigate<TView>(string, MVVMToolkitExtensions.MAUI.Models.NavigationParameters?)
+  fullName.vb: MVVMToolkitExtensions.MAUI.Interfaces.IRegionManager.Navigate(Of TView)(String, MVVMToolkitExtensions.MAUI.Models.NavigationParameters)
+  nameWithType: IRegionManager.Navigate<TView>(string, NavigationParameters?)
+  nameWithType.vb: IRegionManager.Navigate(Of TView)(String, NavigationParameters)
+- uid: MVVMToolkitExtensions.MAUI.Interfaces.IViewFactory
+  name: IViewFactory
+  href: api/MVVMToolkitExtensions.MAUI.Interfaces.IViewFactory.html
+  commentId: T:MVVMToolkitExtensions.MAUI.Interfaces.IViewFactory
+  fullName: MVVMToolkitExtensions.MAUI.Interfaces.IViewFactory
+  nameWithType: IViewFactory
+- uid: MVVMToolkitExtensions.MAUI.Interfaces.IViewFactory.Create(System.Type)
+  name: Create(Type)
+  href: api/MVVMToolkitExtensions.MAUI.Interfaces.IViewFactory.html#MVVMToolkitExtensions_MAUI_Interfaces_IViewFactory_Create_System_Type_
+  commentId: M:MVVMToolkitExtensions.MAUI.Interfaces.IViewFactory.Create(System.Type)
+  fullName: MVVMToolkitExtensions.MAUI.Interfaces.IViewFactory.Create(System.Type)
+  nameWithType: IViewFactory.Create(Type)
+- uid: MVVMToolkitExtensions.MAUI.Interfaces.IViewFactory.Create*
+  name: Create
+  href: api/MVVMToolkitExtensions.MAUI.Interfaces.IViewFactory.html#MVVMToolkitExtensions_MAUI_Interfaces_IViewFactory_Create_
+  commentId: Overload:MVVMToolkitExtensions.MAUI.Interfaces.IViewFactory.Create
+  isSpec: "True"
+  fullName: MVVMToolkitExtensions.MAUI.Interfaces.IViewFactory.Create
+  nameWithType: IViewFactory.Create
+- uid: MVVMToolkitExtensions.MAUI.Interfaces.IViewFactory.Create``1
+  name: Create<TView>()
+  href: api/MVVMToolkitExtensions.MAUI.Interfaces.IViewFactory.html#MVVMToolkitExtensions_MAUI_Interfaces_IViewFactory_Create__1
+  commentId: M:MVVMToolkitExtensions.MAUI.Interfaces.IViewFactory.Create``1
+  name.vb: Create(Of TView)()
+  fullName: MVVMToolkitExtensions.MAUI.Interfaces.IViewFactory.Create<TView>()
+  fullName.vb: MVVMToolkitExtensions.MAUI.Interfaces.IViewFactory.Create(Of TView)()
+  nameWithType: IViewFactory.Create<TView>()
+  nameWithType.vb: IViewFactory.Create(Of TView)()
+- uid: MVVMToolkitExtensions.MAUI.Models
+  name: MVVMToolkitExtensions.MAUI.Models
+  href: api/MVVMToolkitExtensions.MAUI.Models.html
+  commentId: N:MVVMToolkitExtensions.MAUI.Models
+  fullName: MVVMToolkitExtensions.MAUI.Models
+  nameWithType: MVVMToolkitExtensions.MAUI.Models
+- uid: MVVMToolkitExtensions.MAUI.Models.DialogParameters
+  name: DialogParameters
+  href: api/MVVMToolkitExtensions.MAUI.Models.DialogParameters.html
+  commentId: T:MVVMToolkitExtensions.MAUI.Models.DialogParameters
+  fullName: MVVMToolkitExtensions.MAUI.Models.DialogParameters
+  nameWithType: DialogParameters
+- uid: MVVMToolkitExtensions.MAUI.Models.DialogParameters.#ctor
+  name: DialogParameters()
+  href: api/MVVMToolkitExtensions.MAUI.Models.DialogParameters.html#MVVMToolkitExtensions_MAUI_Models_DialogParameters__ctor
+  commentId: M:MVVMToolkitExtensions.MAUI.Models.DialogParameters.#ctor
+  name.vb: New()
+  fullName: MVVMToolkitExtensions.MAUI.Models.DialogParameters.DialogParameters()
+  fullName.vb: MVVMToolkitExtensions.MAUI.Models.DialogParameters.New()
+  nameWithType: DialogParameters.DialogParameters()
+  nameWithType.vb: DialogParameters.New()
+- uid: MVVMToolkitExtensions.MAUI.Models.DialogParameters.#ctor(System.Collections.Generic.IDictionary{System.String,System.Object})
+  name: DialogParameters(IDictionary<string, object>)
+  href: api/MVVMToolkitExtensions.MAUI.Models.DialogParameters.html#MVVMToolkitExtensions_MAUI_Models_DialogParameters__ctor_System_Collections_Generic_IDictionary_System_String_System_Object__
+  commentId: M:MVVMToolkitExtensions.MAUI.Models.DialogParameters.#ctor(System.Collections.Generic.IDictionary{System.String,System.Object})
+  name.vb: New(IDictionary(Of String, Object))
+  fullName: MVVMToolkitExtensions.MAUI.Models.DialogParameters.DialogParameters(System.Collections.Generic.IDictionary<string, object>)
+  fullName.vb: MVVMToolkitExtensions.MAUI.Models.DialogParameters.New(System.Collections.Generic.IDictionary(Of String, Object))
+  nameWithType: DialogParameters.DialogParameters(IDictionary<string, object>)
+  nameWithType.vb: DialogParameters.New(IDictionary(Of String, Object))
+- uid: MVVMToolkitExtensions.MAUI.Models.DialogParameters.#ctor*
+  name: DialogParameters
+  href: api/MVVMToolkitExtensions.MAUI.Models.DialogParameters.html#MVVMToolkitExtensions_MAUI_Models_DialogParameters__ctor_
+  commentId: Overload:MVVMToolkitExtensions.MAUI.Models.DialogParameters.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: MVVMToolkitExtensions.MAUI.Models.DialogParameters.DialogParameters
+  fullName.vb: MVVMToolkitExtensions.MAUI.Models.DialogParameters.New
+  nameWithType: DialogParameters.DialogParameters
+  nameWithType.vb: DialogParameters.New
+- uid: MVVMToolkitExtensions.MAUI.Models.NavigationParameters
+  name: NavigationParameters
+  href: api/MVVMToolkitExtensions.MAUI.Models.NavigationParameters.html
+  commentId: T:MVVMToolkitExtensions.MAUI.Models.NavigationParameters
+  fullName: MVVMToolkitExtensions.MAUI.Models.NavigationParameters
+  nameWithType: NavigationParameters
+- uid: MVVMToolkitExtensions.MAUI.Models.NavigationParameters.#ctor
+  name: NavigationParameters()
+  href: api/MVVMToolkitExtensions.MAUI.Models.NavigationParameters.html#MVVMToolkitExtensions_MAUI_Models_NavigationParameters__ctor
+  commentId: M:MVVMToolkitExtensions.MAUI.Models.NavigationParameters.#ctor
+  name.vb: New()
+  fullName: MVVMToolkitExtensions.MAUI.Models.NavigationParameters.NavigationParameters()
+  fullName.vb: MVVMToolkitExtensions.MAUI.Models.NavigationParameters.New()
+  nameWithType: NavigationParameters.NavigationParameters()
+  nameWithType.vb: NavigationParameters.New()
+- uid: MVVMToolkitExtensions.MAUI.Models.NavigationParameters.#ctor(System.Collections.Generic.IDictionary{System.String,System.Object})
+  name: NavigationParameters(IDictionary<string, object>)
+  href: api/MVVMToolkitExtensions.MAUI.Models.NavigationParameters.html#MVVMToolkitExtensions_MAUI_Models_NavigationParameters__ctor_System_Collections_Generic_IDictionary_System_String_System_Object__
+  commentId: M:MVVMToolkitExtensions.MAUI.Models.NavigationParameters.#ctor(System.Collections.Generic.IDictionary{System.String,System.Object})
+  name.vb: New(IDictionary(Of String, Object))
+  fullName: MVVMToolkitExtensions.MAUI.Models.NavigationParameters.NavigationParameters(System.Collections.Generic.IDictionary<string, object>)
+  fullName.vb: MVVMToolkitExtensions.MAUI.Models.NavigationParameters.New(System.Collections.Generic.IDictionary(Of String, Object))
+  nameWithType: NavigationParameters.NavigationParameters(IDictionary<string, object>)
+  nameWithType.vb: NavigationParameters.New(IDictionary(Of String, Object))
+- uid: MVVMToolkitExtensions.MAUI.Models.NavigationParameters.#ctor*
+  name: NavigationParameters
+  href: api/MVVMToolkitExtensions.MAUI.Models.NavigationParameters.html#MVVMToolkitExtensions_MAUI_Models_NavigationParameters__ctor_
+  commentId: Overload:MVVMToolkitExtensions.MAUI.Models.NavigationParameters.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: MVVMToolkitExtensions.MAUI.Models.NavigationParameters.NavigationParameters
+  fullName.vb: MVVMToolkitExtensions.MAUI.Models.NavigationParameters.New
+  nameWithType: NavigationParameters.NavigationParameters
+  nameWithType.vb: NavigationParameters.New
+- uid: MVVMToolkitExtensions.MAUI.Models.ParametersBase
+  name: ParametersBase
+  href: api/MVVMToolkitExtensions.MAUI.Models.ParametersBase.html
+  commentId: T:MVVMToolkitExtensions.MAUI.Models.ParametersBase
+  fullName: MVVMToolkitExtensions.MAUI.Models.ParametersBase
+  nameWithType: ParametersBase
+- uid: MVVMToolkitExtensions.MAUI.Models.ParametersBase.#ctor
+  name: ParametersBase()
+  href: api/MVVMToolkitExtensions.MAUI.Models.ParametersBase.html#MVVMToolkitExtensions_MAUI_Models_ParametersBase__ctor
+  commentId: M:MVVMToolkitExtensions.MAUI.Models.ParametersBase.#ctor
+  name.vb: New()
+  fullName: MVVMToolkitExtensions.MAUI.Models.ParametersBase.ParametersBase()
+  fullName.vb: MVVMToolkitExtensions.MAUI.Models.ParametersBase.New()
+  nameWithType: ParametersBase.ParametersBase()
+  nameWithType.vb: ParametersBase.New()
+- uid: MVVMToolkitExtensions.MAUI.Models.ParametersBase.#ctor(System.Collections.Generic.IDictionary{System.String,System.Object})
+  name: ParametersBase(IDictionary<string, object>)
+  href: api/MVVMToolkitExtensions.MAUI.Models.ParametersBase.html#MVVMToolkitExtensions_MAUI_Models_ParametersBase__ctor_System_Collections_Generic_IDictionary_System_String_System_Object__
+  commentId: M:MVVMToolkitExtensions.MAUI.Models.ParametersBase.#ctor(System.Collections.Generic.IDictionary{System.String,System.Object})
+  name.vb: New(IDictionary(Of String, Object))
+  fullName: MVVMToolkitExtensions.MAUI.Models.ParametersBase.ParametersBase(System.Collections.Generic.IDictionary<string, object>)
+  fullName.vb: MVVMToolkitExtensions.MAUI.Models.ParametersBase.New(System.Collections.Generic.IDictionary(Of String, Object))
+  nameWithType: ParametersBase.ParametersBase(IDictionary<string, object>)
+  nameWithType.vb: ParametersBase.New(IDictionary(Of String, Object))
+- uid: MVVMToolkitExtensions.MAUI.Models.ParametersBase.#ctor*
+  name: ParametersBase
+  href: api/MVVMToolkitExtensions.MAUI.Models.ParametersBase.html#MVVMToolkitExtensions_MAUI_Models_ParametersBase__ctor_
+  commentId: Overload:MVVMToolkitExtensions.MAUI.Models.ParametersBase.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: MVVMToolkitExtensions.MAUI.Models.ParametersBase.ParametersBase
+  fullName.vb: MVVMToolkitExtensions.MAUI.Models.ParametersBase.New
+  nameWithType: ParametersBase.ParametersBase
+  nameWithType.vb: ParametersBase.New
+- uid: MVVMToolkitExtensions.MAUI.Models.ParametersBase.Add(System.String,System.Object)
+  name: Add(string, object)
+  href: api/MVVMToolkitExtensions.MAUI.Models.ParametersBase.html#MVVMToolkitExtensions_MAUI_Models_ParametersBase_Add_System_String_System_Object_
+  commentId: M:MVVMToolkitExtensions.MAUI.Models.ParametersBase.Add(System.String,System.Object)
+  name.vb: Add(String, Object)
+  fullName: MVVMToolkitExtensions.MAUI.Models.ParametersBase.Add(string, object)
+  fullName.vb: MVVMToolkitExtensions.MAUI.Models.ParametersBase.Add(String, Object)
+  nameWithType: ParametersBase.Add(string, object)
+  nameWithType.vb: ParametersBase.Add(String, Object)
+- uid: MVVMToolkitExtensions.MAUI.Models.ParametersBase.Add*
+  name: Add
+  href: api/MVVMToolkitExtensions.MAUI.Models.ParametersBase.html#MVVMToolkitExtensions_MAUI_Models_ParametersBase_Add_
+  commentId: Overload:MVVMToolkitExtensions.MAUI.Models.ParametersBase.Add
+  isSpec: "True"
+  fullName: MVVMToolkitExtensions.MAUI.Models.ParametersBase.Add
+  nameWithType: ParametersBase.Add
+- uid: MVVMToolkitExtensions.MAUI.Models.ParametersBase.Get*
+  name: Get
+  href: api/MVVMToolkitExtensions.MAUI.Models.ParametersBase.html#MVVMToolkitExtensions_MAUI_Models_ParametersBase_Get_
+  commentId: Overload:MVVMToolkitExtensions.MAUI.Models.ParametersBase.Get
+  isSpec: "True"
+  fullName: MVVMToolkitExtensions.MAUI.Models.ParametersBase.Get
+  nameWithType: ParametersBase.Get
+- uid: MVVMToolkitExtensions.MAUI.Models.ParametersBase.GetEnumerator
+  name: GetEnumerator()
+  href: api/MVVMToolkitExtensions.MAUI.Models.ParametersBase.html#MVVMToolkitExtensions_MAUI_Models_ParametersBase_GetEnumerator
+  commentId: M:MVVMToolkitExtensions.MAUI.Models.ParametersBase.GetEnumerator
+  fullName: MVVMToolkitExtensions.MAUI.Models.ParametersBase.GetEnumerator()
+  nameWithType: ParametersBase.GetEnumerator()
+- uid: MVVMToolkitExtensions.MAUI.Models.ParametersBase.GetEnumerator*
+  name: GetEnumerator
+  href: api/MVVMToolkitExtensions.MAUI.Models.ParametersBase.html#MVVMToolkitExtensions_MAUI_Models_ParametersBase_GetEnumerator_
+  commentId: Overload:MVVMToolkitExtensions.MAUI.Models.ParametersBase.GetEnumerator
+  isSpec: "True"
+  fullName: MVVMToolkitExtensions.MAUI.Models.ParametersBase.GetEnumerator
+  nameWithType: ParametersBase.GetEnumerator
+- uid: MVVMToolkitExtensions.MAUI.Models.ParametersBase.Get``1(System.String)
+  name: Get<T>(string)
+  href: api/MVVMToolkitExtensions.MAUI.Models.ParametersBase.html#MVVMToolkitExtensions_MAUI_Models_ParametersBase_Get__1_System_String_
+  commentId: M:MVVMToolkitExtensions.MAUI.Models.ParametersBase.Get``1(System.String)
+  name.vb: Get(Of T)(String)
+  fullName: MVVMToolkitExtensions.MAUI.Models.ParametersBase.Get<T>(string)
+  fullName.vb: MVVMToolkitExtensions.MAUI.Models.ParametersBase.Get(Of T)(String)
+  nameWithType: ParametersBase.Get<T>(string)
+  nameWithType.vb: ParametersBase.Get(Of T)(String)
+- uid: MVVMToolkitExtensions.WPF.Controls
+  name: MVVMToolkitExtensions.WPF.Controls
+  href: api/MVVMToolkitExtensions.WPF.Controls.html
+  commentId: N:MVVMToolkitExtensions.WPF.Controls
+  fullName: MVVMToolkitExtensions.WPF.Controls
+  nameWithType: MVVMToolkitExtensions.WPF.Controls
+- uid: MVVMToolkitExtensions.WPF.Controls.RegionControl
+  name: RegionControl
+  href: api/MVVMToolkitExtensions.WPF.Controls.RegionControl.html
+  commentId: T:MVVMToolkitExtensions.WPF.Controls.RegionControl
+  fullName: MVVMToolkitExtensions.WPF.Controls.RegionControl
+  nameWithType: RegionControl
+- uid: MVVMToolkitExtensions.WPF.Controls.RegionControl.RegionName
+  name: RegionName
+  href: api/MVVMToolkitExtensions.WPF.Controls.RegionControl.html#MVVMToolkitExtensions_WPF_Controls_RegionControl_RegionName
+  commentId: P:MVVMToolkitExtensions.WPF.Controls.RegionControl.RegionName
+  fullName: MVVMToolkitExtensions.WPF.Controls.RegionControl.RegionName
+  nameWithType: RegionControl.RegionName
+- uid: MVVMToolkitExtensions.WPF.Controls.RegionControl.RegionName*
+  name: RegionName
+  href: api/MVVMToolkitExtensions.WPF.Controls.RegionControl.html#MVVMToolkitExtensions_WPF_Controls_RegionControl_RegionName_
+  commentId: Overload:MVVMToolkitExtensions.WPF.Controls.RegionControl.RegionName
+  isSpec: "True"
+  fullName: MVVMToolkitExtensions.WPF.Controls.RegionControl.RegionName
+  nameWithType: RegionControl.RegionName
+- uid: MVVMToolkitExtensions.WPF.Controls.RegionControl.RegionNameProperty
+  name: RegionNameProperty
+  href: api/MVVMToolkitExtensions.WPF.Controls.RegionControl.html#MVVMToolkitExtensions_WPF_Controls_RegionControl_RegionNameProperty
+  commentId: F:MVVMToolkitExtensions.WPF.Controls.RegionControl.RegionNameProperty
+  fullName: MVVMToolkitExtensions.WPF.Controls.RegionControl.RegionNameProperty
+  nameWithType: RegionControl.RegionNameProperty
+- uid: MVVMToolkitExtensions.WPF.Extensions
+  name: MVVMToolkitExtensions.WPF.Extensions
+  href: api/MVVMToolkitExtensions.WPF.Extensions.html
+  commentId: N:MVVMToolkitExtensions.WPF.Extensions
+  fullName: MVVMToolkitExtensions.WPF.Extensions
+  nameWithType: MVVMToolkitExtensions.WPF.Extensions
+- uid: MVVMToolkitExtensions.WPF.Extensions.ServiceCollectionExtensions
+  name: ServiceCollectionExtensions
+  href: api/MVVMToolkitExtensions.WPF.Extensions.ServiceCollectionExtensions.html
+  commentId: T:MVVMToolkitExtensions.WPF.Extensions.ServiceCollectionExtensions
+  fullName: MVVMToolkitExtensions.WPF.Extensions.ServiceCollectionExtensions
+  nameWithType: ServiceCollectionExtensions
+- uid: MVVMToolkitExtensions.WPF.Extensions.ServiceCollectionExtensions.AddView*
+  name: AddView
+  href: api/MVVMToolkitExtensions.WPF.Extensions.ServiceCollectionExtensions.html#MVVMToolkitExtensions_WPF_Extensions_ServiceCollectionExtensions_AddView_
+  commentId: Overload:MVVMToolkitExtensions.WPF.Extensions.ServiceCollectionExtensions.AddView
+  isSpec: "True"
+  fullName: MVVMToolkitExtensions.WPF.Extensions.ServiceCollectionExtensions.AddView
+  nameWithType: ServiceCollectionExtensions.AddView
+- uid: MVVMToolkitExtensions.WPF.Extensions.ServiceCollectionExtensions.AddView``2(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  name: AddView<TView, TViewModel>(IServiceCollection)
+  href: api/MVVMToolkitExtensions.WPF.Extensions.ServiceCollectionExtensions.html#MVVMToolkitExtensions_WPF_Extensions_ServiceCollectionExtensions_AddView__2_Microsoft_Extensions_DependencyInjection_IServiceCollection_
+  commentId: M:MVVMToolkitExtensions.WPF.Extensions.ServiceCollectionExtensions.AddView``2(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  name.vb: AddView(Of TView, TViewModel)(IServiceCollection)
+  fullName: MVVMToolkitExtensions.WPF.Extensions.ServiceCollectionExtensions.AddView<TView, TViewModel>(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  fullName.vb: MVVMToolkitExtensions.WPF.Extensions.ServiceCollectionExtensions.AddView(Of TView, TViewModel)(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  nameWithType: ServiceCollectionExtensions.AddView<TView, TViewModel>(IServiceCollection)
+  nameWithType.vb: ServiceCollectionExtensions.AddView(Of TView, TViewModel)(IServiceCollection)
+- uid: MVVMToolkitExtensions.WPF.Extensions.ServiceProviderExtensions
+  name: ServiceProviderExtensions
+  href: api/MVVMToolkitExtensions.WPF.Extensions.ServiceProviderExtensions.html
+  commentId: T:MVVMToolkitExtensions.WPF.Extensions.ServiceProviderExtensions
+  fullName: MVVMToolkitExtensions.WPF.Extensions.ServiceProviderExtensions
+  nameWithType: ServiceProviderExtensions
+- uid: MVVMToolkitExtensions.WPF.Extensions.ServiceProviderExtensions.WithMainWindow*
+  name: WithMainWindow
+  href: api/MVVMToolkitExtensions.WPF.Extensions.ServiceProviderExtensions.html#MVVMToolkitExtensions_WPF_Extensions_ServiceProviderExtensions_WithMainWindow_
+  commentId: Overload:MVVMToolkitExtensions.WPF.Extensions.ServiceProviderExtensions.WithMainWindow
+  isSpec: "True"
+  fullName: MVVMToolkitExtensions.WPF.Extensions.ServiceProviderExtensions.WithMainWindow
+  nameWithType: ServiceProviderExtensions.WithMainWindow
+- uid: MVVMToolkitExtensions.WPF.Extensions.ServiceProviderExtensions.WithMainWindow``1(System.IServiceProvider)
+  name: WithMainWindow<TView>(IServiceProvider)
+  href: api/MVVMToolkitExtensions.WPF.Extensions.ServiceProviderExtensions.html#MVVMToolkitExtensions_WPF_Extensions_ServiceProviderExtensions_WithMainWindow__1_System_IServiceProvider_
+  commentId: M:MVVMToolkitExtensions.WPF.Extensions.ServiceProviderExtensions.WithMainWindow``1(System.IServiceProvider)
+  name.vb: WithMainWindow(Of TView)(IServiceProvider)
+  fullName: MVVMToolkitExtensions.WPF.Extensions.ServiceProviderExtensions.WithMainWindow<TView>(System.IServiceProvider)
+  fullName.vb: MVVMToolkitExtensions.WPF.Extensions.ServiceProviderExtensions.WithMainWindow(Of TView)(System.IServiceProvider)
+  nameWithType: ServiceProviderExtensions.WithMainWindow<TView>(IServiceProvider)
+  nameWithType.vb: ServiceProviderExtensions.WithMainWindow(Of TView)(IServiceProvider)
+- uid: MVVMToolkitExtensions.WPF.Interfaces
+  name: MVVMToolkitExtensions.WPF.Interfaces
+  href: api/MVVMToolkitExtensions.WPF.Interfaces.html
+  commentId: N:MVVMToolkitExtensions.WPF.Interfaces
+  fullName: MVVMToolkitExtensions.WPF.Interfaces
+  nameWithType: MVVMToolkitExtensions.WPF.Interfaces
+- uid: MVVMToolkitExtensions.WPF.Interfaces.IDialogAware
+  name: IDialogAware
+  href: api/MVVMToolkitExtensions.WPF.Interfaces.IDialogAware.html
+  commentId: T:MVVMToolkitExtensions.WPF.Interfaces.IDialogAware
+  fullName: MVVMToolkitExtensions.WPF.Interfaces.IDialogAware
+  nameWithType: IDialogAware
+- uid: MVVMToolkitExtensions.WPF.Interfaces.IDialogAware.CanCloseDialog
+  name: CanCloseDialog()
+  href: api/MVVMToolkitExtensions.WPF.Interfaces.IDialogAware.html#MVVMToolkitExtensions_WPF_Interfaces_IDialogAware_CanCloseDialog
+  commentId: M:MVVMToolkitExtensions.WPF.Interfaces.IDialogAware.CanCloseDialog
+  fullName: MVVMToolkitExtensions.WPF.Interfaces.IDialogAware.CanCloseDialog()
+  nameWithType: IDialogAware.CanCloseDialog()
+- uid: MVVMToolkitExtensions.WPF.Interfaces.IDialogAware.CanCloseDialog*
+  name: CanCloseDialog
+  href: api/MVVMToolkitExtensions.WPF.Interfaces.IDialogAware.html#MVVMToolkitExtensions_WPF_Interfaces_IDialogAware_CanCloseDialog_
+  commentId: Overload:MVVMToolkitExtensions.WPF.Interfaces.IDialogAware.CanCloseDialog
+  isSpec: "True"
+  fullName: MVVMToolkitExtensions.WPF.Interfaces.IDialogAware.CanCloseDialog
+  nameWithType: IDialogAware.CanCloseDialog
+- uid: MVVMToolkitExtensions.WPF.Interfaces.IDialogAware.OnDialogClosed
+  name: OnDialogClosed()
+  href: api/MVVMToolkitExtensions.WPF.Interfaces.IDialogAware.html#MVVMToolkitExtensions_WPF_Interfaces_IDialogAware_OnDialogClosed
+  commentId: M:MVVMToolkitExtensions.WPF.Interfaces.IDialogAware.OnDialogClosed
+  fullName: MVVMToolkitExtensions.WPF.Interfaces.IDialogAware.OnDialogClosed()
+  nameWithType: IDialogAware.OnDialogClosed()
+- uid: MVVMToolkitExtensions.WPF.Interfaces.IDialogAware.OnDialogClosed*
+  name: OnDialogClosed
+  href: api/MVVMToolkitExtensions.WPF.Interfaces.IDialogAware.html#MVVMToolkitExtensions_WPF_Interfaces_IDialogAware_OnDialogClosed_
+  commentId: Overload:MVVMToolkitExtensions.WPF.Interfaces.IDialogAware.OnDialogClosed
+  isSpec: "True"
+  fullName: MVVMToolkitExtensions.WPF.Interfaces.IDialogAware.OnDialogClosed
+  nameWithType: IDialogAware.OnDialogClosed
+- uid: MVVMToolkitExtensions.WPF.Interfaces.IDialogAware.OnDialogOpened(MVVMToolkitExtensions.WPF.Models.DialogParameters)
+  name: OnDialogOpened(DialogParameters)
+  href: api/MVVMToolkitExtensions.WPF.Interfaces.IDialogAware.html#MVVMToolkitExtensions_WPF_Interfaces_IDialogAware_OnDialogOpened_MVVMToolkitExtensions_WPF_Models_DialogParameters_
+  commentId: M:MVVMToolkitExtensions.WPF.Interfaces.IDialogAware.OnDialogOpened(MVVMToolkitExtensions.WPF.Models.DialogParameters)
+  fullName: MVVMToolkitExtensions.WPF.Interfaces.IDialogAware.OnDialogOpened(MVVMToolkitExtensions.WPF.Models.DialogParameters)
+  nameWithType: IDialogAware.OnDialogOpened(DialogParameters)
+- uid: MVVMToolkitExtensions.WPF.Interfaces.IDialogAware.OnDialogOpened*
+  name: OnDialogOpened
+  href: api/MVVMToolkitExtensions.WPF.Interfaces.IDialogAware.html#MVVMToolkitExtensions_WPF_Interfaces_IDialogAware_OnDialogOpened_
+  commentId: Overload:MVVMToolkitExtensions.WPF.Interfaces.IDialogAware.OnDialogOpened
+  isSpec: "True"
+  fullName: MVVMToolkitExtensions.WPF.Interfaces.IDialogAware.OnDialogOpened
+  nameWithType: IDialogAware.OnDialogOpened
+- uid: MVVMToolkitExtensions.WPF.Interfaces.IDialogService
+  name: IDialogService
+  href: api/MVVMToolkitExtensions.WPF.Interfaces.IDialogService.html
+  commentId: T:MVVMToolkitExtensions.WPF.Interfaces.IDialogService
+  fullName: MVVMToolkitExtensions.WPF.Interfaces.IDialogService
+  nameWithType: IDialogService
+- uid: MVVMToolkitExtensions.WPF.Interfaces.IDialogService.ShowDialog*
+  name: ShowDialog
+  href: api/MVVMToolkitExtensions.WPF.Interfaces.IDialogService.html#MVVMToolkitExtensions_WPF_Interfaces_IDialogService_ShowDialog_
+  commentId: Overload:MVVMToolkitExtensions.WPF.Interfaces.IDialogService.ShowDialog
+  isSpec: "True"
+  fullName: MVVMToolkitExtensions.WPF.Interfaces.IDialogService.ShowDialog
+  nameWithType: IDialogService.ShowDialog
+- uid: MVVMToolkitExtensions.WPF.Interfaces.IDialogService.ShowDialog``1(MVVMToolkitExtensions.WPF.Models.DialogParameters)
+  name: ShowDialog<TView>(DialogParameters?)
+  href: api/MVVMToolkitExtensions.WPF.Interfaces.IDialogService.html#MVVMToolkitExtensions_WPF_Interfaces_IDialogService_ShowDialog__1_MVVMToolkitExtensions_WPF_Models_DialogParameters_
+  commentId: M:MVVMToolkitExtensions.WPF.Interfaces.IDialogService.ShowDialog``1(MVVMToolkitExtensions.WPF.Models.DialogParameters)
+  name.vb: ShowDialog(Of TView)(DialogParameters)
+  fullName: MVVMToolkitExtensions.WPF.Interfaces.IDialogService.ShowDialog<TView>(MVVMToolkitExtensions.WPF.Models.DialogParameters?)
+  fullName.vb: MVVMToolkitExtensions.WPF.Interfaces.IDialogService.ShowDialog(Of TView)(MVVMToolkitExtensions.WPF.Models.DialogParameters)
+  nameWithType: IDialogService.ShowDialog<TView>(DialogParameters?)
+  nameWithType.vb: IDialogService.ShowDialog(Of TView)(DialogParameters)
+- uid: MVVMToolkitExtensions.WPF.Interfaces.INavigationAware
+  name: INavigationAware
+  href: api/MVVMToolkitExtensions.WPF.Interfaces.INavigationAware.html
+  commentId: T:MVVMToolkitExtensions.WPF.Interfaces.INavigationAware
+  fullName: MVVMToolkitExtensions.WPF.Interfaces.INavigationAware
+  nameWithType: INavigationAware
+- uid: MVVMToolkitExtensions.WPF.Interfaces.INavigationAware.OnNavigatedFrom
+  name: OnNavigatedFrom()
+  href: api/MVVMToolkitExtensions.WPF.Interfaces.INavigationAware.html#MVVMToolkitExtensions_WPF_Interfaces_INavigationAware_OnNavigatedFrom
+  commentId: M:MVVMToolkitExtensions.WPF.Interfaces.INavigationAware.OnNavigatedFrom
+  fullName: MVVMToolkitExtensions.WPF.Interfaces.INavigationAware.OnNavigatedFrom()
+  nameWithType: INavigationAware.OnNavigatedFrom()
+- uid: MVVMToolkitExtensions.WPF.Interfaces.INavigationAware.OnNavigatedFrom*
+  name: OnNavigatedFrom
+  href: api/MVVMToolkitExtensions.WPF.Interfaces.INavigationAware.html#MVVMToolkitExtensions_WPF_Interfaces_INavigationAware_OnNavigatedFrom_
+  commentId: Overload:MVVMToolkitExtensions.WPF.Interfaces.INavigationAware.OnNavigatedFrom
+  isSpec: "True"
+  fullName: MVVMToolkitExtensions.WPF.Interfaces.INavigationAware.OnNavigatedFrom
+  nameWithType: INavigationAware.OnNavigatedFrom
+- uid: MVVMToolkitExtensions.WPF.Interfaces.INavigationAware.OnNavigatedTo(MVVMToolkitExtensions.WPF.Models.NavigationParameters)
+  name: OnNavigatedTo(NavigationParameters)
+  href: api/MVVMToolkitExtensions.WPF.Interfaces.INavigationAware.html#MVVMToolkitExtensions_WPF_Interfaces_INavigationAware_OnNavigatedTo_MVVMToolkitExtensions_WPF_Models_NavigationParameters_
+  commentId: M:MVVMToolkitExtensions.WPF.Interfaces.INavigationAware.OnNavigatedTo(MVVMToolkitExtensions.WPF.Models.NavigationParameters)
+  fullName: MVVMToolkitExtensions.WPF.Interfaces.INavigationAware.OnNavigatedTo(MVVMToolkitExtensions.WPF.Models.NavigationParameters)
+  nameWithType: INavigationAware.OnNavigatedTo(NavigationParameters)
+- uid: MVVMToolkitExtensions.WPF.Interfaces.INavigationAware.OnNavigatedTo*
+  name: OnNavigatedTo
+  href: api/MVVMToolkitExtensions.WPF.Interfaces.INavigationAware.html#MVVMToolkitExtensions_WPF_Interfaces_INavigationAware_OnNavigatedTo_
+  commentId: Overload:MVVMToolkitExtensions.WPF.Interfaces.INavigationAware.OnNavigatedTo
+  isSpec: "True"
+  fullName: MVVMToolkitExtensions.WPF.Interfaces.INavigationAware.OnNavigatedTo
+  nameWithType: INavigationAware.OnNavigatedTo
+- uid: MVVMToolkitExtensions.WPF.Interfaces.IRegionManager
+  name: IRegionManager
+  href: api/MVVMToolkitExtensions.WPF.Interfaces.IRegionManager.html
+  commentId: T:MVVMToolkitExtensions.WPF.Interfaces.IRegionManager
+  fullName: MVVMToolkitExtensions.WPF.Interfaces.IRegionManager
+  nameWithType: IRegionManager
+- uid: MVVMToolkitExtensions.WPF.Interfaces.IRegionManager.Clear(System.String)
+  name: Clear(string)
+  href: api/MVVMToolkitExtensions.WPF.Interfaces.IRegionManager.html#MVVMToolkitExtensions_WPF_Interfaces_IRegionManager_Clear_System_String_
+  commentId: M:MVVMToolkitExtensions.WPF.Interfaces.IRegionManager.Clear(System.String)
+  name.vb: Clear(String)
+  fullName: MVVMToolkitExtensions.WPF.Interfaces.IRegionManager.Clear(string)
+  fullName.vb: MVVMToolkitExtensions.WPF.Interfaces.IRegionManager.Clear(String)
+  nameWithType: IRegionManager.Clear(string)
+  nameWithType.vb: IRegionManager.Clear(String)
+- uid: MVVMToolkitExtensions.WPF.Interfaces.IRegionManager.Clear*
+  name: Clear
+  href: api/MVVMToolkitExtensions.WPF.Interfaces.IRegionManager.html#MVVMToolkitExtensions_WPF_Interfaces_IRegionManager_Clear_
+  commentId: Overload:MVVMToolkitExtensions.WPF.Interfaces.IRegionManager.Clear
+  isSpec: "True"
+  fullName: MVVMToolkitExtensions.WPF.Interfaces.IRegionManager.Clear
+  nameWithType: IRegionManager.Clear
+- uid: MVVMToolkitExtensions.WPF.Interfaces.IRegionManager.Navigate*
+  name: Navigate
+  href: api/MVVMToolkitExtensions.WPF.Interfaces.IRegionManager.html#MVVMToolkitExtensions_WPF_Interfaces_IRegionManager_Navigate_
+  commentId: Overload:MVVMToolkitExtensions.WPF.Interfaces.IRegionManager.Navigate
+  isSpec: "True"
+  fullName: MVVMToolkitExtensions.WPF.Interfaces.IRegionManager.Navigate
+  nameWithType: IRegionManager.Navigate
+- uid: MVVMToolkitExtensions.WPF.Interfaces.IRegionManager.Navigate``1(System.String,MVVMToolkitExtensions.WPF.Models.NavigationParameters)
+  name: Navigate<TView>(string, NavigationParameters?)
+  href: api/MVVMToolkitExtensions.WPF.Interfaces.IRegionManager.html#MVVMToolkitExtensions_WPF_Interfaces_IRegionManager_Navigate__1_System_String_MVVMToolkitExtensions_WPF_Models_NavigationParameters_
+  commentId: M:MVVMToolkitExtensions.WPF.Interfaces.IRegionManager.Navigate``1(System.String,MVVMToolkitExtensions.WPF.Models.NavigationParameters)
+  name.vb: Navigate(Of TView)(String, NavigationParameters)
+  fullName: MVVMToolkitExtensions.WPF.Interfaces.IRegionManager.Navigate<TView>(string, MVVMToolkitExtensions.WPF.Models.NavigationParameters?)
+  fullName.vb: MVVMToolkitExtensions.WPF.Interfaces.IRegionManager.Navigate(Of TView)(String, MVVMToolkitExtensions.WPF.Models.NavigationParameters)
+  nameWithType: IRegionManager.Navigate<TView>(string, NavigationParameters?)
+  nameWithType.vb: IRegionManager.Navigate(Of TView)(String, NavigationParameters)
+- uid: MVVMToolkitExtensions.WPF.Interfaces.IViewFactory
+  name: IViewFactory
+  href: api/MVVMToolkitExtensions.WPF.Interfaces.IViewFactory.html
+  commentId: T:MVVMToolkitExtensions.WPF.Interfaces.IViewFactory
+  fullName: MVVMToolkitExtensions.WPF.Interfaces.IViewFactory
+  nameWithType: IViewFactory
+- uid: MVVMToolkitExtensions.WPF.Interfaces.IViewFactory.Create(System.Type)
+  name: Create(Type)
+  href: api/MVVMToolkitExtensions.WPF.Interfaces.IViewFactory.html#MVVMToolkitExtensions_WPF_Interfaces_IViewFactory_Create_System_Type_
+  commentId: M:MVVMToolkitExtensions.WPF.Interfaces.IViewFactory.Create(System.Type)
+  fullName: MVVMToolkitExtensions.WPF.Interfaces.IViewFactory.Create(System.Type)
+  nameWithType: IViewFactory.Create(Type)
+- uid: MVVMToolkitExtensions.WPF.Interfaces.IViewFactory.Create*
+  name: Create
+  href: api/MVVMToolkitExtensions.WPF.Interfaces.IViewFactory.html#MVVMToolkitExtensions_WPF_Interfaces_IViewFactory_Create_
+  commentId: Overload:MVVMToolkitExtensions.WPF.Interfaces.IViewFactory.Create
+  isSpec: "True"
+  fullName: MVVMToolkitExtensions.WPF.Interfaces.IViewFactory.Create
+  nameWithType: IViewFactory.Create
+- uid: MVVMToolkitExtensions.WPF.Interfaces.IViewFactory.Create``1
+  name: Create<TView>()
+  href: api/MVVMToolkitExtensions.WPF.Interfaces.IViewFactory.html#MVVMToolkitExtensions_WPF_Interfaces_IViewFactory_Create__1
+  commentId: M:MVVMToolkitExtensions.WPF.Interfaces.IViewFactory.Create``1
+  name.vb: Create(Of TView)()
+  fullName: MVVMToolkitExtensions.WPF.Interfaces.IViewFactory.Create<TView>()
+  fullName.vb: MVVMToolkitExtensions.WPF.Interfaces.IViewFactory.Create(Of TView)()
+  nameWithType: IViewFactory.Create<TView>()
+  nameWithType.vb: IViewFactory.Create(Of TView)()
+- uid: MVVMToolkitExtensions.WPF.Models
+  name: MVVMToolkitExtensions.WPF.Models
+  href: api/MVVMToolkitExtensions.WPF.Models.html
+  commentId: N:MVVMToolkitExtensions.WPF.Models
+  fullName: MVVMToolkitExtensions.WPF.Models
+  nameWithType: MVVMToolkitExtensions.WPF.Models
+- uid: MVVMToolkitExtensions.WPF.Models.BaseParameters
+  name: BaseParameters
+  href: api/MVVMToolkitExtensions.WPF.Models.BaseParameters.html
+  commentId: T:MVVMToolkitExtensions.WPF.Models.BaseParameters
+  fullName: MVVMToolkitExtensions.WPF.Models.BaseParameters
+  nameWithType: BaseParameters
+- uid: MVVMToolkitExtensions.WPF.Models.BaseParameters.#ctor
+  name: BaseParameters()
+  href: api/MVVMToolkitExtensions.WPF.Models.BaseParameters.html#MVVMToolkitExtensions_WPF_Models_BaseParameters__ctor
+  commentId: M:MVVMToolkitExtensions.WPF.Models.BaseParameters.#ctor
+  name.vb: New()
+  fullName: MVVMToolkitExtensions.WPF.Models.BaseParameters.BaseParameters()
+  fullName.vb: MVVMToolkitExtensions.WPF.Models.BaseParameters.New()
+  nameWithType: BaseParameters.BaseParameters()
+  nameWithType.vb: BaseParameters.New()
+- uid: MVVMToolkitExtensions.WPF.Models.BaseParameters.#ctor(System.Collections.Generic.IDictionary{System.String,System.Object})
+  name: BaseParameters(IDictionary<string, object>)
+  href: api/MVVMToolkitExtensions.WPF.Models.BaseParameters.html#MVVMToolkitExtensions_WPF_Models_BaseParameters__ctor_System_Collections_Generic_IDictionary_System_String_System_Object__
+  commentId: M:MVVMToolkitExtensions.WPF.Models.BaseParameters.#ctor(System.Collections.Generic.IDictionary{System.String,System.Object})
+  name.vb: New(IDictionary(Of String, Object))
+  fullName: MVVMToolkitExtensions.WPF.Models.BaseParameters.BaseParameters(System.Collections.Generic.IDictionary<string, object>)
+  fullName.vb: MVVMToolkitExtensions.WPF.Models.BaseParameters.New(System.Collections.Generic.IDictionary(Of String, Object))
+  nameWithType: BaseParameters.BaseParameters(IDictionary<string, object>)
+  nameWithType.vb: BaseParameters.New(IDictionary(Of String, Object))
+- uid: MVVMToolkitExtensions.WPF.Models.BaseParameters.#ctor*
+  name: BaseParameters
+  href: api/MVVMToolkitExtensions.WPF.Models.BaseParameters.html#MVVMToolkitExtensions_WPF_Models_BaseParameters__ctor_
+  commentId: Overload:MVVMToolkitExtensions.WPF.Models.BaseParameters.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: MVVMToolkitExtensions.WPF.Models.BaseParameters.BaseParameters
+  fullName.vb: MVVMToolkitExtensions.WPF.Models.BaseParameters.New
+  nameWithType: BaseParameters.BaseParameters
+  nameWithType.vb: BaseParameters.New
+- uid: MVVMToolkitExtensions.WPF.Models.BaseParameters.Add(System.String,System.Object)
+  name: Add(string, object)
+  href: api/MVVMToolkitExtensions.WPF.Models.BaseParameters.html#MVVMToolkitExtensions_WPF_Models_BaseParameters_Add_System_String_System_Object_
+  commentId: M:MVVMToolkitExtensions.WPF.Models.BaseParameters.Add(System.String,System.Object)
+  name.vb: Add(String, Object)
+  fullName: MVVMToolkitExtensions.WPF.Models.BaseParameters.Add(string, object)
+  fullName.vb: MVVMToolkitExtensions.WPF.Models.BaseParameters.Add(String, Object)
+  nameWithType: BaseParameters.Add(string, object)
+  nameWithType.vb: BaseParameters.Add(String, Object)
+- uid: MVVMToolkitExtensions.WPF.Models.BaseParameters.Add*
+  name: Add
+  href: api/MVVMToolkitExtensions.WPF.Models.BaseParameters.html#MVVMToolkitExtensions_WPF_Models_BaseParameters_Add_
+  commentId: Overload:MVVMToolkitExtensions.WPF.Models.BaseParameters.Add
+  isSpec: "True"
+  fullName: MVVMToolkitExtensions.WPF.Models.BaseParameters.Add
+  nameWithType: BaseParameters.Add
+- uid: MVVMToolkitExtensions.WPF.Models.BaseParameters.Get*
+  name: Get
+  href: api/MVVMToolkitExtensions.WPF.Models.BaseParameters.html#MVVMToolkitExtensions_WPF_Models_BaseParameters_Get_
+  commentId: Overload:MVVMToolkitExtensions.WPF.Models.BaseParameters.Get
+  isSpec: "True"
+  fullName: MVVMToolkitExtensions.WPF.Models.BaseParameters.Get
+  nameWithType: BaseParameters.Get
+- uid: MVVMToolkitExtensions.WPF.Models.BaseParameters.GetEnumerator
+  name: GetEnumerator()
+  href: api/MVVMToolkitExtensions.WPF.Models.BaseParameters.html#MVVMToolkitExtensions_WPF_Models_BaseParameters_GetEnumerator
+  commentId: M:MVVMToolkitExtensions.WPF.Models.BaseParameters.GetEnumerator
+  fullName: MVVMToolkitExtensions.WPF.Models.BaseParameters.GetEnumerator()
+  nameWithType: BaseParameters.GetEnumerator()
+- uid: MVVMToolkitExtensions.WPF.Models.BaseParameters.GetEnumerator*
+  name: GetEnumerator
+  href: api/MVVMToolkitExtensions.WPF.Models.BaseParameters.html#MVVMToolkitExtensions_WPF_Models_BaseParameters_GetEnumerator_
+  commentId: Overload:MVVMToolkitExtensions.WPF.Models.BaseParameters.GetEnumerator
+  isSpec: "True"
+  fullName: MVVMToolkitExtensions.WPF.Models.BaseParameters.GetEnumerator
+  nameWithType: BaseParameters.GetEnumerator
+- uid: MVVMToolkitExtensions.WPF.Models.BaseParameters.Get``1(System.String)
+  name: Get<T>(string)
+  href: api/MVVMToolkitExtensions.WPF.Models.BaseParameters.html#MVVMToolkitExtensions_WPF_Models_BaseParameters_Get__1_System_String_
+  commentId: M:MVVMToolkitExtensions.WPF.Models.BaseParameters.Get``1(System.String)
+  name.vb: Get(Of T)(String)
+  fullName: MVVMToolkitExtensions.WPF.Models.BaseParameters.Get<T>(string)
+  fullName.vb: MVVMToolkitExtensions.WPF.Models.BaseParameters.Get(Of T)(String)
+  nameWithType: BaseParameters.Get<T>(string)
+  nameWithType.vb: BaseParameters.Get(Of T)(String)
+- uid: MVVMToolkitExtensions.WPF.Models.DialogParameters
+  name: DialogParameters
+  href: api/MVVMToolkitExtensions.WPF.Models.DialogParameters.html
+  commentId: T:MVVMToolkitExtensions.WPF.Models.DialogParameters
+  fullName: MVVMToolkitExtensions.WPF.Models.DialogParameters
+  nameWithType: DialogParameters
+- uid: MVVMToolkitExtensions.WPF.Models.DialogParameters.#ctor
+  name: DialogParameters()
+  href: api/MVVMToolkitExtensions.WPF.Models.DialogParameters.html#MVVMToolkitExtensions_WPF_Models_DialogParameters__ctor
+  commentId: M:MVVMToolkitExtensions.WPF.Models.DialogParameters.#ctor
+  name.vb: New()
+  fullName: MVVMToolkitExtensions.WPF.Models.DialogParameters.DialogParameters()
+  fullName.vb: MVVMToolkitExtensions.WPF.Models.DialogParameters.New()
+  nameWithType: DialogParameters.DialogParameters()
+  nameWithType.vb: DialogParameters.New()
+- uid: MVVMToolkitExtensions.WPF.Models.DialogParameters.#ctor(System.Collections.Generic.IDictionary{System.String,System.Object})
+  name: DialogParameters(IDictionary<string, object>)
+  href: api/MVVMToolkitExtensions.WPF.Models.DialogParameters.html#MVVMToolkitExtensions_WPF_Models_DialogParameters__ctor_System_Collections_Generic_IDictionary_System_String_System_Object__
+  commentId: M:MVVMToolkitExtensions.WPF.Models.DialogParameters.#ctor(System.Collections.Generic.IDictionary{System.String,System.Object})
+  name.vb: New(IDictionary(Of String, Object))
+  fullName: MVVMToolkitExtensions.WPF.Models.DialogParameters.DialogParameters(System.Collections.Generic.IDictionary<string, object>)
+  fullName.vb: MVVMToolkitExtensions.WPF.Models.DialogParameters.New(System.Collections.Generic.IDictionary(Of String, Object))
+  nameWithType: DialogParameters.DialogParameters(IDictionary<string, object>)
+  nameWithType.vb: DialogParameters.New(IDictionary(Of String, Object))
+- uid: MVVMToolkitExtensions.WPF.Models.DialogParameters.#ctor*
+  name: DialogParameters
+  href: api/MVVMToolkitExtensions.WPF.Models.DialogParameters.html#MVVMToolkitExtensions_WPF_Models_DialogParameters__ctor_
+  commentId: Overload:MVVMToolkitExtensions.WPF.Models.DialogParameters.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: MVVMToolkitExtensions.WPF.Models.DialogParameters.DialogParameters
+  fullName.vb: MVVMToolkitExtensions.WPF.Models.DialogParameters.New
+  nameWithType: DialogParameters.DialogParameters
+  nameWithType.vb: DialogParameters.New
+- uid: MVVMToolkitExtensions.WPF.Models.NavigationParameters
+  name: NavigationParameters
+  href: api/MVVMToolkitExtensions.WPF.Models.NavigationParameters.html
+  commentId: T:MVVMToolkitExtensions.WPF.Models.NavigationParameters
+  fullName: MVVMToolkitExtensions.WPF.Models.NavigationParameters
+  nameWithType: NavigationParameters
+- uid: MVVMToolkitExtensions.WPF.Models.NavigationParameters.#ctor
+  name: NavigationParameters()
+  href: api/MVVMToolkitExtensions.WPF.Models.NavigationParameters.html#MVVMToolkitExtensions_WPF_Models_NavigationParameters__ctor
+  commentId: M:MVVMToolkitExtensions.WPF.Models.NavigationParameters.#ctor
+  name.vb: New()
+  fullName: MVVMToolkitExtensions.WPF.Models.NavigationParameters.NavigationParameters()
+  fullName.vb: MVVMToolkitExtensions.WPF.Models.NavigationParameters.New()
+  nameWithType: NavigationParameters.NavigationParameters()
+  nameWithType.vb: NavigationParameters.New()
+- uid: MVVMToolkitExtensions.WPF.Models.NavigationParameters.#ctor(System.Collections.Generic.IDictionary{System.String,System.Object})
+  name: NavigationParameters(IDictionary<string, object>)
+  href: api/MVVMToolkitExtensions.WPF.Models.NavigationParameters.html#MVVMToolkitExtensions_WPF_Models_NavigationParameters__ctor_System_Collections_Generic_IDictionary_System_String_System_Object__
+  commentId: M:MVVMToolkitExtensions.WPF.Models.NavigationParameters.#ctor(System.Collections.Generic.IDictionary{System.String,System.Object})
+  name.vb: New(IDictionary(Of String, Object))
+  fullName: MVVMToolkitExtensions.WPF.Models.NavigationParameters.NavigationParameters(System.Collections.Generic.IDictionary<string, object>)
+  fullName.vb: MVVMToolkitExtensions.WPF.Models.NavigationParameters.New(System.Collections.Generic.IDictionary(Of String, Object))
+  nameWithType: NavigationParameters.NavigationParameters(IDictionary<string, object>)
+  nameWithType.vb: NavigationParameters.New(IDictionary(Of String, Object))
+- uid: MVVMToolkitExtensions.WPF.Models.NavigationParameters.#ctor*
+  name: NavigationParameters
+  href: api/MVVMToolkitExtensions.WPF.Models.NavigationParameters.html#MVVMToolkitExtensions_WPF_Models_NavigationParameters__ctor_
+  commentId: Overload:MVVMToolkitExtensions.WPF.Models.NavigationParameters.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: MVVMToolkitExtensions.WPF.Models.NavigationParameters.NavigationParameters
+  fullName.vb: MVVMToolkitExtensions.WPF.Models.NavigationParameters.New
+  nameWithType: NavigationParameters.NavigationParameters
+  nameWithType.vb: NavigationParameters.New

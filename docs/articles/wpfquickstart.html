@@ -1,0 +1,220 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>WPF Quickstart </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="WPF Quickstart ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BrandonWoodward/MVVMToolkitExtensions/blob/master/docs/articles/wpfquickstart.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+  </head>
+
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="wpf-quickstart">WPF Quickstart</h1>
+
+<h2 id="installation">Installation</h2>
+<p>.NET CLI:</p>
+<pre><code class="lang-bash">dotnet add package MVVMToolkitExtensions.WPF
+</code></pre>
+<p>Package Manager:</p>
+<pre><code class="lang-bash">Install-Package MVVMToolkitExtensions.WPF
+</code></pre>
+<h2 id="setup">Setup</h2>
+<p>In your <code>App.xaml.cs</code>, add the following:</p>
+<pre><code class="lang-csharp">protected override void OnStartup(StartupEventArgs e)
+{
+    base.OnStartup(e);
+    var services = new ServiceCollection();
+
+    // Register services as normal...
+    services.AddSingleton&lt;IMyService, MyService&gt;();
+    
+    // Register views with their view models
+    services.AddView&lt;MainWindow, MainWindowViewModel&gt;();
+    
+    // Create service provider and show provided view
+    services
+        .BuildServiceProvider()
+        .WithMainWindow&lt;MainWindow&gt;();
+}
+</code></pre>
+<br>
+<h2 id="navigation">Navigation</h2>
+<p>You can programatically add views to regions using the <code>INavigationService</code>.
+This is similar to the <code>IRegionManager</code> in Prism.</p>
+<h3 id="appxamlcs">App.xaml.cs</h3>
+<pre><code class="lang-csharp">// Make sure to register the view you want to navigate to
+services.AddView&lt;AnotherView, AnotherViewModel&gt;();
+</code></pre>
+<h3 id="mainwindowxaml">MainWindow.xaml</h3>
+<pre><code class="lang-xaml">&lt;regions:NavigationContainer RegionName=&quot;ViewARegion&quot; /&gt;
+</code></pre>
+<h3 id="mainwindowviewmodelcs">MainWindowViewModel.cs</h3>
+<pre><code class="lang-csharp">// Ask for the IRegionManager in the constructor
+public MainWindowViewModel(IRegionManager regionManager)
+{
+    _regionManager = regionManager;
+}
+</code></pre>
+<pre><code class="lang-csharp">// Optional parameters
+var parameters = new NavigationParameters 
+{ 
+    { &quot;message&quot;, &quot;Any object here&quot; } 
+};
+
+// Creates an instance of the View/ViewModel
+// Sets the view as the content of the region
+// DataContext is set automatically
+_regionManager.Navigate&lt;ViewA&gt;(&quot;ViewARegion&quot;, parameters);
+</code></pre>
+<h3 id="anotherviewmodelcs">AnotherViewModel.cs</h3>
+<pre><code class="lang-csharp">// Implement INavigationAware to receive parameters
+// And tap into the navigation lifecycle
+public class ViewBViewModel : INavigationAware 
+{
+    // Will throw if parameter is not found
+    public void OnNavigatedTo(NavigationParameters parameters) 
+        =&gt; Message = parameters.Get&lt;string&gt;(&quot;message&quot;);
+    
+    public void OnNavigatedFrom() 
+        =&gt; Console.WriteLine(&quot;Navigated away from ViewB.&quot;);
+}
+</code></pre>
+<br>
+<h2 id="dialogs">Dialogs</h2>
+<p>You can show dialogs using the <code>IDialogService</code>. Again, this will feel familiar if you've used Prism.</p>
+<h3 id="appxamlcs-1">App.xaml.cs</h3>
+<pre><code class="lang-csharp">// Make sure to register the view you want to use for a dialog
+services.AddView&lt;DialogA, DialogAViewModel&gt;();
+</code></pre>
+<h3 id="viewaviewmodelcs">ViewAViewModel.cs</h3>
+<pre><code class="lang-csharp">// Ask for the IDialogService in the constructor
+public SomeViewModel(IDialogService dialogService)
+{
+    _dialogService = dialogService;
+}
+</code></pre>
+<pre><code class="lang-csharp">// Optional parameters
+var parameters = new DialogParameters
+{
+    { &quot;message&quot;, &quot;Any object here&quot; },
+};
+
+// Creates an instance of the View/ViewModel
+// Shows the control as a dialog
+// DataContext is set automatically
+_dialogService.ShowDialog&lt;DialogA&gt;(parameters);
+</code></pre>
+<h3 id="dialogaviewmodelcs">DialogAViewModel.cs</h3>
+<pre><code class="lang-csharp">// Implement IDialogAware to receive parameters
+// And tap into the dialog lifecycle
+public class DialogAViewModel : IDialogAware
+{
+    public bool CanCloseDialog() 
+        =&gt; true;
+
+    public void OnDialogClosed() 
+        =&gt; Debug.WriteLine(&quot;Dialog closed.&quot;);
+
+    public void OnDialogOpened(DialogParameters parameters)
+        =&gt; Message = parameters.Get&lt;string&gt;(&quot;message&quot;);
+}
+</code></pre>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BrandonWoodward/MVVMToolkitExtensions/blob/master/docs/articles/wpfquickstart.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

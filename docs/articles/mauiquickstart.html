@@ -1,0 +1,304 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>MAUI Quickstart </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="MAUI Quickstart ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BrandonWoodward/MVVMToolkitExtensions/blob/master/docs/articles/mauiquickstart.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+  </head>
+
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="maui-quickstart">MAUI Quickstart</h1>
+
+<h2 id="installation">Installation</h2>
+<p>.NET CLI:</p>
+<pre><code class="lang-bash">dotnet add package MVVMToolkitExtensions.MAUI
+</code></pre>
+<p>Package Manager:</p>
+<pre><code class="lang-bash">Install-Package MVVMToolkitExtensions.MAUI
+</code></pre>
+<h2 id="setup">Setup</h2>
+<p>In your <code>MauiProgram.cs</code>, add the following:</p>
+<pre><code class="lang-csharp">public static MauiApp CreateMauiApp()
+{
+    var builder = MauiApp.CreateBuilder();
+
+    // Add services as normal
+
+    // Views and ViewModels
+    builder.Services.AddView&lt;MainPage, MainPageViewModel&gt;();
+    builder.Services.AddView&lt;LoginPage, LoginPageViewModel&gt;();
+
+    // Routes for navigation
+    builder.Services.AddRoute&lt;LoginPage&gt;();
+
+    return builder
+        .UseMauiApp&lt;App&gt;()
+        .WithMainPage&lt;LoginPage&gt;()
+        .Build();
+}
+</code></pre>
+<p>In your <code>App.xaml.cs</code>, add the following to resolve your startup page:</p>
+<pre><code class="lang-csharp">public partial class App : Application
+{
+    public App(Func&lt;Page&gt; mainPage)
+    {
+        InitializeComponent();
+        MainPage = mainPage();
+    }
+}
+</code></pre>
+<br>
+<h2 id="view-based-navigation">View-Based Navigation</h2>
+<p>You can programatically add views to regions using the <code>INavigationService</code>.
+This is similar to the <code>IRegionManager</code> in Prism.</p>
+<h3 id="mauiprogramcs">MauiProgram.cs</h3>
+<pre><code class="lang-csharp">// Make sure to register the view you want to navigate to
+services.AddView&lt;AnotherView, AnotherViewModel&gt;();
+</code></pre>
+<h3 id="mainwindowxaml">MainWindow.xaml</h3>
+<pre><code class="lang-xaml">&lt;regions:RegionControl RegionName=&quot;ViewARegion&quot; /&gt;
+</code></pre>
+<h3 id="mainwindowviewmodelcs">MainWindowViewModel.cs</h3>
+<pre><code class="lang-csharp">// Ask for the IRegionManager in the constructor
+public MainWindowViewModel(IRegionManager regionManager)
+{
+    _regionManager = regionManager;
+}
+</code></pre>
+<pre><code class="lang-csharp">// Optionally, you can pass parameters to the view model
+// Any object can be passed as a parameter
+var parameters = new NavigationParameters 
+{ 
+    { &quot;message&quot;, &quot;Any object here&quot; } 
+};
+
+// Creates an instance of the View/ViewModel
+// Sets the view as the content of the region
+// DataContext is set automatically
+_regionManager.Navigate&lt;ViewA&gt;(&quot;ViewARegion&quot;, parameters);
+</code></pre>
+<h3 id="anotherviewmodelcs">AnotherViewModel.cs</h3>
+<pre><code class="lang-csharp">// Implement INavigationAware to receive parameters
+// And tap into the navigation lifecycle
+public class ViewBViewModel : INavigationAware 
+{
+    // Will throw if parameter is not found
+    public void OnNavigatedTo(NavigationParameters parameters) 
+        =&gt; Message = parameters.Get&lt;string&gt;(&quot;message&quot;);
+    
+    public void OnNavigatedFrom() 
+        =&gt; Console.WriteLine(&quot;Navigated away from ViewB.&quot;);
+}
+</code></pre>
+<br>
+<h2 id="page-based-navigation">Page-Based Navigation</h2>
+<p>Page-based navigation offers a robust URI-based system that's seamlessly integrated with the MVVM design pattern. This system supports both absolute and relative navigation paths, ensuring flexibility in addressing different navigation requirements.</p>
+<h3 id="key-features">Key Features:</h3>
+<ul>
+<li><strong>URI-Based System</strong>: Navigate using structured URIs to represent pages and their hierarchies.</li>
+<li><strong>MVVM Friendly</strong>: Easily integrate with MVVM design patterns.</li>
+<li><strong>Shared Parameter System</strong>: Use the <code>INavigationAware</code> interface, ensuring consistency with the view-based navigation.</li>
+</ul>
+<h3 id="setup-and-registration">Setup and Registration</h3>
+<p>Before utilizing page-based navigation, you must register your views and view models.
+This registration ensures that the navigation system recognizes the pages and can route to them correctly.
+Register your pages in the <code>MauiProgram.cs</code>:</p>
+<pre><code class="lang-csharp">// Register Views and their corresponding ViewModels
+builder.Services.AddView&lt;MainPage, MainPageViewModel&gt;();
+builder.Services.AddView&lt;LoginPage, LoginPageViewModel&gt;();
+builder.Services.AddView&lt;PageA, PageAViewModel&gt;();
+builder.Services.AddView&lt;PageB, PageBViewModel&gt;();
+
+// Define routes for navigation
+builder.Services.AddRoute&lt;MainPage&gt;();
+builder.Services.AddRoute&lt;PageA&gt;();
+builder.Services.AddRoute&lt;PageB&gt;();
+</code></pre>
+<p>Once registered, use the <code>INavigationService</code> to navigate between pages. Additionally, this service allows you to pass parameters to the target view model,
+making it versatile for various use-cases:</p>
+<pre><code class="lang-csharp">// Ask for the INavigationService in the constructor
+public LoginPageViewModel(INavigationService navigationService)
+{
+	_navigationService = navigationService;
+}
+</code></pre>
+<pre><code class="lang-csharp">// Optional parameters
+var parameters = new NavigationParameters 
+{ 
+    { &quot;message&quot;, &quot;Any object here&quot; } 
+};
+
+_navigationService.Navigate(&quot;/ViewA&quot;, parameters);
+</code></pre>
+<h2 id="uri-navigation-syntax">URI Navigation Syntax</h2>
+<p>The <code>NavigationService</code> offers two navigation methods: <strong>Relative</strong> and <strong>Absolute</strong>.</p>
+<hr>
+<h3 id="relative-navigation">Relative Navigation</h3>
+<p>Relative navigation, as its name suggests, navigates with respect to the current position in the navigation stack. This means you're either pushing new pages onto the stack or moving up and down within the existing stack.</p>
+<p>Here's a breakdown of the different patterns you can use:</p>
+<table>
+<thead>
+<tr>
+<th>Description</th>
+<th>Pattern</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Push a new page to the stack</td>
+<td><code>&quot;/PageA&quot;</code></td>
+<td>Pushes <code>PageA</code> onto the navigation stack</td>
+</tr>
+<tr>
+<td>Push multiple new pages to the stack</td>
+<td><code>&quot;/PageA/PageB&quot;</code></td>
+<td>Sequentially pushes <code>PageA</code> and then <code>PageB</code> onto the stack</td>
+</tr>
+<tr>
+<td>Navigate up one and then to a new page</td>
+<td><code>&quot;../PageB&quot;</code></td>
+<td>Pops the current page off the stack, then pushes <code>PageB</code></td>
+</tr>
+<tr>
+<td>Navigate up two and then to a new page</td>
+<td><code>&quot;../../PageA&quot;</code></td>
+<td>Pops two pages off the stack, then pushes <code>PageA</code></td>
+</tr>
+<tr>
+<td>Navigate to the root page</td>
+<td><code>&quot;//&quot;</code></td>
+<td>Pops all pages until reaching the root</td>
+</tr>
+</tbody>
+</table>
+<h3 id="absolute-navigation">Absolute Navigation</h3>
+<p>Absolute navigation resets parts or the entirety of the navigation stack, then navigates to the specified page or pages. It provides a way to start fresh or set a new base for subsequent relative navigation.</p>
+<p>Here's a breakdown of the different patterns you can use:</p>
+<table>
+<thead>
+<tr>
+<th>Description</th>
+<th>Pattern</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Navigate to a new page, but keep the root</td>
+<td><code>&quot;PageA&quot;</code></td>
+<td>Clears the stack but retains the root page. Then, pushes <code>PageA</code></td>
+</tr>
+<tr>
+<td>Navigate to new pages, but keep the root</td>
+<td><code>&quot;PageA/PageB&quot;</code></td>
+<td>Clears the stack but retains the root page. Then, pushes <code>PageA</code> followed by <code>PageB</code></td>
+</tr>
+<tr>
+<td>Set a new root and navigate to subsequent pages</td>
+<td><code>&quot;//PageA/PageB&quot;</code></td>
+<td>Clears the entire stack, including the root. <code>PageA</code> becomes the new root, and then <code>PageB</code> is pushed</td>
+</tr>
+</tbody>
+</table>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BrandonWoodward/MVVMToolkitExtensions/blob/master/docs/articles/mauiquickstart.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
