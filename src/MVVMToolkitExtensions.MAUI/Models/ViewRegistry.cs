@@ -9,7 +9,7 @@ internal sealed class ViewRegistry : IViewRegistry
     public Type this[Type viewType]
     {
         get => _registry.TryGetValue(viewType, out var type)
-            ? type : throw new KeyNotFoundException("View not found. Register a View/ViewModel using AddView<TView, TViewModel>()");
+            ? type : throw new KeyNotFoundException("View not found. Register a View/ViewModel using AddViewModelMapping<TView, TViewModel>()");
         set => _registry[viewType] = value;
     }
 

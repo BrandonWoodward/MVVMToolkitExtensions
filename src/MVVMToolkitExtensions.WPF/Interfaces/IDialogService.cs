@@ -13,7 +13,7 @@ public interface IDialogService
     /// anything else will be wrapped in a Window control.
     /// </summary>
     /// <remarks>
-    /// The view must be registered in the DI container using AddView.
+    /// The view must be registered in the DI container using AddViewModelMapping.
     /// </remarks>
     /// <param name="parameters">Optional parameters to pass parameters to the dialog's ViewModel.
     /// Use <see cref="IDialogAware"/> to retrieve the parameters through the OnDialogOpened.

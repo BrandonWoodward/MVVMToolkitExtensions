@@ -9,7 +9,7 @@ internal sealed class NavigationRegistry : INavigationRegistry
     public Type this[string route] 
         => _registry.TryGetValue(route, out var type) 
             ? type : throw new ArgumentException($"Route '{route}' not found. Make sure you have registered " +
-                                                 $"the route using builder.Services.AddRoute<TView>().");
+                                                 $"the route using builder.Services.AddNavigationRoute<TView>().");
     
 
     public NavigationRegistry(IEnumerable<INavigationRegistration> navigationRegistrations)

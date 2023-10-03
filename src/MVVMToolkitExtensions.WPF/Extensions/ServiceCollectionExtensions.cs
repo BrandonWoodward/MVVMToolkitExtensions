@@ -22,7 +22,7 @@ public static class ServiceCollectionExtensions
     /// <remarks>
     /// This abstracts away the complexity of setting up the data context and encourages a clean separation of concerns in MVVM-based applications.
     /// </remarks>
-    public static IServiceCollection AddView<TView, TViewModel>(this IServiceCollection services)
+    public static IServiceCollection AddViewModelMapping<TView, TViewModel>(this IServiceCollection services)
         where TView : FrameworkElement
         where TViewModel : class
     {
