@@ -5,6 +5,7 @@
 ---
 
 ## 1. Introduction
+
 &nbsp;
 
 The `IRegionManager` provides functionality for dynamic view composition and region-based navigation.

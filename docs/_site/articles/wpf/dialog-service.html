@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title> </title>
+      <title>Dialog Service </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content=" ">
+      <meta name="title" content="Dialog Service ">
       
       <link rel="icon" href="../../favicon.ico">
       <link rel="stylesheet" href="../../public/docfx.min.css">
@@ -83,7 +83,75 @@
         </div>
 
         <article data-uid="">
+<h1 id="dialog-service">Dialog Service</h1>
 
+<p> </p>
+<hr>
+<h2 id="1-introduction">1. Introduction</h2>
+<p> </p>
+<p>The <code>IDialogService</code> provides functionality for MVVM-friendly dialogs.
+If you've used Prism before, this is very similar.</p>
+<p> </p>
+<hr>
+<h2 id="2-basic-usage">2. Basic Usage</h2>
+<p> </p>
+<pre><code class="lang-csharp">public YourViewModel(IDialogService dialogService)
+{
+    _dialogService = dialogService;
+}
+</code></pre>
+<pre><code class="lang-csharp">_dialogService.ShowDialog&lt;YourDialog&gt;();
+</code></pre>
+<p> </p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Ensure that the dialog has been appropriately registered with the DI container.</p>
+</div>
+<p> </p>
+<hr>
+<h2 id="3-passing-parameters">3. Passing Parameters</h2>
+<p> </p>
+<p>The <code>IDialogAware</code> interface exposes 3 methods, <code>OnDialogOpened</code>, <code>OnDialogClosed</code>, and <code>CanCloseDialog</code>,
+which are self-explanatory.</p>
+<p>You can use the <code>OnDialogOpened</code> method to pass parameters to your dialog.</p>
+<p> </p>
+<ul>
+<li><p><strong>YourViewModel.cs</strong>:</p>
+<pre><code class="lang-csharp">var parameters = new DialogParameters {{ &quot;message&quot;, &quot;Hello from the MainPage!&quot; }};
+_dialogService.ShowDialog&lt;AnotherView&gt;(&quot;AnotherViewRegion&quot;, parameters);
+</code></pre>
+</li>
+</ul>
+<p> </p>
+<ul>
+<li><p><strong>AnotherViewModel.cs</strong>:</p>
+<pre><code class="lang-csharp">public class AnotherViewModel : IDialogAware
+{
+    public void OnDialogOpened(DialogParameters parameters)
+    {
+        var message = parameters.Get&lt;string&gt;(&quot;message&quot;);
+    }
+
+    public void OnDialogClosed()
+    {
+        // Define actions to undertake when navigation departs from this view
+    }
+
+    public bool CanCloseDialog()
+    {
+        // Define conditions for which the dialog can be closed
+    }
+}
+</code></pre>
+</li>
+</ul>
+<p> </p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Any views that derive from <code>Window</code> will be shown as-is,
+anything else will be wrapped in a <code>Window</code> control.</p>
+</div>
+<hr>
 </article>
 
         <div class="contribution d-print-none">
