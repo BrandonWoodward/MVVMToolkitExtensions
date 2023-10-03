@@ -66,38 +66,38 @@ references:
   commentId: T:MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions
   fullName: MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions
   nameWithType: ServiceCollectionExtensions
-- uid: MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.AddRoute*
-  name: AddRoute
-  href: api/MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.html#MVVMToolkitExtensions_MAUI_Extensions_ServiceCollectionExtensions_AddRoute_
-  commentId: Overload:MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.AddRoute
+- uid: MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.AddNavigationRoute*
+  name: AddNavigationRoute
+  href: api/MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.html#MVVMToolkitExtensions_MAUI_Extensions_ServiceCollectionExtensions_AddNavigationRoute_
+  commentId: Overload:MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.AddNavigationRoute
   isSpec: "True"
-  fullName: MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.AddRoute
-  nameWithType: ServiceCollectionExtensions.AddRoute
-- uid: MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.AddRoute``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  name: AddRoute<TPage>(IServiceCollection)
-  href: api/MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.html#MVVMToolkitExtensions_MAUI_Extensions_ServiceCollectionExtensions_AddRoute__1_Microsoft_Extensions_DependencyInjection_IServiceCollection_
-  commentId: M:MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.AddRoute``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  name.vb: AddRoute(Of TPage)(IServiceCollection)
-  fullName: MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.AddRoute<TPage>(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  fullName.vb: MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.AddRoute(Of TPage)(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  nameWithType: ServiceCollectionExtensions.AddRoute<TPage>(IServiceCollection)
-  nameWithType.vb: ServiceCollectionExtensions.AddRoute(Of TPage)(IServiceCollection)
-- uid: MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.AddView*
-  name: AddView
-  href: api/MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.html#MVVMToolkitExtensions_MAUI_Extensions_ServiceCollectionExtensions_AddView_
-  commentId: Overload:MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.AddView
+  fullName: MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.AddNavigationRoute
+  nameWithType: ServiceCollectionExtensions.AddNavigationRoute
+- uid: MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.AddNavigationRoute``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  name: AddNavigationRoute<TPage>(IServiceCollection)
+  href: api/MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.html#MVVMToolkitExtensions_MAUI_Extensions_ServiceCollectionExtensions_AddNavigationRoute__1_Microsoft_Extensions_DependencyInjection_IServiceCollection_
+  commentId: M:MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.AddNavigationRoute``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  name.vb: AddNavigationRoute(Of TPage)(IServiceCollection)
+  fullName: MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.AddNavigationRoute<TPage>(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  fullName.vb: MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.AddNavigationRoute(Of TPage)(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  nameWithType: ServiceCollectionExtensions.AddNavigationRoute<TPage>(IServiceCollection)
+  nameWithType.vb: ServiceCollectionExtensions.AddNavigationRoute(Of TPage)(IServiceCollection)
+- uid: MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.AddViewModelMapping*
+  name: AddViewModelMapping
+  href: api/MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.html#MVVMToolkitExtensions_MAUI_Extensions_ServiceCollectionExtensions_AddViewModelMapping_
+  commentId: Overload:MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.AddViewModelMapping
   isSpec: "True"
-  fullName: MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.AddView
-  nameWithType: ServiceCollectionExtensions.AddView
-- uid: MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.AddView``2(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  name: AddView<TView, TViewModel>(IServiceCollection)
-  href: api/MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.html#MVVMToolkitExtensions_MAUI_Extensions_ServiceCollectionExtensions_AddView__2_Microsoft_Extensions_DependencyInjection_IServiceCollection_
-  commentId: M:MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.AddView``2(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  name.vb: AddView(Of TView, TViewModel)(IServiceCollection)
-  fullName: MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.AddView<TView, TViewModel>(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  fullName.vb: MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.AddView(Of TView, TViewModel)(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  nameWithType: ServiceCollectionExtensions.AddView<TView, TViewModel>(IServiceCollection)
-  nameWithType.vb: ServiceCollectionExtensions.AddView(Of TView, TViewModel)(IServiceCollection)
+  fullName: MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.AddViewModelMapping
+  nameWithType: ServiceCollectionExtensions.AddViewModelMapping
+- uid: MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.AddViewModelMapping``2(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  name: AddViewModelMapping<TView, TViewModel>(IServiceCollection)
+  href: api/MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.html#MVVMToolkitExtensions_MAUI_Extensions_ServiceCollectionExtensions_AddViewModelMapping__2_Microsoft_Extensions_DependencyInjection_IServiceCollection_
+  commentId: M:MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.AddViewModelMapping``2(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  name.vb: AddViewModelMapping(Of TView, TViewModel)(IServiceCollection)
+  fullName: MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.AddViewModelMapping<TView, TViewModel>(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  fullName.vb: MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.AddViewModelMapping(Of TView, TViewModel)(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  nameWithType: ServiceCollectionExtensions.AddViewModelMapping<TView, TViewModel>(IServiceCollection)
+  nameWithType.vb: ServiceCollectionExtensions.AddViewModelMapping(Of TView, TViewModel)(IServiceCollection)
 - uid: MVVMToolkitExtensions.MAUI.Interfaces
   name: MVVMToolkitExtensions.MAUI.Interfaces
   href: api/MVVMToolkitExtensions.MAUI.Interfaces.html

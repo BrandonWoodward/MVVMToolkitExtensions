@@ -15,10 +15,10 @@ It is designed to be used with CommunityToolkit.MVVM and Microsoft.Extensions.De
 
 <br/>
 
-- **ViewModel Registration**
-- **View-Based Navigation**
-- **Page-based Navigation** (MAUI)
-- **Dialog Service** (WPF)
+- 🛠️ **ViewModel Registration**: Streamline and manage your ViewModels effectively.
+- 📌 **View-Based Navigation**: Use dynamic view composition to modularize your apps.
+- 🌐 **Page-based Navigation** (MAUI): Navigate between pages using a powerful URI-based syntax.
+- 💬 **Dialog Service** (WPF): Implement MVVM-friendly dialogs with minimal effort.
  
 <br/>
 

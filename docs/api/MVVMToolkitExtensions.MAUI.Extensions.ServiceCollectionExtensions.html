@@ -153,10 +153,10 @@
 </h2>
 
 
-  <a id="MVVMToolkitExtensions_MAUI_Extensions_ServiceCollectionExtensions_AddRoute_" data-uid="MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.AddRoute*"></a>
+  <a id="MVVMToolkitExtensions_MAUI_Extensions_ServiceCollectionExtensions_AddNavigationRoute_" data-uid="MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.AddNavigationRoute*"></a>
 
-  <h3 id="MVVMToolkitExtensions_MAUI_Extensions_ServiceCollectionExtensions_AddRoute__1_Microsoft_Extensions_DependencyInjection_IServiceCollection_" data-uid="MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.AddRoute``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
-  AddRoute&lt;TPage&gt;(IServiceCollection)
+  <h3 id="MVVMToolkitExtensions_MAUI_Extensions_ServiceCollectionExtensions_AddNavigationRoute__1_Microsoft_Extensions_DependencyInjection_IServiceCollection_" data-uid="MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.AddNavigationRoute``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+  AddNavigationRoute&lt;TPage&gt;(IServiceCollection)
   <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/MVVMToolkitExtensions/blob/master/src/MVVMToolkitExtensions.MAUI/Extensions/ServiceCollectionExtensions.cs/#L43"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -166,7 +166,7 @@ The URI route for navigation is inferred from the page type name.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void AddRoute&lt;TPage&gt;(this IServiceCollection services) where TPage : Page</code></pre>
+    <pre><code class="lang-csharp hljs">public static void AddNavigationRoute&lt;TPage&gt;(this IServiceCollection services) where TPage : Page</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -189,18 +189,18 @@ The URI route for navigation is inferred from the page type name.</p>
 
 
 
-  <h4 class="section" id="MVVMToolkitExtensions_MAUI_Extensions_ServiceCollectionExtensions_AddRoute__1_Microsoft_Extensions_DependencyInjection_IServiceCollection__remarks">Remarks</h4>
+  <h4 class="section" id="MVVMToolkitExtensions_MAUI_Extensions_ServiceCollectionExtensions_AddNavigationRoute__1_Microsoft_Extensions_DependencyInjection_IServiceCollection__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>It's essential to register the page and its associated view model with the DI container
-using the <a class="xref" href="MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.html#MVVMToolkitExtensions_MAUI_Extensions_ServiceCollectionExtensions_AddView__2_Microsoft_Extensions_DependencyInjection_IServiceCollection_">AddView&lt;TView, TViewModel&gt;(IServiceCollection)</a> method before utilizing this method for navigation registration.</p>
+using the <a class="xref" href="MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.html#MVVMToolkitExtensions_MAUI_Extensions_ServiceCollectionExtensions_AddViewModelMapping__2_Microsoft_Extensions_DependencyInjection_IServiceCollection_">AddViewModelMapping&lt;TView, TViewModel&gt;(IServiceCollection)</a> method before utilizing this method for navigation registration.</p>
 </div>
 
 
 
 
-  <a id="MVVMToolkitExtensions_MAUI_Extensions_ServiceCollectionExtensions_AddView_" data-uid="MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.AddView*"></a>
+  <a id="MVVMToolkitExtensions_MAUI_Extensions_ServiceCollectionExtensions_AddViewModelMapping_" data-uid="MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.AddViewModelMapping*"></a>
 
-  <h3 id="MVVMToolkitExtensions_MAUI_Extensions_ServiceCollectionExtensions_AddView__2_Microsoft_Extensions_DependencyInjection_IServiceCollection_" data-uid="MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.AddView``2(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
-  AddView&lt;TView, TViewModel&gt;(IServiceCollection)
+  <h3 id="MVVMToolkitExtensions_MAUI_Extensions_ServiceCollectionExtensions_AddViewModelMapping__2_Microsoft_Extensions_DependencyInjection_IServiceCollection_" data-uid="MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.AddViewModelMapping``2(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+  AddViewModelMapping&lt;TView, TViewModel&gt;(IServiceCollection)
   <a class="header-action link-secondary" title="View source" href="https://github.com/BrandonWoodward/MVVMToolkitExtensions/blob/master/src/MVVMToolkitExtensions.MAUI/Extensions/ServiceCollectionExtensions.cs/#L23"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -214,7 +214,7 @@ set to the provided ViewModel.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IServiceCollection AddView&lt;TView, TViewModel&gt;(this IServiceCollection services) where TView : VisualElement where TViewModel : class</code></pre>
+    <pre><code class="lang-csharp hljs">public static IServiceCollection AddViewModelMapping&lt;TView, TViewModel&gt;(this IServiceCollection services) where TView : VisualElement where TViewModel : class</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
