@@ -9,6 +9,7 @@
 [![ci](https://github.com/BrandonWoodward/MVVMToolkitExtensions/actions/workflows/CI.yml/badge.svg)](https://github.com/BrandonWoodward/MVVMToolkitExtensions/actions/workflows/CI.yml)
 [![cd](https://github.com/BrandonWoodward/MVVMToolkitExtensions/actions/workflows/CD.yml/badge.svg)](https://github.com/BrandonWoodward/MVVMToolkitExtensions/actions/workflows/CD.yml)
 [![NuGet](https://img.shields.io/nuget/v/MVVMToolkitExtensions.WPF.svg?style=flat)](https://www.nuget.org/packages/MVVMToolkitExtensions.WPF/)
+[![Docs](https://img.shields.io/badge/Documentation-View-blue)](https://BrandonWoodward.github.io/MVVMToolkitExtensions/)
 
 </div>
 
@@ -17,3 +18,4 @@
 </h4>
 
 <br>
+
