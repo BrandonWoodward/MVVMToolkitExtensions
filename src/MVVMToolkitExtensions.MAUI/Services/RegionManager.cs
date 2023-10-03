@@ -14,7 +14,7 @@ internal sealed class RegionManager : IRegionManager
         _regionRegistry = regionRegistry;
     }
 
-    public void Navigate<TView>(string regionName, NavigationParameters parameters = null)
+    public void Navigate<TView>(string regionName, NavigationParameters? parameters = null)
         where TView : View
     {
         CheckRegionExists(regionName)

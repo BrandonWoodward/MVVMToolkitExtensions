@@ -19,7 +19,7 @@ internal sealed class NavigationService : INavigationService
         _navigationRoot = navigationRoot;
     }
 
-    public async Task NavigateAsync(string uri, NavigationParameters parameters = null)
+    public async Task NavigateAsync(string uri, NavigationParameters? parameters = null)
     {
         var cleanUri = uri.Trim();
         var segments = cleanUri.Split('/').Where(s => !string.IsNullOrWhiteSpace(s)).ToList();
@@ -85,7 +85,7 @@ internal sealed class NavigationService : INavigationService
         }
     }
 
-    private async Task PushPageAsync(string uri, NavigationParameters parameters)
+    private async Task PushPageAsync(string uri, NavigationParameters? parameters)
     {
         // Create a new page and ViewModel.
         // This will throw if the page type is not registered.

@@ -24,5 +24,5 @@ public interface INavigationService
     /// Implementations of this method should handle the complete navigation logic, 
     /// including resolving views, passing parameters, and managing the navigation stack.
     /// </remarks>
-    Task NavigateAsync(string uri, NavigationParameters parameters = null);
+    Task NavigateAsync(string uri, NavigationParameters? parameters = null);
 }
