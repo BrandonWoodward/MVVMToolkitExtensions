@@ -1,10 +1,13 @@
-# MVVMToolkitExtensions (WIP)
+# MVVMToolkitExtensions
 
 <br/>
 
 ## Overview
 
 <br/>
+
+> [!NOTE]
+> This package is currently work in progress.
 
 MVVMToolkitExtensions is a set of utilities that aims to streamline the development of WPF and MAUI applications using the MVVM pattern.
 It is designed to be used with CommunityToolkit.MVVM and Microsoft.Extensions.DependencyInjection.
