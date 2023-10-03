@@ -451,22 +451,22 @@ references:
   commentId: T:MVVMToolkitExtensions.WPF.Extensions.ServiceCollectionExtensions
   fullName: MVVMToolkitExtensions.WPF.Extensions.ServiceCollectionExtensions
   nameWithType: ServiceCollectionExtensions
-- uid: MVVMToolkitExtensions.WPF.Extensions.ServiceCollectionExtensions.AddView*
-  name: AddView
-  href: api/MVVMToolkitExtensions.WPF.Extensions.ServiceCollectionExtensions.html#MVVMToolkitExtensions_WPF_Extensions_ServiceCollectionExtensions_AddView_
-  commentId: Overload:MVVMToolkitExtensions.WPF.Extensions.ServiceCollectionExtensions.AddView
+- uid: MVVMToolkitExtensions.WPF.Extensions.ServiceCollectionExtensions.AddViewModelMapping*
+  name: AddViewModelMapping
+  href: api/MVVMToolkitExtensions.WPF.Extensions.ServiceCollectionExtensions.html#MVVMToolkitExtensions_WPF_Extensions_ServiceCollectionExtensions_AddViewModelMapping_
+  commentId: Overload:MVVMToolkitExtensions.WPF.Extensions.ServiceCollectionExtensions.AddViewModelMapping
   isSpec: "True"
-  fullName: MVVMToolkitExtensions.WPF.Extensions.ServiceCollectionExtensions.AddView
-  nameWithType: ServiceCollectionExtensions.AddView
-- uid: MVVMToolkitExtensions.WPF.Extensions.ServiceCollectionExtensions.AddView``2(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  name: AddView<TView, TViewModel>(IServiceCollection)
-  href: api/MVVMToolkitExtensions.WPF.Extensions.ServiceCollectionExtensions.html#MVVMToolkitExtensions_WPF_Extensions_ServiceCollectionExtensions_AddView__2_Microsoft_Extensions_DependencyInjection_IServiceCollection_
-  commentId: M:MVVMToolkitExtensions.WPF.Extensions.ServiceCollectionExtensions.AddView``2(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  name.vb: AddView(Of TView, TViewModel)(IServiceCollection)
-  fullName: MVVMToolkitExtensions.WPF.Extensions.ServiceCollectionExtensions.AddView<TView, TViewModel>(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  fullName.vb: MVVMToolkitExtensions.WPF.Extensions.ServiceCollectionExtensions.AddView(Of TView, TViewModel)(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  nameWithType: ServiceCollectionExtensions.AddView<TView, TViewModel>(IServiceCollection)
-  nameWithType.vb: ServiceCollectionExtensions.AddView(Of TView, TViewModel)(IServiceCollection)
+  fullName: MVVMToolkitExtensions.WPF.Extensions.ServiceCollectionExtensions.AddViewModelMapping
+  nameWithType: ServiceCollectionExtensions.AddViewModelMapping
+- uid: MVVMToolkitExtensions.WPF.Extensions.ServiceCollectionExtensions.AddViewModelMapping``2(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  name: AddViewModelMapping<TView, TViewModel>(IServiceCollection)
+  href: api/MVVMToolkitExtensions.WPF.Extensions.ServiceCollectionExtensions.html#MVVMToolkitExtensions_WPF_Extensions_ServiceCollectionExtensions_AddViewModelMapping__2_Microsoft_Extensions_DependencyInjection_IServiceCollection_
+  commentId: M:MVVMToolkitExtensions.WPF.Extensions.ServiceCollectionExtensions.AddViewModelMapping``2(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  name.vb: AddViewModelMapping(Of TView, TViewModel)(IServiceCollection)
+  fullName: MVVMToolkitExtensions.WPF.Extensions.ServiceCollectionExtensions.AddViewModelMapping<TView, TViewModel>(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  fullName.vb: MVVMToolkitExtensions.WPF.Extensions.ServiceCollectionExtensions.AddViewModelMapping(Of TView, TViewModel)(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  nameWithType: ServiceCollectionExtensions.AddViewModelMapping<TView, TViewModel>(IServiceCollection)
+  nameWithType.vb: ServiceCollectionExtensions.AddViewModelMapping(Of TView, TViewModel)(IServiceCollection)
 - uid: MVVMToolkitExtensions.WPF.Extensions.ServiceProviderExtensions
   name: ServiceProviderExtensions
   href: api/MVVMToolkitExtensions.WPF.Extensions.ServiceProviderExtensions.html
