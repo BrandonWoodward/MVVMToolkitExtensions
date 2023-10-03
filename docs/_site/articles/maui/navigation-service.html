@@ -135,21 +135,71 @@ builder.Services.AddNavigationRoute&lt;PageB&gt;();
 <p>The <code>NavigationService</code> supports two primary navigation styles: <strong>Relative</strong> and <strong>Absolute</strong>.
  </p>
 <h3 id="relative-navigation">Relative Navigation:</h3>
-<p>| Description                                       | Pattern             | Action                                                                                 |
-|---------------------------------------------------|---------------------|----------------------------------------------------------------------------------------|
-| Push a new page                                   | <code>&quot;/PageA&quot;</code>          | Adds <code>PageA</code> to the navigation stack                                                   |
-| Push multiple pages                               | <code>&quot;/PageA/PageB&quot;</code>    | Adds <code>PageA</code> followed by <code>PageB</code> to the stack                                          |
-| Navigate up one level, then push a new page       | <code>&quot;../PageB&quot;</code>        | Removes current page and adds <code>PageB</code>                                                  |
-| Navigate up two levels, then push a new page      | <code>&quot;../../PageA&quot;</code>     | Removes two pages and then adds <code>PageA</code>                                                |
-| Navigate to the root                              | <code>&quot;//&quot;</code>              | Clears all pages, reaching the root of the navigation stack                            |
- </p>
+<table>
+<thead>
+<tr>
+<th>Description</th>
+<th>Pattern</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Push a new page</td>
+<td><code>&quot;/PageA&quot;</code></td>
+<td>Adds <code>PageA</code> to the navigation stack</td>
+</tr>
+<tr>
+<td>Push multiple pages</td>
+<td><code>&quot;/PageA/PageB&quot;</code></td>
+<td>Adds <code>PageA</code> followed by <code>PageB</code> to the stack</td>
+</tr>
+<tr>
+<td>Navigate up one level, then push a new page</td>
+<td><code>&quot;../PageB&quot;</code></td>
+<td>Removes current page and adds <code>PageB</code></td>
+</tr>
+<tr>
+<td>Navigate up two levels, then push a new page</td>
+<td><code>&quot;../../PageA&quot;</code></td>
+<td>Removes two pages and then adds <code>PageA</code></td>
+</tr>
+<tr>
+<td>Navigate to the root</td>
+<td><code>&quot;//&quot;</code></td>
+<td>Clears all pages, reaching the root of the navigation stack</td>
+</tr>
+</tbody>
+</table>
+<br>
 <h3 id="absolute-navigation">Absolute Navigation:</h3>
-<p>| Description                                       | Pattern             | Action                                                                                 |
-|---------------------------------------------------|---------------------|----------------------------------------------------------------------------------------|
-| Navigate and retain the root                      | <code>&quot;PageA&quot;</code>           | Clears the stack, retains the root, and adds <code>PageA</code>                                   |
-| Navigate to multiple pages and retain the root    | <code>&quot;PageA/PageB&quot;</code>     | Clears the stack, retains the root, then sequentially adds <code>PageA</code> and <code>PageB</code>         |
-| Set a new root and navigate to subsequent pages   | <code>&quot;//PageA/PageB&quot;</code>   | Clears the entire stack. Sets <code>PageA</code> as root, then adds <code>PageB</code>                       |
- </p>
+<table>
+<thead>
+<tr>
+<th>Description</th>
+<th>Pattern</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Navigate and retain the root</td>
+<td><code>&quot;PageA&quot;</code></td>
+<td>Clears the stack, retains the root, and adds <code>PageA</code></td>
+</tr>
+<tr>
+<td>Navigate to multiple pages and retain the root</td>
+<td><code>&quot;PageA/PageB&quot;</code></td>
+<td>Clears the stack, retains the root, then sequentially adds <code>PageA</code> and <code>PageB</code></td>
+</tr>
+<tr>
+<td>Set a new root and navigate to subsequent pages</td>
+<td><code>&quot;//PageA/PageB&quot;</code></td>
+<td>Clears the entire stack. Sets <code>PageA</code> as root, then adds <code>PageB</code></td>
+</tr>
+</tbody>
+</table>
+<br>
 <hr>
 <h2 id="4-navigating-with-parameters">4. Navigating with Parameters</h2>
 <p> </p>

@@ -70,7 +70,8 @@ The `NavigationService` supports two primary navigation styles: **Relative** and
 | Navigate up one level, then push a new page       | `"../PageB"`        | Removes current page and adds `PageB`                                                  |
 | Navigate up two levels, then push a new page      | `"../../PageA"`     | Removes two pages and then adds `PageA`                                                |
 | Navigate to the root                              | `"//"`              | Clears all pages, reaching the root of the navigation stack                            |
-&nbsp;
+
+<br/>
 
 ### Absolute Navigation:
 
@@ -79,11 +80,13 @@ The `NavigationService` supports two primary navigation styles: **Relative** and
 | Navigate and retain the root                      | `"PageA"`           | Clears the stack, retains the root, and adds `PageA`                                   |
 | Navigate to multiple pages and retain the root    | `"PageA/PageB"`     | Clears the stack, retains the root, then sequentially adds `PageA` and `PageB`         |
 | Set a new root and navigate to subsequent pages   | `"//PageA/PageB"`   | Clears the entire stack. Sets `PageA` as root, then adds `PageB`                       |
-&nbsp;
+
+<br/>
 
 ---
 
 ## 4. Navigating with Parameters
+
 &nbsp;
 
 Parameters can be effortlessly passed to the ViewModel through the `INavigationAware` interface.

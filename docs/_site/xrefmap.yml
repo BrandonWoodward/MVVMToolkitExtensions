@@ -143,13 +143,13 @@ references:
   fullName: MVVMToolkitExtensions.MAUI.Interfaces.INavigationService
   nameWithType: INavigationService
 - uid: MVVMToolkitExtensions.MAUI.Interfaces.INavigationService.NavigateAsync(System.String,MVVMToolkitExtensions.MAUI.Models.NavigationParameters)
-  name: NavigateAsync(string, NavigationParameters)
+  name: NavigateAsync(string, NavigationParameters?)
   href: api/MVVMToolkitExtensions.MAUI.Interfaces.INavigationService.html#MVVMToolkitExtensions_MAUI_Interfaces_INavigationService_NavigateAsync_System_String_MVVMToolkitExtensions_MAUI_Models_NavigationParameters_
   commentId: M:MVVMToolkitExtensions.MAUI.Interfaces.INavigationService.NavigateAsync(System.String,MVVMToolkitExtensions.MAUI.Models.NavigationParameters)
   name.vb: NavigateAsync(String, NavigationParameters)
-  fullName: MVVMToolkitExtensions.MAUI.Interfaces.INavigationService.NavigateAsync(string, MVVMToolkitExtensions.MAUI.Models.NavigationParameters)
+  fullName: MVVMToolkitExtensions.MAUI.Interfaces.INavigationService.NavigateAsync(string, MVVMToolkitExtensions.MAUI.Models.NavigationParameters?)
   fullName.vb: MVVMToolkitExtensions.MAUI.Interfaces.INavigationService.NavigateAsync(String, MVVMToolkitExtensions.MAUI.Models.NavigationParameters)
-  nameWithType: INavigationService.NavigateAsync(string, NavigationParameters)
+  nameWithType: INavigationService.NavigateAsync(string, NavigationParameters?)
   nameWithType.vb: INavigationService.NavigateAsync(String, NavigationParameters)
 - uid: MVVMToolkitExtensions.MAUI.Interfaces.INavigationService.NavigateAsync*
   name: NavigateAsync
