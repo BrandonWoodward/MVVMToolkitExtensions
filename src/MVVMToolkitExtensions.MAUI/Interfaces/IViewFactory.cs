@@ -3,7 +3,7 @@
 /// <summary>
 /// Creates View and ViewModel pairs with the BindingContext set.
 /// </summary>
-public interface IViewFactory
+internal interface IViewFactory
 {
     /// <summary>
     /// Creates a Page and ViewModel pair with the BindingContext set.

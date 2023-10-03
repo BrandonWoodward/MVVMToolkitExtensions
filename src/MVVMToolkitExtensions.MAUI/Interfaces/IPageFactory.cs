@@ -3,7 +3,7 @@ namespace MVVMToolkitExtensions.MAUI.Interfaces;
 /// <summary>
 /// Creates Page and ViewModel pairs with the BindingContext set.
 /// </summary>
-public interface IPageFactory
+internal interface IPageFactory
 {
     /// <summary>
     /// Creates a Page and ViewModel pair with the BindingContext set. The page must be registered using AddView().
