@@ -155,6 +155,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MVVMToolkitExtensions.MAUI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MVVMToolkitExtensions.MAUI.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MVVMToolkitExtensions.WPF.Controls.RegionControl.yml",
       "output": {
         ".html": {
@@ -304,6 +314,26 @@
       "version": ""
     },
     {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MVVMToolkitExtensions.WPF.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MVVMToolkitExtensions.WPF.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MVVMToolkitExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MVVMToolkitExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "api/index.md",
       "output": {
@@ -338,10 +368,43 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/mauiquickstart.md",
+      "source_relative_path": "articles/maui/navigation-service.md",
       "output": {
         ".html": {
-          "relative_path": "articles/mauiquickstart.html"
+          "relative_path": "articles/maui/navigation-service.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/maui/region-manager.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/maui/region-manager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/maui/setup.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/maui/setup.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/maui/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/maui/toc.html"
+        },
+        ".json": {
+          "relative_path": "articles/maui/toc.json"
         }
       },
       "version": ""
@@ -355,16 +418,6 @@
         },
         ".json": {
           "relative_path": "articles/toc.json"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/wpfquickstart.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/wpfquickstart.html"
         }
       },
       "version": ""

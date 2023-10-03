@@ -13,7 +13,7 @@
       "disableGitFeatures": false,
       "disableDefaultFilter": false,
       "noRestore": false,
-      "namespaceLayout": "flattened",
+      "namespaceLayout": "nested",
       "memberLayout": "samePage",
       "EnumSortOrder": "alphabetic",
       "allowCompilationErrors": false

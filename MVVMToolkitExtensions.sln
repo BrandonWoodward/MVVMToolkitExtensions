@@ -30,6 +30,70 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVVMToolkitExtensions.WPF.Tests", "tests\MVVMToolkitExtensions.WPF.Tests\MVVMToolkitExtensions.WPF.Tests.csproj", "{70230C49-B2A4-4888-9852-FA134A838FB9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{E93A4C55-F9A1-438F-B234-AB7E440FD62C}"
+	ProjectSection(SolutionItems) = preProject
+		docs\docfx.json = docs\docfx.json
+		docs\index.md = docs\index.md
+		docs\toc.yml = docs\toc.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "api", "api", "{18DBEC0E-C9B4-41A9-AC87-19626C0BB914}"
+	ProjectSection(SolutionItems) = preProject
+		docs\api\.gitignore = docs\api\.gitignore
+		docs\api\.manifest = docs\api\.manifest
+		docs\api\index.md = docs\api\index.md
+		docs\api\MVVMToolkitExtensions.MAUI.Controls.RegionControl.yml = docs\api\MVVMToolkitExtensions.MAUI.Controls.RegionControl.yml
+		docs\api\MVVMToolkitExtensions.MAUI.Controls.yml = docs\api\MVVMToolkitExtensions.MAUI.Controls.yml
+		docs\api\MVVMToolkitExtensions.MAUI.Extensions.MauiAppBuilderExtensions.yml = docs\api\MVVMToolkitExtensions.MAUI.Extensions.MauiAppBuilderExtensions.yml
+		docs\api\MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.yml = docs\api\MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.yml
+		docs\api\MVVMToolkitExtensions.MAUI.Extensions.yml = docs\api\MVVMToolkitExtensions.MAUI.Extensions.yml
+		docs\api\MVVMToolkitExtensions.MAUI.Interfaces.INavigationAware.yml = docs\api\MVVMToolkitExtensions.MAUI.Interfaces.INavigationAware.yml
+		docs\api\MVVMToolkitExtensions.MAUI.Interfaces.INavigationService.yml = docs\api\MVVMToolkitExtensions.MAUI.Interfaces.INavigationService.yml
+		docs\api\MVVMToolkitExtensions.MAUI.Interfaces.IPageFactory.yml = docs\api\MVVMToolkitExtensions.MAUI.Interfaces.IPageFactory.yml
+		docs\api\MVVMToolkitExtensions.MAUI.Interfaces.IRegionManager.yml = docs\api\MVVMToolkitExtensions.MAUI.Interfaces.IRegionManager.yml
+		docs\api\MVVMToolkitExtensions.MAUI.Interfaces.IViewFactory.yml = docs\api\MVVMToolkitExtensions.MAUI.Interfaces.IViewFactory.yml
+		docs\api\MVVMToolkitExtensions.MAUI.Interfaces.yml = docs\api\MVVMToolkitExtensions.MAUI.Interfaces.yml
+		docs\api\MVVMToolkitExtensions.MAUI.Models.DialogParameters.yml = docs\api\MVVMToolkitExtensions.MAUI.Models.DialogParameters.yml
+		docs\api\MVVMToolkitExtensions.MAUI.Models.NavigationParameters.yml = docs\api\MVVMToolkitExtensions.MAUI.Models.NavigationParameters.yml
+		docs\api\MVVMToolkitExtensions.MAUI.Models.ParametersBase.yml = docs\api\MVVMToolkitExtensions.MAUI.Models.ParametersBase.yml
+		docs\api\MVVMToolkitExtensions.MAUI.Models.yml = docs\api\MVVMToolkitExtensions.MAUI.Models.yml
+		docs\api\MVVMToolkitExtensions.WPF.Controls.RegionControl.yml = docs\api\MVVMToolkitExtensions.WPF.Controls.RegionControl.yml
+		docs\api\MVVMToolkitExtensions.WPF.Controls.yml = docs\api\MVVMToolkitExtensions.WPF.Controls.yml
+		docs\api\MVVMToolkitExtensions.WPF.Extensions.ServiceCollectionExtensions.yml = docs\api\MVVMToolkitExtensions.WPF.Extensions.ServiceCollectionExtensions.yml
+		docs\api\MVVMToolkitExtensions.WPF.Extensions.ServiceProviderExtensions.yml = docs\api\MVVMToolkitExtensions.WPF.Extensions.ServiceProviderExtensions.yml
+		docs\api\MVVMToolkitExtensions.WPF.Extensions.yml = docs\api\MVVMToolkitExtensions.WPF.Extensions.yml
+		docs\api\MVVMToolkitExtensions.WPF.Interfaces.IDialogAware.yml = docs\api\MVVMToolkitExtensions.WPF.Interfaces.IDialogAware.yml
+		docs\api\MVVMToolkitExtensions.WPF.Interfaces.IDialogService.yml = docs\api\MVVMToolkitExtensions.WPF.Interfaces.IDialogService.yml
+		docs\api\MVVMToolkitExtensions.WPF.Interfaces.INavigationAware.yml = docs\api\MVVMToolkitExtensions.WPF.Interfaces.INavigationAware.yml
+		docs\api\MVVMToolkitExtensions.WPF.Interfaces.IRegionManager.yml = docs\api\MVVMToolkitExtensions.WPF.Interfaces.IRegionManager.yml
+		docs\api\MVVMToolkitExtensions.WPF.Interfaces.IViewFactory.yml = docs\api\MVVMToolkitExtensions.WPF.Interfaces.IViewFactory.yml
+		docs\api\MVVMToolkitExtensions.WPF.Interfaces.yml = docs\api\MVVMToolkitExtensions.WPF.Interfaces.yml
+		docs\api\MVVMToolkitExtensions.WPF.Models.BaseParameters.yml = docs\api\MVVMToolkitExtensions.WPF.Models.BaseParameters.yml
+		docs\api\MVVMToolkitExtensions.WPF.Models.DialogParameters.yml = docs\api\MVVMToolkitExtensions.WPF.Models.DialogParameters.yml
+		docs\api\MVVMToolkitExtensions.WPF.Models.NavigationParameters.yml = docs\api\MVVMToolkitExtensions.WPF.Models.NavigationParameters.yml
+		docs\api\MVVMToolkitExtensions.WPF.Models.yml = docs\api\MVVMToolkitExtensions.WPF.Models.yml
+		docs\api\toc.yml = docs\api\toc.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "apidoc", "apidoc", "{A695965B-87CD-4825-A675-389BF77AB79E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "articles", "articles", "{DF39242D-519D-4BF6-9145-BA1E34C5960A}"
+	ProjectSection(SolutionItems) = preProject
+		docs\articles\toc.yml = docs\articles\toc.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{D80A88A7-7B19-4952-847B-0F0C9007AC69}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3E55A20D-F8CE-4A3E-A168-CE0B9CC437AC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "maui", "maui", "{A31DDA19-E847-42EA-BBF1-D28EDE99808A}"
+	ProjectSection(SolutionItems) = preProject
+		docs\articles\maui\navigation-service.md = docs\articles\maui\navigation-service.md
+		docs\articles\maui\setup.md = docs\articles\maui\setup.md
+		docs\articles\maui\region-manager.md = docs\articles\maui\region-manager.md
+		docs\articles\maui\toc.yml = docs\articles\maui\toc.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "wpf", "wpf", "{90966E39-C99F-47F5-B1D7-94B82B1172AC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -77,6 +141,13 @@ Global
 		{44069740-6AAD-47EC-A471-EBBB34C59550} = {212E9F58-991F-44A9-AF6E-55A348525E95}
 		{70230C49-B2A4-4888-9852-FA134A838FB9} = {212E9F58-991F-44A9-AF6E-55A348525E95}
 		{E93A4C55-F9A1-438F-B234-AB7E440FD62C} = {DA38D034-FF49-4769-88D9-640B5C7B575C}
+		{18DBEC0E-C9B4-41A9-AC87-19626C0BB914} = {E93A4C55-F9A1-438F-B234-AB7E440FD62C}
+		{A695965B-87CD-4825-A675-389BF77AB79E} = {E93A4C55-F9A1-438F-B234-AB7E440FD62C}
+		{DF39242D-519D-4BF6-9145-BA1E34C5960A} = {E93A4C55-F9A1-438F-B234-AB7E440FD62C}
+		{D80A88A7-7B19-4952-847B-0F0C9007AC69} = {E93A4C55-F9A1-438F-B234-AB7E440FD62C}
+		{3E55A20D-F8CE-4A3E-A168-CE0B9CC437AC} = {E93A4C55-F9A1-438F-B234-AB7E440FD62C}
+		{A31DDA19-E847-42EA-BBF1-D28EDE99808A} = {DF39242D-519D-4BF6-9145-BA1E34C5960A}
+		{90966E39-C99F-47F5-B1D7-94B82B1172AC} = {DF39242D-519D-4BF6-9145-BA1E34C5960A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {83F55445-FCB8-49C5-BC9C-5A7EE8117F2C}

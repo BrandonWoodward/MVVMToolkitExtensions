@@ -1,6 +1,12 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
+- uid: MVVMToolkitExtensions
+  name: MVVMToolkitExtensions
+  href: api/MVVMToolkitExtensions.html
+- uid: MVVMToolkitExtensions.MAUI
+  name: MVVMToolkitExtensions.MAUI
+  href: api/MVVMToolkitExtensions.MAUI.html
 - uid: MVVMToolkitExtensions.MAUI.Controls
   name: MVVMToolkitExtensions.MAUI.Controls
   href: api/MVVMToolkitExtensions.MAUI.Controls.html
@@ -399,6 +405,9 @@ references:
   fullName.vb: MVVMToolkitExtensions.MAUI.Models.ParametersBase.Get(Of T)(String)
   nameWithType: ParametersBase.Get<T>(string)
   nameWithType.vb: ParametersBase.Get(Of T)(String)
+- uid: MVVMToolkitExtensions.WPF
+  name: MVVMToolkitExtensions.WPF
+  href: api/MVVMToolkitExtensions.WPF.html
 - uid: MVVMToolkitExtensions.WPF.Controls
   name: MVVMToolkitExtensions.WPF.Controls
   href: api/MVVMToolkitExtensions.WPF.Controls.html
