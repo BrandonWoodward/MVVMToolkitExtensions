@@ -11,7 +11,7 @@ The page-based navigation system provides a robust URI-based navigation mechanis
 
 ---
 
-## 2. Setup and Registration
+## 2. Basic Usage
 &nbsp;
 
 To make use of the page-based navigation, it's essential to register ViewModel mappings for `INavigationService` to correctly set the `BindingContext` of the desired page. Subsequently, pages for navigation must also be registered.

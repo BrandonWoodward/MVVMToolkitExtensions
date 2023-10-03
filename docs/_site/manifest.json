@@ -1,0 +1,458 @@
+{
+  "homepages": [],
+  "source_base_path": "D:/Coding/projects/MVVMToolkitExtensions/docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MVVMToolkitExtensions.MAUI.Controls.RegionControl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MVVMToolkitExtensions.MAUI.Controls.RegionControl.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MVVMToolkitExtensions.MAUI.Controls.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MVVMToolkitExtensions.MAUI.Controls.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MVVMToolkitExtensions.MAUI.Extensions.MauiAppBuilderExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MVVMToolkitExtensions.MAUI.Extensions.MauiAppBuilderExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MVVMToolkitExtensions.MAUI.Extensions.ServiceCollectionExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MVVMToolkitExtensions.MAUI.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MVVMToolkitExtensions.MAUI.Extensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MVVMToolkitExtensions.MAUI.Interfaces.INavigationAware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MVVMToolkitExtensions.MAUI.Interfaces.INavigationAware.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MVVMToolkitExtensions.MAUI.Interfaces.INavigationService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MVVMToolkitExtensions.MAUI.Interfaces.INavigationService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MVVMToolkitExtensions.MAUI.Interfaces.IPageFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MVVMToolkitExtensions.MAUI.Interfaces.IPageFactory.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MVVMToolkitExtensions.MAUI.Interfaces.IRegionManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MVVMToolkitExtensions.MAUI.Interfaces.IRegionManager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MVVMToolkitExtensions.MAUI.Interfaces.IViewFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MVVMToolkitExtensions.MAUI.Interfaces.IViewFactory.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MVVMToolkitExtensions.MAUI.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MVVMToolkitExtensions.MAUI.Interfaces.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MVVMToolkitExtensions.MAUI.Models.DialogParameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MVVMToolkitExtensions.MAUI.Models.DialogParameters.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MVVMToolkitExtensions.MAUI.Models.NavigationParameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MVVMToolkitExtensions.MAUI.Models.NavigationParameters.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MVVMToolkitExtensions.MAUI.Models.ParametersBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MVVMToolkitExtensions.MAUI.Models.ParametersBase.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MVVMToolkitExtensions.MAUI.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MVVMToolkitExtensions.MAUI.Models.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MVVMToolkitExtensions.MAUI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MVVMToolkitExtensions.MAUI.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MVVMToolkitExtensions.WPF.Controls.RegionControl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MVVMToolkitExtensions.WPF.Controls.RegionControl.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MVVMToolkitExtensions.WPF.Controls.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MVVMToolkitExtensions.WPF.Controls.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MVVMToolkitExtensions.WPF.Extensions.ServiceCollectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MVVMToolkitExtensions.WPF.Extensions.ServiceCollectionExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MVVMToolkitExtensions.WPF.Extensions.ServiceProviderExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MVVMToolkitExtensions.WPF.Extensions.ServiceProviderExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MVVMToolkitExtensions.WPF.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MVVMToolkitExtensions.WPF.Extensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MVVMToolkitExtensions.WPF.Interfaces.IDialogAware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MVVMToolkitExtensions.WPF.Interfaces.IDialogAware.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MVVMToolkitExtensions.WPF.Interfaces.IDialogService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MVVMToolkitExtensions.WPF.Interfaces.IDialogService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MVVMToolkitExtensions.WPF.Interfaces.INavigationAware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MVVMToolkitExtensions.WPF.Interfaces.INavigationAware.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MVVMToolkitExtensions.WPF.Interfaces.IRegionManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MVVMToolkitExtensions.WPF.Interfaces.IRegionManager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MVVMToolkitExtensions.WPF.Interfaces.IViewFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MVVMToolkitExtensions.WPF.Interfaces.IViewFactory.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MVVMToolkitExtensions.WPF.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MVVMToolkitExtensions.WPF.Interfaces.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MVVMToolkitExtensions.WPF.Models.BaseParameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MVVMToolkitExtensions.WPF.Models.BaseParameters.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MVVMToolkitExtensions.WPF.Models.DialogParameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MVVMToolkitExtensions.WPF.Models.DialogParameters.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MVVMToolkitExtensions.WPF.Models.NavigationParameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MVVMToolkitExtensions.WPF.Models.NavigationParameters.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MVVMToolkitExtensions.WPF.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MVVMToolkitExtensions.WPF.Models.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MVVMToolkitExtensions.WPF.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MVVMToolkitExtensions.WPF.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MVVMToolkitExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MVVMToolkitExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/maui/navigation-service.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/maui/navigation-service.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/maui/region-manager.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/maui/region-manager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/maui/setup.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/maui/setup.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/maui/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/maui/toc.html"
+        },
+        ".json": {
+          "relative_path": "articles/maui/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html"
+        },
+        ".json": {
+          "relative_path": "articles/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
