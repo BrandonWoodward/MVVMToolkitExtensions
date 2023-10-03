@@ -7,7 +7,7 @@
 ## 1. Introduction
 &nbsp;
 
-The `IRegionManager` provides functionality for dynamic view composition and region-based navigation. 
+The `IRegionManager` provides functionality for dynamic view composition and region-based navigation.
 If you've used Prism before, this will be familiar.
 &nbsp;
 
@@ -20,18 +20,16 @@ If you've used Prism before, this will be familiar.
 - **YourView.xaml**:
 
   ```xaml
-  <ContentPage
-      x:Class="YourNamespace.YourView"
-      xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-      xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-      xmlns:region="clr-namespace:MVVMToolkitExtensions.MAUI.Controls;assembly=MVVMToolkitExtensions.MAUI">
-
-      <ContentPage.Content>
-          <region:RegionControl RegionName="AnotherViewRegion" />
-      </ContentPage.Content>
-  </ContentPage>
+  <Window
+        x:Class="YourNamespace.YourView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:region="clr-namespace:MVVMToolkitExtensions.WPF.Controls;assembly=MVVMToolkitExtensions.WPF">
+          
+        <region:RegionControl Grid.Column="0" RegionName="ViewARegion" />
+  </Window>
   ```
-&nbsp;
+  &nbsp;
 
 - **YourViewModel.cs**:
 
@@ -87,7 +85,7 @@ Pass parameters to your ViewModel using the `INavigationAware` interface.
       }
   }
   ```
-  
+
 &nbsp;
 
 > [!NOTE]

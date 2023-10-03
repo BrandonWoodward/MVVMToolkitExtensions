@@ -27,12 +27,12 @@ Install **MVVMToolkitExtensions.MAUI** through your method of choice:
 ---
 
 ## 2. Configuring Dependency Injection
+
 &nbsp;
 
-MVVMToolkitExtensions is designed with IoC in mind and stands on the shoulders of the reputable `Microsoft.Extensions.DependencyInjection` library. Say goodbye to the old ways of setting the `BindingContext` for each view or injecting view models in code-behind; with MVVMToolkitExtensions, enjoy a unified and centralized solution.
-&nbsp;
+MVVMToolkitExtensions is designed with IoC in mind and uses the reputable `Microsoft.Extensions.DependencyInjection` library.
+Instead of manually setting the `BindingContext` in each view, you can use a centralized approach:
 
-### Setting Up the Application Container:
 &nbsp;
 
 - **MauiProgram.cs**:
@@ -54,6 +54,7 @@ MVVMToolkitExtensions is designed with IoC in mind and stands on the shoulders o
   ```
 
 &nbsp;
+
 - **App.xaml.cs**:
 
   ```csharp
@@ -70,16 +71,3 @@ MVVMToolkitExtensions is designed with IoC in mind and stands on the shoulders o
 &nbsp;
 
 ---
-
-## 3. Expanding Your App
-&nbsp;
-
-Once the setup is complete, you're primed to build upon your application. Leverage the [`IRegionManager`](region-manager.md) for region-based navigation or modular view composition. Or, harness the might of the [`INavigationService`](navigation-service.md) for a dynamic, URI-driven, page-focused navigation.
-
-Remember, when using either of these stellar services, the `BindingContext` is set for you, effortlessly.
-&nbsp;
-
----
-```
-
-I've interspersed the content with `&nbsp;` to provide additional spacing. Depending on the exact rendering on docfx, you might need to adjust the number of `&nbsp;` to achieve the desired look.

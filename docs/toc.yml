@@ -2,19 +2,19 @@ items:
 - name: MAUI
   items:
   - name: Setup
-    href: /articles/maui/setup.html
+    href: articles/maui/setup.md
   - name: RegionManager
-    href: /articles/maui/region-manager.html
+    href: articles/maui/region-manager.md
   - name: NavigationService
-    href: /articles/maui/navigation-service.html
+    href: articles/maui/navigation-service.md
 - name: WPF
   items:
   - name: Setup
-    href: /articles/maui/setup.html
+    href: articles/wpf/setup.md
   - name: RegionManager
-    href: /articles/maui/region-manager.html
+    href: articles/wpf/region-manager.md
   - name: DialogService
-    href: /articles/maui/dialog-service.html
+    href: articles/wpf/dialog-service.md
 - name: Api Documentation
   href: api/
   homepage: api/index.md

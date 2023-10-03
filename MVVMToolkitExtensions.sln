@@ -94,6 +94,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "maui", "maui", "{A31DDA19-E
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "wpf", "wpf", "{90966E39-C99F-47F5-B1D7-94B82B1172AC}"
+	ProjectSection(SolutionItems) = preProject
+		docs\articles\wpf\dialog-service.md = docs\articles\wpf\dialog-service.md
+		docs\articles\wpf\region-manager.md = docs\articles\wpf\region-manager.md
+		docs\articles\wpf\setup.md = docs\articles\wpf\setup.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_site", "_site", "{CF41C0CE-AFB5-4C69-9CB1-690E70221448}"
 	ProjectSection(SolutionItems) = preProject
@@ -249,6 +254,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "maui", "maui", "{D528E072-9
 		docs\_site\articles\maui\toc.json = docs\_site\articles\maui\toc.json
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "wpf", "wpf", "{2FAEC0AA-CEF2-430A-96D3-8A633AA8BDE1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -307,6 +314,7 @@ Global
 		{EB090BE6-3506-417C-8F2C-048FF434A7A3} = {CF41C0CE-AFB5-4C69-9CB1-690E70221448}
 		{7D2034C1-F559-4970-8BFF-0484D7B5AE21} = {CF41C0CE-AFB5-4C69-9CB1-690E70221448}
 		{D528E072-9242-4C5C-B51A-0AFC953C7E8C} = {EB090BE6-3506-417C-8F2C-048FF434A7A3}
+		{2FAEC0AA-CEF2-430A-96D3-8A633AA8BDE1} = {EB090BE6-3506-417C-8F2C-048FF434A7A3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {83F55445-FCB8-49C5-BC9C-5A7EE8117F2C}
