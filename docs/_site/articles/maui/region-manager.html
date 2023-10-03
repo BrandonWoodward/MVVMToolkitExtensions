@@ -89,12 +89,11 @@
 <hr>
 <h2 id="1-introduction">1. Introduction</h2>
 <p> </p>
-<p>The <code>IRegionManager</code> provides an avenue for dynamic view composition and region-based navigation that aligns harmoniously with MVVM paradigms. If you're acquainted with the Prism library, you'll find many familiar concepts here.
+<p>The <code>IRegionManager</code> provides functionality for dynamic view composition and region-based navigation.
+If you've used Prism before, this will be familiar.
  </p>
 <hr>
 <h2 id="2-basic-usage">2. Basic Usage</h2>
-<p> </p>
-<h3 id="setting-up-a-region-in-the-view">Setting up a Region in the View:</h3>
 <p> </p>
 <ul>
 <li><p><strong>YourView.xaml</strong>:</p>
@@ -112,17 +111,13 @@
 </li>
 </ul>
 <p> </p>
-<h3 id="using-the-regionmanager">Using the RegionManager:</h3>
-<p> </p>
 <ul>
 <li><p><strong>YourViewModel.cs</strong>:</p>
-<p>Acquire the <code>IRegionManager</code> via constructor dependency injection:</p>
 <pre><code class="lang-csharp">public YourViewModel(IRegionManager regionManager)
 {
     _regionManager = regionManager;
 }
 </code></pre>
-<p>Proceed to navigate to the designated view:</p>
 <pre><code class="lang-csharp">_regionManager.Navigate&lt;AnotherView&gt;(&quot;AnotherViewRegion&quot;);
 </code></pre>
 </li>
@@ -130,16 +125,13 @@
 <p> </p>
 <div class="NOTE">
 <h5>Note</h5>
-<p>Ensure that the destination view has been appropriately registered within the DI container:
-<code>builder.Services.AddViewModelMapping&lt;AnotherView, AnotherViewModel&gt;();</code>
- </p>
+<p>Ensure that the destination view has been appropriately registered with the DI container.</p>
 </div>
+<p> </p>
 <hr>
 <h2 id="3-passing-parameters">3. Passing Parameters</h2>
 <p> </p>
-<p>Pass parameters to your ViewModel using the <code>INavigationAware</code> interface.
- </p>
-<h3 id="dispatching-parameters">Dispatching Parameters:</h3>
+<p>Pass parameters to your ViewModel using the <code>INavigationAware</code> interface.</p>
 <p> </p>
 <ul>
 <li><p><strong>YourViewModel.cs</strong>:</p>
@@ -148,8 +140,6 @@ _regionManager.Navigate&lt;AnotherView&gt;(&quot;AnotherViewRegion&quot;, parame
 </code></pre>
 </li>
 </ul>
-<p> </p>
-<h3 id="acquiring-parameters">Acquiring Parameters:</h3>
 <p> </p>
 <ul>
 <li><p><strong>AnotherViewModel.cs</strong>:</p>
@@ -166,10 +156,14 @@ _regionManager.Navigate&lt;AnotherView&gt;(&quot;AnotherViewRegion&quot;, parame
     }
 }
 </code></pre>
-<p>Note: The <code>OnNavigatedFrom</code> function is summoned when the view departs from the region, either due to transition to another view in the same region or via an <code>IRegionManager.Clear</code> call.
- </p>
 </li>
 </ul>
+<p> </p>
+<div class="NOTE">
+<h5>Note</h5>
+<p><code>OnNavigatedFrom()</code> is called when the view in the region is replaced
+or the region is cleared by calling <code>IRegionManager.Clear(regionName)</code></p>
+</div>
 <hr>
 </article>
 

@@ -2,20 +2,20 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>MAUI Setup </title>
+      <title> </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="MAUI Setup ">
+      <meta name="title" content=" ">
       
       <link rel="icon" href="../../favicon.ico">
       <link rel="stylesheet" href="../../public/docfx.min.css">
       <link rel="stylesheet" href="../../public/main.css">
       <meta name="docfx:navrel" content="../../toc.html">
-      <meta name="docfx:tocrel" content="toc.html">
+      <meta name="docfx:tocrel" content="../../toc.html">
       
       
       
       
-      <meta name="docfx:docurl" content="https://github.com/BrandonWoodward/MVVMToolkitExtensions/blob/master/docs/articles/maui/setup.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/BrandonWoodward/MVVMToolkitExtensions/blob/master/docs/articles/wpf/dialog-service.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -83,72 +83,11 @@
         </div>
 
         <article data-uid="">
-<h1 id="maui-setup">MAUI Setup</h1>
 
-<p> </p>
-<hr>
-<h2 id="1-installation">1. Installation</h2>
-<p> </p>
-<p>Install <strong>MVVMToolkitExtensions.MAUI</strong> through your method of choice:</p>
-<p> </p>
-<ul>
-<li><p><strong>.NET CLI</strong>:</p>
-<pre><code class="lang-bash">dotnet add package MVVMToolkitExtensions.MAUI
-</code></pre>
-</li>
-</ul>
-<p> </p>
-<ul>
-<li><p><strong>Package Manager</strong>:</p>
-<pre><code class="lang-bash">Install-Package MVVMToolkitExtensions.MAUI
-</code></pre>
-</li>
-</ul>
-<p> </p>
-<hr>
-<h2 id="2-configuring-dependency-injection">2. Configuring Dependency Injection</h2>
-<p> </p>
-<p>MVVMToolkitExtensions is designed with IoC in mind and uses the reputable <code>Microsoft.Extensions.DependencyInjection</code> library.
-Instead of manually setting the <code>BindingContext</code> in each view, you can use a centralized approach:</p>
-<p> </p>
-<ul>
-<li><p><strong>MauiProgram.cs</strong>:</p>
-<pre><code class="lang-csharp">public static MauiApp CreateMauiApp()
-{
-    var builder = MauiApp.CreateBuilder();
-
-    // Register services and view models
-    builder.Services.AddViewModelMapping&lt;MainPage, MainPageViewModel&gt;();
-    builder.Services.AddViewModelMapping&lt;LoginPage, LoginPageViewModel&gt;();
-
-    return builder
-        .UseMauiApp&lt;App&gt;()
-        .WithMainPage&lt;LoginPage&gt;()
-        .Build();
-}
-</code></pre>
-</li>
-</ul>
-<p> </p>
-<ul>
-<li><p><strong>App.xaml.cs</strong>:</p>
-<pre><code class="lang-csharp">public partial class App : Application
-{
-    public App(Func&lt;Page&gt; loginPage)
-    {
-        InitializeComponent();
-        MainPage = loginPage();
-    }
-}
-</code></pre>
-</li>
-</ul>
-<p> </p>
-<hr>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BrandonWoodward/MVVMToolkitExtensions/blob/master/docs/articles/maui/setup.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BrandonWoodward/MVVMToolkitExtensions/blob/master/docs/articles/wpf/dialog-service.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

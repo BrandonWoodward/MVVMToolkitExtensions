@@ -2,20 +2,20 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>MAUI Setup </title>
+      <title>Region Manager </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="MAUI Setup ">
+      <meta name="title" content="Region Manager ">
       
       <link rel="icon" href="../../favicon.ico">
       <link rel="stylesheet" href="../../public/docfx.min.css">
       <link rel="stylesheet" href="../../public/main.css">
       <meta name="docfx:navrel" content="../../toc.html">
-      <meta name="docfx:tocrel" content="toc.html">
+      <meta name="docfx:tocrel" content="../../toc.html">
       
       
       
       
-      <meta name="docfx:docurl" content="https://github.com/BrandonWoodward/MVVMToolkitExtensions/blob/master/docs/articles/maui/setup.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/BrandonWoodward/MVVMToolkitExtensions/blob/master/docs/articles/wpf/region-manager.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -83,72 +83,88 @@
         </div>
 
         <article data-uid="">
-<h1 id="maui-setup">MAUI Setup</h1>
+<h1 id="region-manager">Region Manager</h1>
 
 <p> </p>
 <hr>
-<h2 id="1-installation">1. Installation</h2>
+<h2 id="1-introduction">1. Introduction</h2>
 <p> </p>
-<p>Install <strong>MVVMToolkitExtensions.MAUI</strong> through your method of choice:</p>
-<p> </p>
-<ul>
-<li><p><strong>.NET CLI</strong>:</p>
-<pre><code class="lang-bash">dotnet add package MVVMToolkitExtensions.MAUI
-</code></pre>
-</li>
-</ul>
-<p> </p>
-<ul>
-<li><p><strong>Package Manager</strong>:</p>
-<pre><code class="lang-bash">Install-Package MVVMToolkitExtensions.MAUI
-</code></pre>
-</li>
-</ul>
-<p> </p>
+<p>The <code>IRegionManager</code> provides functionality for dynamic view composition and region-based navigation.
+If you've used Prism before, this will be familiar.
+ </p>
 <hr>
-<h2 id="2-configuring-dependency-injection">2. Configuring Dependency Injection</h2>
-<p> </p>
-<p>MVVMToolkitExtensions is designed with IoC in mind and uses the reputable <code>Microsoft.Extensions.DependencyInjection</code> library.
-Instead of manually setting the <code>BindingContext</code> in each view, you can use a centralized approach:</p>
+<h2 id="2-basic-usage">2. Basic Usage</h2>
 <p> </p>
 <ul>
-<li><p><strong>MauiProgram.cs</strong>:</p>
-<pre><code class="lang-csharp">public static MauiApp CreateMauiApp()
+<li><p><strong>YourView.xaml</strong>:</p>
+<pre><code class="lang-xaml">&lt;Window
+      x:Class=&quot;YourNamespace.YourView&quot;
+      xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;
+      xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;
+      xmlns:region=&quot;clr-namespace:MVVMToolkitExtensions.WPF.Controls;assembly=MVVMToolkitExtensions.WPF&quot;&gt;
+
+      &lt;region:RegionControl Grid.Column=&quot;0&quot; RegionName=&quot;ViewARegion&quot; /&gt;
+&lt;/Window&gt;
+</code></pre>
+<p> </p>
+</li>
+<li><p><strong>YourViewModel.cs</strong>:</p>
+<pre><code class="lang-csharp">public YourViewModel(IRegionManager regionManager)
 {
-    var builder = MauiApp.CreateBuilder();
-
-    // Register services and view models
-    builder.Services.AddViewModelMapping&lt;MainPage, MainPageViewModel&gt;();
-    builder.Services.AddViewModelMapping&lt;LoginPage, LoginPageViewModel&gt;();
-
-    return builder
-        .UseMauiApp&lt;App&gt;()
-        .WithMainPage&lt;LoginPage&gt;()
-        .Build();
+    _regionManager = regionManager;
 }
 </code></pre>
+<pre><code class="lang-csharp">_regionManager.Navigate&lt;AnotherView&gt;(&quot;AnotherViewRegion&quot;);
+</code></pre>
+</li>
+</ul>
+<p> </p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Ensure that the destination view has been appropriately registered with the DI container.</p>
+</div>
+<p> </p>
+<hr>
+<h2 id="3-passing-parameters">3. Passing Parameters</h2>
+<p> </p>
+<p>Pass parameters to your ViewModel using the <code>INavigationAware</code> interface.</p>
+<p> </p>
+<ul>
+<li><p><strong>YourViewModel.cs</strong>:</p>
+<pre><code class="lang-csharp">var parameters = new NavigationParameters {{ &quot;message&quot;, &quot;Hello from the MainPage!&quot; }};
+_regionManager.Navigate&lt;AnotherView&gt;(&quot;AnotherViewRegion&quot;, parameters);
+</code></pre>
 </li>
 </ul>
 <p> </p>
 <ul>
-<li><p><strong>App.xaml.cs</strong>:</p>
-<pre><code class="lang-csharp">public partial class App : Application
+<li><p><strong>AnotherViewModel.cs</strong>:</p>
+<pre><code class="lang-csharp">public class AnotherViewModel : INavigationAware
 {
-    public App(Func&lt;Page&gt; loginPage)
+    public void OnNavigatedTo(NavigationParameters parameters)
     {
-        InitializeComponent();
-        MainPage = loginPage();
+        var message = parameters.Get&lt;string&gt;(&quot;message&quot;);
+    }
+
+    public void OnNavigatedFrom()
+    {
+        // Define actions to undertake when navigation departs from this view
     }
 }
 </code></pre>
 </li>
 </ul>
 <p> </p>
+<div class="NOTE">
+<h5>Note</h5>
+<p><code>OnNavigatedFrom()</code> is called when the view in the region is replaced
+or the region is cleared by calling <code>IRegionManager.Clear(regionName)</code></p>
+</div>
 <hr>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BrandonWoodward/MVVMToolkitExtensions/blob/master/docs/articles/maui/setup.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BrandonWoodward/MVVMToolkitExtensions/blob/master/docs/articles/wpf/region-manager.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
