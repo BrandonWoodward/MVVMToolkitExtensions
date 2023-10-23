@@ -88,8 +88,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "maui", "maui", "{A31DDA19-E847-42EA-BBF1-D28EDE99808A}"
 	ProjectSection(SolutionItems) = preProject
 		docs\articles\maui\navigation-service.md = docs\articles\maui\navigation-service.md
-		docs\articles\maui\setup.md = docs\articles\maui\setup.md
 		docs\articles\maui\region-manager.md = docs\articles\maui\region-manager.md
+		docs\articles\maui\setup.md = docs\articles\maui\setup.md
 		docs\articles\maui\toc.yml = docs\articles\maui\toc.yml
 	EndProjectSection
 EndProject
@@ -256,6 +256,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "maui", "maui", "{D528E072-9
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "wpf", "wpf", "{2FAEC0AA-CEF2-430A-96D3-8A633AA8BDE1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFDemo", "src\WPFDemo\WPFDemo.csproj", "{605A2AC7-6B66-435B-9AED-CC2682D3D9BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -287,6 +289,10 @@ Global
 		{70230C49-B2A4-4888-9852-FA134A838FB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70230C49-B2A4-4888-9852-FA134A838FB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70230C49-B2A4-4888-9852-FA134A838FB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{605A2AC7-6B66-435B-9AED-CC2682D3D9BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{605A2AC7-6B66-435B-9AED-CC2682D3D9BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{605A2AC7-6B66-435B-9AED-CC2682D3D9BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{605A2AC7-6B66-435B-9AED-CC2682D3D9BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -315,6 +321,7 @@ Global
 		{7D2034C1-F559-4970-8BFF-0484D7B5AE21} = {CF41C0CE-AFB5-4C69-9CB1-690E70221448}
 		{D528E072-9242-4C5C-B51A-0AFC953C7E8C} = {EB090BE6-3506-417C-8F2C-048FF434A7A3}
 		{2FAEC0AA-CEF2-430A-96D3-8A633AA8BDE1} = {EB090BE6-3506-417C-8F2C-048FF434A7A3}
+		{605A2AC7-6B66-435B-9AED-CC2682D3D9BF} = {804ACBDE-A7AE-4FA6-9CD3-362D9E58A1A8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {83F55445-FCB8-49C5-BC9C-5A7EE8117F2C}
