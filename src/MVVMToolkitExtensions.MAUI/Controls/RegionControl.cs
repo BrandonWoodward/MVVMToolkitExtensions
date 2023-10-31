@@ -20,11 +20,9 @@ public class RegionControl : ContentView
         get => _regionName;
         set
         {
-            if(_regionName != value)
-            {
-                _regionName = value;
-                WeakReferenceMessenger.Default.Send(new RegisterRegionMessage((_regionName, this)));
-            }
+            if (_regionName == value) return;
+            _regionName = value;
+            WeakReferenceMessenger.Default.Send(new RegisterRegionMessage((_regionName, this)));
         }
     }
 }

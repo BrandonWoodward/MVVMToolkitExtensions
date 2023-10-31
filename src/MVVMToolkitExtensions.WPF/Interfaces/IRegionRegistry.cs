@@ -4,6 +4,6 @@ namespace MVVMToolkitExtensions.WPF.Interfaces;
 
 internal interface IRegionRegistry
 {
-    RegionControl this[string regionName] { get; set; }
+    IRegionControl this[string regionName] { get; }
     bool Contains(string regionName);
 }

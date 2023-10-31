@@ -4,7 +4,7 @@ using MVVMToolkitExtensions.MAUI.Interfaces;
 
 namespace MVVMToolkitExtensions.MAUI.Models;
 
-internal class RegionRegistry : IRegionRegistry, IRecipient<RegisterRegionMessage>
+internal sealed class RegionRegistry : IRegionRegistry, IRecipient<RegisterRegionMessage>
 {
     private readonly Dictionary<string, RegionControl> _registry;
 
@@ -21,17 +21,23 @@ internal class RegionRegistry : IRegionRegistry, IRecipient<RegisterRegionMessag
     }
 
     public bool Contains(string regionName)
-        => _registry.ContainsKey(regionName);
+    {
+        return _registry.ContainsKey(regionName);
+    }
 
     public void Receive(RegisterRegionMessage message)
-        => Add(message.Value.Name, message.Value.Region);
+    {
+        Add(message.Value.Name, message.Value.Region);
+    }
 
     private RegionControl? GetValueOrNull(string regionName)
-        => _registry.TryGetValue(regionName, out var region) ? region : null;
+    {
+        return _registry.TryGetValue(regionName, out var region) ? region : null;
+    }
 
     private void Add(string regionName, RegionControl region)
     {
-        if (_registry.ContainsKey(regionName)) return;
+        if (_registry.ContainsKey(regionName)) throw new ArgumentException($"Region {regionName} already exists.");
         _registry.Add(regionName, region);
     }
 }

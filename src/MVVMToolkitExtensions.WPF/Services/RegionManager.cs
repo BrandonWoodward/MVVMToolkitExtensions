@@ -18,40 +18,27 @@ internal sealed class RegionManager : IRegionManager
     public void Navigate<TView>(string regionName, NavigationParameters? parameters = null)
         where TView : FrameworkElement
     {
-        CheckRegionExists(regionName)
+        HandleNavigationAware(regionName, vm => vm.OnNavigatedFrom())
             .ClearContent(regionName)
-            .HandleNavigationAware(regionName, vm => vm.OnNavigatedFrom())
             .SetContent<TView>(regionName)
             .HandleNavigationAware(regionName, vm => vm.OnNavigatedTo(parameters ?? NavigationParameters.Empty));
     }
 
     public void Clear(string regionName)
     {
-        CheckRegionExists(regionName)
-            .ClearContent(regionName)
+        ClearContent(regionName)
             .HandleNavigationAware(regionName, vm => vm.OnNavigatedFrom());
-    }
-
-    private RegionManager CheckRegionExists(string regionName)
-    {
-        if(!_regionRegistry.Contains(regionName))
-            throw new InvalidOperationException($"Region with name {regionName} not found.");
-        return this;
     }
 
     private RegionManager ClearContent(string regionName)
     {
-        _regionRegistry[regionName].Content = null;
+        _regionRegistry[regionName].Clear();
         return this;
     }
 
     private RegionManager HandleNavigationAware(string regionName, Action<INavigationAware> action)
     {
-        if(_regionRegistry[regionName].Content is FrameworkElement
-            { DataContext: INavigationAware navigationAwareViewModel })
-        {
-            action(navigationAwareViewModel);
-        }
+        if(_regionRegistry[regionName].DataContext is INavigationAware vm) action(vm);
         return this;
     }
 
@@ -59,7 +46,7 @@ internal sealed class RegionManager : IRegionManager
         where TView : FrameworkElement
     {
         var (view, _) = _viewFactory.Create<TView>();
-        _regionRegistry[regionName].Content = view;
+        _regionRegistry[regionName].Add(view);
         return this;
     }
 }

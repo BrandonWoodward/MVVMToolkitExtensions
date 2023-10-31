@@ -1,9 +1,10 @@
 ﻿using CommunityToolkit.Mvvm.Messaging.Messages;
 using MVVMToolkitExtensions.WPF.Controls;
+using MVVMToolkitExtensions.WPF.Interfaces;
 
 namespace MVVMToolkitExtensions.WPF.Models;
 
-internal class RegisterRegionMessage : ValueChangedMessage<(string Name, RegionControl Region)>
+internal sealed class RegisterRegionMessage : ValueChangedMessage<(string Name, IRegionControl Region)>
 {
-    public RegisterRegionMessage((string, RegionControl) value) : base(value) { }
+    public RegisterRegionMessage((string, IRegionControl) value) : base(value) { }
 }
