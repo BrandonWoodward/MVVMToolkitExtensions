@@ -30,5 +30,8 @@ internal class RegionRegistry : IRegionRegistry, IRecipient<RegisterRegionMessag
         => _registry.TryGetValue(regionName, out var region) ? region : null;
 
     private void Add(string regionName, RegionControl region)
-        => _registry.Add(regionName, region);
+    {
+        if (_registry.ContainsKey(regionName)) return;
+        _registry.Add(regionName, region);
+    }
 }
