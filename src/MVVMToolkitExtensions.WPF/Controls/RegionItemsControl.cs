@@ -37,6 +37,11 @@ public class RegionItemsControl : ItemsControl, IRegionControl
         if (d is not RegionItemsControl regionItemsControl || e.NewValue is not string regionName) return;
         WeakReferenceMessenger.Default.Send(new RegisterRegionMessage((regionName, regionItemsControl)));
     }
+    
+    public IEnumerable<object> RegionContent()
+    {
+        yield return Items;
+    }
 
     public void Add(FrameworkElement view)
     {

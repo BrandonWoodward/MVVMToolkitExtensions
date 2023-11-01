@@ -29,7 +29,12 @@ public class RegionControl : ContentControl, IRegionControl
         get => (string)GetValue(RegionNameProperty);
         set => SetValue(RegionNameProperty, value);
     }
-    
+
+    public IEnumerable<object> RegionContent()
+    {
+        yield return Content;
+    }
+
     public void Add(FrameworkElement view)
     {
         Content = view;

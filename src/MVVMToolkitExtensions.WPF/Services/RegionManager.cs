@@ -18,36 +18,33 @@ internal sealed class RegionManager : IRegionManager
     public void Navigate<TView>(string regionName, NavigationParameters? parameters = null)
         where TView : FrameworkElement
     {
-        HandleNavigationAware(regionName, vm => vm.OnNavigatedFrom())
-            .ClearContent(regionName)
-            .SetContent<TView>(regionName)
-            .HandleNavigationAware(regionName, vm => vm.OnNavigatedTo(parameters ?? NavigationParameters.Empty));
+        if (_regionRegistry[regionName].RegionContent().Count() == 1)
+        {
+            var existingView = _regionRegistry[regionName].RegionContent().First();
+            if(existingView is FrameworkElement { DataContext: INavigationAware viewModel })
+            {
+                viewModel.OnNavigatedFrom();
+            }
+        }
+                    
+        var (newView, newViewModel) = _viewFactory.Create<TView>();
+        _regionRegistry[regionName].Add(newView);
+
+        if (newViewModel is INavigationAware vm)
+        {
+            vm.OnNavigatedTo(parameters ?? NavigationParameters.Empty);
+        }
     }
 
     public void Clear(string regionName)
     {
-        ClearContent(regionName)
-            .HandleNavigationAware(regionName, vm => vm.OnNavigatedFrom());
-    }
-
-    private RegionManager ClearContent(string regionName)
-    {
-        _regionRegistry[regionName].Clear();
-        return this;
-    }
-
-    private RegionManager HandleNavigationAware(string regionName, Action<INavigationAware> action)
-    {
-        if(_regionRegistry[regionName].DataContext is INavigationAware vm) action(vm);
-        return this;
-    }
-
-    private RegionManager SetContent<TView>(string regionName)
-        where TView : FrameworkElement
-    {
-        var (view, _) = _viewFactory.Create<TView>();
-        _regionRegistry[regionName].Add(view);
-        return this;
+        foreach(var view in _regionRegistry[regionName].RegionContent())
+        {
+            if(view is FrameworkElement { DataContext: INavigationAware viewModel })
+            {
+                viewModel.OnNavigatedFrom();
+            }
+        }
     }
 }
 
