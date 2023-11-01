@@ -44,6 +44,7 @@ internal sealed class RegionManager : IRegionManager
             {
                 viewModel.OnNavigatedFrom();
             }
+            _regionRegistry[regionName].Clear();
         }
     }
 }
