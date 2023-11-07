@@ -38,4 +38,6 @@ public interface IRegionManager
     /// that no content is being displayed within a specific region.
     /// </remarks>
     void Clear(string regionName);
+
+    object this[string regionName] { get; }
 }

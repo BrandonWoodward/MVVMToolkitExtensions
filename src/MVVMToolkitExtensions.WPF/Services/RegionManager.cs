@@ -8,6 +8,9 @@ internal sealed class RegionManager : IRegionManager
 {
     private readonly IViewFactory _viewFactory;
     private readonly IRegionRegistry _regionRegistry;
+    
+    public object this[string regionName] 
+        => _regionRegistry[regionName].RegionContent();
 
     public RegionManager(IViewFactory viewFactory, IRegionRegistry regionRegistry)
     {
@@ -44,8 +47,8 @@ internal sealed class RegionManager : IRegionManager
             {
                 viewModel.OnNavigatedFrom();
             }
-            _regionRegistry[regionName].Clear();
         }
+        _regionRegistry[regionName].Clear();
     }
 }
 
