@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Dialog Service </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Dialog Service ">
+      
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../../toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BrandonWoodward/MVVMToolkitExtensions/blob/master/docs/articles/wpf/dialog-service.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+  </head>
+
+  <script type="module">
+    import options from './../../public/main.js'
+    import { init } from './../../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="dialog-service">Dialog Service</h1>
+
+<p> </p>
+<hr>
+<h2 id="1-introduction">1. Introduction</h2>
+<p> </p>
+<p>The <code>IDialogService</code> provides functionality for MVVM-friendly dialogs.
+If you've used Prism before, this is very similar.</p>
+<p> </p>
+<hr>
+<h2 id="2-basic-usage">2. Basic Usage</h2>
+<p> </p>
+<pre><code class="lang-csharp">public YourViewModel(IDialogService dialogService)
+{
+    _dialogService = dialogService;
+}
+</code></pre>
+<pre><code class="lang-csharp">_dialogService.ShowDialog&lt;YourDialog&gt;();
+</code></pre>
+<p> </p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Ensure that the dialog has been appropriately registered with the DI container.</p>
+</div>
+<p> </p>
+<hr>
+<h2 id="3-passing-parameters">3. Passing Parameters</h2>
+<p> </p>
+<p>The <code>IDialogAware</code> interface exposes 3 methods, <code>OnDialogOpened</code>, <code>OnDialogClosed</code>, and <code>CanCloseDialog</code>,
+which are self-explanatory.</p>
+<p>You can use the <code>OnDialogOpened</code> method to pass parameters to your dialog.</p>
+<p> </p>
+<ul>
+<li><p><strong>YourViewModel.cs</strong>:</p>
+<pre><code class="lang-csharp">var parameters = new DialogParameters {{ &quot;message&quot;, &quot;Hello from the MainPage!&quot; }};
+_dialogService.ShowDialog&lt;AnotherView&gt;(&quot;AnotherViewRegion&quot;, parameters);
+</code></pre>
+</li>
+</ul>
+<p> </p>
+<ul>
+<li><p><strong>AnotherViewModel.cs</strong>:</p>
+<pre><code class="lang-csharp">public class AnotherViewModel : IDialogAware
+{
+    public void OnDialogOpened(DialogParameters parameters)
+    {
+        var message = parameters.Get&lt;string&gt;(&quot;message&quot;);
+    }
+
+    public void OnDialogClosed()
+    {
+        // Define actions to undertake when navigation departs from this view
+    }
+
+    public bool CanCloseDialog()
+    {
+        // Define conditions for which the dialog can be closed
+    }
+}
+</code></pre>
+</li>
+</ul>
+<p> </p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Any views that derive from <code>Window</code> will be shown as-is,
+anything else will be wrapped in a <code>Window</code> control.</p>
+</div>
+<hr>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BrandonWoodward/MVVMToolkitExtensions/blob/master/docs/articles/wpf/dialog-service.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,259 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Navigation Service </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Navigation Service ">
+      
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BrandonWoodward/MVVMToolkitExtensions/blob/master/docs/articles/maui/navigation-service.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+  </head>
+
+  <script type="module">
+    import options from './../../public/main.js'
+    import { init } from './../../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="navigation-service">Navigation Service</h1>
+
+<p> </p>
+<hr>
+<h2 id="1-introduction">1. Introduction</h2>
+<p> </p>
+<p>The page-based navigation system provides a robust URI-based navigation mechanism that's in harmony with the MVVM design pattern. With support for both absolute and relative paths, it offers flexibility for diverse navigation needs.
+ </p>
+<hr>
+<h2 id="2-basic-usage">2. Basic Usage</h2>
+<p> </p>
+<p>To make use of the page-based navigation, it's essential to register ViewModel mappings for <code>INavigationService</code> to correctly set the <code>BindingContext</code> of the desired page. Subsequently, pages for navigation must also be registered.
+ </p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>All routes must be derived from <code>Page</code>.
+ </p>
+</div>
+<ul>
+<li><p><strong>MauiProgram.cs</strong>:</p>
+<pre><code class="lang-csharp">builder.Services.AddViewModelMapping&lt;MainPage, MainPageViewModel&gt;();
+builder.Services.AddViewModelMapping&lt;LoginPage, LoginPageViewModel&gt;();
+builder.Services.AddViewModelMapping&lt;PageA, PageAViewModel&gt;();
+builder.Services.AddViewModelMapping&lt;PageB, PageBViewModel&gt;();
+
+builder.Services.AddNavigationRoute&lt;MainPage&gt;();
+builder.Services.AddNavigationRoute&lt;PageA&gt;();
+builder.Services.AddNavigationRoute&lt;PageB&gt;();
+</code></pre>
+</li>
+</ul>
+<p> </p>
+<ul>
+<li><p><strong>LoginPageViewModel.cs</strong>:</p>
+<p>Inject the <code>INavigationService</code>:</p>
+<pre><code class="lang-csharp">public LoginPageViewModel(INavigationService navigationService)
+{
+    _navigationService = navigationService;
+}
+</code></pre>
+<p>Navigate using the service:</p>
+<pre><code class="lang-csharp">_navigationService.Navigate(&quot;/ViewA&quot;, parameters);
+</code></pre>
+</li>
+</ul>
+<p> </p>
+<hr>
+<h2 id="3-uri-navigation-syntax">3. URI Navigation Syntax</h2>
+<p> </p>
+<p>The <code>NavigationService</code> supports two primary navigation styles: <strong>Relative</strong> and <strong>Absolute</strong>.
+ </p>
+<h3 id="relative-navigation">Relative Navigation:</h3>
+<table>
+<thead>
+<tr>
+<th>Description</th>
+<th>Pattern</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Push a new page</td>
+<td><code>&quot;/PageA&quot;</code></td>
+<td>Adds <code>PageA</code> to the navigation stack</td>
+</tr>
+<tr>
+<td>Push multiple pages</td>
+<td><code>&quot;/PageA/PageB&quot;</code></td>
+<td>Adds <code>PageA</code> followed by <code>PageB</code> to the stack</td>
+</tr>
+<tr>
+<td>Navigate up one level, then push a new page</td>
+<td><code>&quot;../PageB&quot;</code></td>
+<td>Removes current page and adds <code>PageB</code></td>
+</tr>
+<tr>
+<td>Navigate up two levels, then push a new page</td>
+<td><code>&quot;../../PageA&quot;</code></td>
+<td>Removes two pages and then adds <code>PageA</code></td>
+</tr>
+<tr>
+<td>Navigate to the root</td>
+<td><code>&quot;//&quot;</code></td>
+<td>Clears all pages, reaching the root of the navigation stack</td>
+</tr>
+</tbody>
+</table>
+<br>
+<h3 id="absolute-navigation">Absolute Navigation:</h3>
+<table>
+<thead>
+<tr>
+<th>Description</th>
+<th>Pattern</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Navigate and retain the root</td>
+<td><code>&quot;PageA&quot;</code></td>
+<td>Clears the stack, retains the root, and adds <code>PageA</code></td>
+</tr>
+<tr>
+<td>Navigate to multiple pages and retain the root</td>
+<td><code>&quot;PageA/PageB&quot;</code></td>
+<td>Clears the stack, retains the root, then sequentially adds <code>PageA</code> and <code>PageB</code></td>
+</tr>
+<tr>
+<td>Set a new root and navigate to subsequent pages</td>
+<td><code>&quot;//PageA/PageB&quot;</code></td>
+<td>Clears the entire stack. Sets <code>PageA</code> as root, then adds <code>PageB</code></td>
+</tr>
+</tbody>
+</table>
+<br>
+<hr>
+<h2 id="4-navigating-with-parameters">4. Navigating with Parameters</h2>
+<p> </p>
+<p>Parameters can be effortlessly passed to the ViewModel through the <code>INavigationAware</code> interface.
+ </p>
+<ul>
+<li><p><strong>LoginPageViewModel.cs</strong>:</p>
+<pre><code class="lang-csharp">var parameters = new NavigationParameters {{ &quot;username&quot;, Username }};
+_regionManager.Navigate&lt;AnotherView&gt;(&quot;AnotherViewRegion&quot;, parameters);
+</code></pre>
+</li>
+</ul>
+<p> </p>
+<ul>
+<li><p><strong>MainPageViewModel.cs</strong>:</p>
+<pre><code class="lang-csharp">public class MainPageViewModel : INavigationAware
+{
+    public void OnNavigatedTo(NavigationParameters parameters)
+    {
+        var username = parameters.Get&lt;string&gt;(&quot;username&quot;);
+    }
+
+    public void OnNavigatedFrom()
+    {
+        // Handle actions when navigation moves away from this page
+    }
+}
+</code></pre>
+<p>Note: The <code>OnNavigatedFrom</code> method is triggered when the page is removed from the navigation stack.</p>
+</li>
+</ul>
+<hr>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BrandonWoodward/MVVMToolkitExtensions/blob/master/docs/articles/maui/navigation-service.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
