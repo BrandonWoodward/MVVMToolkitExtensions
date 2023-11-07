@@ -39,5 +39,5 @@ public interface IRegionManager
     /// </remarks>
     void Clear(string regionName);
 
-    object this[string regionName] { get; }
+    IEnumerable<object> this[string regionName] { get; }
 }

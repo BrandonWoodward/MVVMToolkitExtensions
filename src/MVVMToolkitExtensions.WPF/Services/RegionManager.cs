@@ -9,7 +9,7 @@ internal sealed class RegionManager : IRegionManager
     private readonly IViewFactory _viewFactory;
     private readonly IRegionRegistry _regionRegistry;
     
-    public object this[string regionName] 
+    public IEnumerable<object> this[string regionName] 
         => _regionRegistry[regionName].RegionContent();
 
     public RegionManager(IViewFactory viewFactory, IRegionRegistry regionRegistry)
